@@ -18,14 +18,14 @@ using namespace std;
 
 class A {
     friend ostream& operator<<(ostream& os, A& a);
-    friend A operator+(A& op1, A& op2);
-    friend A operator+(int op1, A& op2);
+    friend A operator+(A& op1, A& op2);     // sobrecarga como funcion (A + A)
+    friend A operator+(int op1, A& op2);    // sobrecarga como funcion (int + A)
 private:
     string value;
 public:
     A();
     explicit A(string&& str);
-    A operator+(int op2);
+    A operator+(int op2);                   // sobrecarga como metodo (A + int)
 };
 
 A operator+(A& op1, A& op2);

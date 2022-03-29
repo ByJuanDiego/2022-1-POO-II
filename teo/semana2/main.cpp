@@ -1,12 +1,10 @@
 #include "A.h"
 
 int main() {
-
+    
     A a1("juan");
-    A a2 = a1 + 10;
-    A a3 = 20 + a1;
-    A a4("Hola");
-    A a5(" Mundo");
+    A a2 = (a1 + 10), a3 = (20 + a1);
+    A a4("Hola"), a5(" Mundo");
     A a6(a4 + a5);
     cout << a1;
     cout << a2;
@@ -14,6 +12,6 @@ int main() {
     cout << a4;
     cout << a5;
     cout << a6;
-    return 0;
 
+    return 0;
 }
