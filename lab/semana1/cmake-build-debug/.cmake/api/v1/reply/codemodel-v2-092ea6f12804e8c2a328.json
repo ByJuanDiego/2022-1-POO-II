@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/juandiegocastropadilla/Desktop/CLionProjects/POO2-2022-1/semana1/cmake-build-debug",
-		"source" : "/Users/juandiegocastropadilla/Desktop/CLionProjects/POO2-2022-1/semana1"
+		"build" : "/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1/cmake-build-debug",
+		"source" : "/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1"
 	},
 	"version" : 
 	{
