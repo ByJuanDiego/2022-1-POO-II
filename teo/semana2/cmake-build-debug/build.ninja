@@ -84,6 +84,12 @@ build CMakeFiles/semana2.dir/A.cpp.o: CXX_COMPILER__semana2_Debug /Users/juandie
   OBJECT_DIR = CMakeFiles/semana2.dir
   OBJECT_FILE_DIR = CMakeFiles/semana2.dir
 
+build CMakeFiles/semana2.dir/Persona.cpp.o: CXX_COMPILER__semana2_Debug /Users/juandiegocastropadilla/Desktop/CS1103/teo/semana2/Persona.cpp || cmake_object_order_depends_target_semana2
+  DEP_FILE = CMakeFiles/semana2.dir/Persona.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  OBJECT_DIR = CMakeFiles/semana2.dir
+  OBJECT_FILE_DIR = CMakeFiles/semana2.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target semana2
@@ -92,7 +98,7 @@ build CMakeFiles/semana2.dir/A.cpp.o: CXX_COMPILER__semana2_Debug /Users/juandie
 #############################################
 # Link the executable semana2
 
-build semana2: CXX_EXECUTABLE_LINKER__semana2_Debug CMakeFiles/semana2.dir/main.cpp.o CMakeFiles/semana2.dir/A.cpp.o
+build semana2: CXX_EXECUTABLE_LINKER__semana2_Debug CMakeFiles/semana2.dir/main.cpp.o CMakeFiles/semana2.dir/A.cpp.o CMakeFiles/semana2.dir/Persona.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/semana2.dir
   POST_BUILD = :

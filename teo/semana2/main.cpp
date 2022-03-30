@@ -1,7 +1,8 @@
 #include "A.h"
+#include "Persona.h"
 
 int main() {
-    
+
     A a1("juan");
     A a2 = (a1 + 10), a3 = (20 + a1);
     A a4("Hola"), a5(" Mundo");
@@ -12,6 +13,17 @@ int main() {
     cout << a4;
     cout << a5;
     cout << a6;
+
+    Persona p1;
+    p1.set_nombre("Juan");
+    p1.set_dni("12345");
+    cout << p1.get_nombre() << " " << p1.get_dni() << endl;
+
+    const Persona p2 ("Maria", "23456");
+    cout << p2.get_nombre() << " " << p2.get_dni() << endl;
+
+    cout << Persona::get_clase() << endl;
+    cout << Persona::sumar(10, 20) << endl;
 
     return 0;
 }
