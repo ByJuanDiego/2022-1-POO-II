@@ -1,7 +1,12 @@
 #include "A.h"
 #include "Persona.h"
 
-int main() {
+int main() {// La sobrecarga de operadores es un tipo de polimorfismo [ad-hoc]
+
+    // Tipos de operadores: según número de operadores
+    // - unarios
+    // - binarios
+    // - terciarios
 
     A a1("juan");
     A a2 = (a1 + 10), a3 = (20 + a1);
