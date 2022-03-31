@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana2/cmake-build-debug",
-		"source" : "/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana2"
+		"build" : "/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana2_polimorfismo/cmake-build-debug",
+		"source" : "/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana2_polimorfismo"
 	},
 	"version" : 
 	{
