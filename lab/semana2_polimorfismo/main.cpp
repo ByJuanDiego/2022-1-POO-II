@@ -21,7 +21,6 @@ void identificar_clase(Figura* figura) {
     } else{
         cout << "No es ninguno" << endl;
     }
-
 }
 
 int main() {
