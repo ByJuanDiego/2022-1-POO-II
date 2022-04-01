@@ -21,9 +21,9 @@ int main() {
     vector_figuras.push_back(new Rectangulo);
     vector_figuras.push_back(new Elipse);
 
-    for (const auto &figura:vector_figuras){
+    for (const auto &figura:vector_figuras)
         figura->dibujar();
-    }
+    
 
     return 0;
 }
