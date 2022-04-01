@@ -84,6 +84,12 @@ build CMakeFiles/tarea_1.dir/matrix.cpp.o: CXX_COMPILER__tarea_1_Debug /Users/ju
   OBJECT_DIR = CMakeFiles/tarea_1.dir
   OBJECT_FILE_DIR = CMakeFiles/tarea_1.dir
 
+build CMakeFiles/tarea_1.dir/matrix2.cpp.o: CXX_COMPILER__tarea_1_Debug /Users/juandiegocastropadilla/Desktop/CS1103/tareas/tarea_1/matrix2.cpp || cmake_object_order_depends_target_tarea_1
+  DEP_FILE = CMakeFiles/tarea_1.dir/matrix2.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  OBJECT_DIR = CMakeFiles/tarea_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/tarea_1.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target tarea_1
@@ -92,7 +98,7 @@ build CMakeFiles/tarea_1.dir/matrix.cpp.o: CXX_COMPILER__tarea_1_Debug /Users/ju
 #############################################
 # Link the executable tarea_1
 
-build tarea_1: CXX_EXECUTABLE_LINKER__tarea_1_Debug CMakeFiles/tarea_1.dir/main.cpp.o CMakeFiles/tarea_1.dir/matrix.cpp.o
+build tarea_1: CXX_EXECUTABLE_LINKER__tarea_1_Debug CMakeFiles/tarea_1.dir/main.cpp.o CMakeFiles/tarea_1.dir/matrix.cpp.o CMakeFiles/tarea_1.dir/matrix2.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/tarea_1.dir
   POST_BUILD = :
