@@ -13,6 +13,17 @@ void mover_figura(Figura* figura, int dx, int dy){
     figura->set_y(figura->get_y() + dy);
 }
 
+void identificar_clase(Figura* figura) {
+    if (dynamic_cast<Elipse*>(figura) != nullptr){
+        cout << "Es elipse" << endl;
+    } else if (dynamic_cast<Rectangulo*>(figura) != nullptr){
+        cout << "Es Rectangulo" << endl;
+    } else{
+        cout << "No es ninguno" << endl;
+    }
+
+}
+
 int main() {
 
     /* Utilidades del polimorfismo
@@ -28,8 +39,9 @@ int main() {
         mover_figura(figura, 1, -1);
 
     for (const auto &figura:vector_figuras) {
-        figura->dibujar();
-        cout << figura->get_x() << " " << figura->get_y() << endl;
+        identificar_clase(figura);
+        figura -> dibujar();
+        cout << "x: " << figura->get_x() << " y: " << figura->get_y() << endl << endl;
     }
 
     return 0;
