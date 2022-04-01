@@ -20,10 +20,10 @@ public:
     Figura() = default;
     Figura(int x, int y): x(x), y(y) {}
 
-    void set_x(int value_x){x = value_x;}
-    void set_y(int value_y){y = value_y;}
     int get_x() const {return x;}
     int get_y() const {return y;}
+    void set_x(int value_x){x = value_x;}
+    void set_y(int value_y){y = value_y;}
 
 };
 
