@@ -28,8 +28,8 @@ namespace utec{
     matrix2::matrix2(SIZE_TYPE row, SIZE_TYPE col) {// constructor por parametros
         n_row = row;
         n_col = col;
-        data = new integer_t*[n_row*n_col];
 
+        data = new integer_t*[n_row*n_col];
         for (int i=0; i<(n_row*n_col); i++) {
             data[i] = new integer_t();
         }
