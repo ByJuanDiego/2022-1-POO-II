@@ -9,6 +9,8 @@
 
 class Rectangulo: public Figura{
 public:
+    Rectangulo(int x, int y): Figura(x, y) {}
+    Rectangulo(): Rectangulo(0, 0) {}
     void dibujar() override {cout << "Dibujando Rectangulo" << endl;}
 };
 

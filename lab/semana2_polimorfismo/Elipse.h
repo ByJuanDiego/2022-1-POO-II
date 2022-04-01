@@ -9,6 +9,8 @@
 
 class Elipse: public Figura{
 public:
+    Elipse(int x, int y): Figura(x, y) {};
+    Elipse(): Elipse(0, 0) {};
     void dibujar() override {cout << "Dibujando Elipse" << endl;}
 };
 
