@@ -6,7 +6,14 @@
 
 namespace utec{
 
-    ostream& operator<<(ostream &os, utec::matrix_t &m) {
+    void matrix_t::_destroy_() {
+        for (int i=0; i<(n_row*n_col); i++){
+            delete data[i];
+        }
+        delete [] data;
+    }
+
+    ostream& operator<<(ostream &os, const matrix_t &m){
         for (int f = 0; f < m.n_row; f++){
             for (int c = 0; c < m.n_col; c++){
                 os << *m(f, c) << "\t";
@@ -25,44 +32,42 @@ namespace utec{
         return n_row;
     }
 
-    matrix_t::matrix_t(SIZE_TYPE row, SIZE_TYPE col) {// constructor por parametros
-        n_row = row;
-        n_col = col;
-        data = new integer_t**[n_row];
-
-        for (int i=0; i<n_row; i++) {
-            data[i] = new integer_t*[n_col];
-            for (int j=0; j<n_col; j++){
-                data[i][j] = new integer_t(0);
-            }
+    matrix_t::matrix_t(SIZE_TYPE row, SIZE_TYPE col): n_row(row), n_col(col) {// constructor por parametros
+        data = new number_t*[n_row*n_col];
+        for (int i=0; i<(n_row*n_col); i++) {
+            data[i] = new number_t();
         }
     }
 
-    matrix_t::matrix_t(const matrix_t& other) {// constructor copia
-        n_row = other.n_row;
-        n_col = other.n_col;
-
-        data = new integer_t**[n_row];
-        for (int i=0; i<n_row; i++) {
-            data[i] = new integer_t *[n_col];
-            for (int j=0; j<n_col; j++){
-                data[i][j] = new integer_t(*other.data[i][j]);
-            }
+    matrix_t::matrix_t(const matrix_t& other): n_row(other.n_row), n_col(other.n_col) {// constructor copia
+        data = new number_t*[n_row*n_col];
+        for (int i=0; i<(n_row*n_col); i++) {
+            data[i] = new number_t(*other.data[i]);
         }
+    }
+
+    matrix_t& matrix_t::operator=(const matrix_t &other){
+        _destroy_();
+        n_col = other.n_col;
+        n_row = other.n_row;
+
+        data = new number_t*[n_row*n_col];
+        for (int i=0; i<(n_row*n_col); i++) {
+            data[i] = new number_t(*other.data[i]);
+        }
+        return *this;
     }
 
     matrix_t::~matrix_t(){// destructor
-        for (int i=0; i<n_row; i++){
-            for (int j=0; j<n_col; j++){
-                delete data[i][j];
-            }
-            delete [] data[i];
-        }
-        delete [] data;
+        _destroy_();
     }
 
-    integer_t* & matrix_t::operator()(int x, int y) {
-        return data[x][y];
+    number_t* & matrix_t::operator()(SIZE_TYPE i, SIZE_TYPE j) {
+        return data[i*n_col + j];
+    }
+
+    number_t* matrix_t::operator()(SIZE_TYPE i, SIZE_TYPE j) const {
+        return data[i * n_col + j];
     }
 
 }

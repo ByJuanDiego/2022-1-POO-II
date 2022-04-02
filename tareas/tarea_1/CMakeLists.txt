@@ -3,4 +3,4 @@ project(tarea_1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(tarea_1 main.cpp matrix.cpp matrix.h matrix2.cpp matrix2.h)
+add_executable(tarea_1 main.cpp matrix.cpp matrix.h)
