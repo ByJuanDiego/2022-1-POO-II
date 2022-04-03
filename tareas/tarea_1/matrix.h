@@ -7,9 +7,9 @@
 
 #include <iostream>
 #include <iomanip>
+#include "number.h"
 using namespace std;
 typedef int SIZE_TYPE;
-typedef int number_t;
 
 namespace utec{
 
@@ -23,7 +23,7 @@ namespace utec{
         SIZE_TYPE n_col;
         number_t** data = nullptr;
         void _destroy_();
-        
+
     public:
 
         matrix_t(SIZE_TYPE row, SIZE_TYPE col);     // constructor por parametros

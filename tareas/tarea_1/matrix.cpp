@@ -16,7 +16,8 @@ namespace utec{
     ostream& operator<<(ostream &os, const matrix_t &m){
         for (int f = 0; f < m.n_row; f++){
             for (int c = 0; c < m.n_col; c++){
-                os << setw(5) << *m(f, c);
+                os << setw(7);
+                m(f, c)->print(os);
             }
             os << endl;
         }
@@ -35,14 +36,14 @@ namespace utec{
     matrix_t::matrix_t(SIZE_TYPE row, SIZE_TYPE col): n_row(row), n_col(col) {// constructor por parametros
         data = new number_t*[n_row*n_col];
         for (int i=0; i<(n_row*n_col); i++) {
-            data[i] = new number_t();
+            data[i] = new integer_t();
         }
     }
 
     matrix_t::matrix_t(const matrix_t& other): n_row(other.n_row), n_col(other.n_col) {// constructor copia
         data = new number_t*[n_row*n_col];
         for (int i=0; i<(n_row*n_col); i++) {
-            data[i] = new number_t(*other.data[i]);
+            *data[i] = *other.data[i];
         }
     }
 
@@ -57,7 +58,7 @@ namespace utec{
 
         data = new number_t*[n_row*n_col];
         for (int i=0; i<(n_row*n_col); i++) {
-            data[i] = new number_t(*other.data[i]);
+            *data[i] = *other.data[i];
         }
         return *this;
     }
