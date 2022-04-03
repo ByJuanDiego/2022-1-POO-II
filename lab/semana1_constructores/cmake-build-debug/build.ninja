@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1/cmake-build-debug/
+cmake_ninja_workdir = /Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1_constructores/cmake-build-debug/
 
 #############################################
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1 -B/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1/cmake-build-debug
+  COMMAND = cd /Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1_constructores/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1_constructores -B/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1_constructores/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -57,7 +57,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1_constructores/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -72,7 +72,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_semana1: phony || CMakeFiles/semana1.dir
 
-build CMakeFiles/semana1.dir/main.cpp.o: CXX_COMPILER__semana1_Debug /Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1/main.cpp || cmake_object_order_depends_target_semana1
+build CMakeFiles/semana1.dir/main.cpp.o: CXX_COMPILER__semana1_Debug /Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1_constructores/main.cpp || cmake_object_order_depends_target_semana1
   DEP_FILE = CMakeFiles/semana1.dir/main.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
   OBJECT_DIR = CMakeFiles/semana1.dir
@@ -80,7 +80,7 @@ build CMakeFiles/semana1.dir/main.cpp.o: CXX_COMPILER__semana1_Debug /Users/juan
   TARGET_COMPILE_PDB = CMakeFiles/semana1.dir/
   TARGET_PDB = semana1.pdb
 
-build CMakeFiles/semana1.dir/A.cpp.o: CXX_COMPILER__semana1_Debug /Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1/A.cpp || cmake_object_order_depends_target_semana1
+build CMakeFiles/semana1.dir/A.cpp.o: CXX_COMPILER__semana1_Debug /Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1_constructores/A.cpp || cmake_object_order_depends_target_semana1
   DEP_FILE = CMakeFiles/semana1.dir/A.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
   OBJECT_DIR = CMakeFiles/semana1.dir
@@ -114,7 +114,7 @@ build semana1: CXX_EXECUTABLE_LINKER__semana1_Debug CMakeFiles/semana1.dir/main.
 # =============================================================================
 
 #############################################
-# Folder: /Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1/cmake-build-debug
+# Folder: /Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1_constructores/cmake-build-debug
 
 build all: phony semana1
 

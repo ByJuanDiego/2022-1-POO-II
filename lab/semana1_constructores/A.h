@@ -22,7 +22,7 @@ namespace utec {
 
         // Copia
         A(const A &another);                // constructor copia
-        A &operator=(const A &another);    // constructor asignacion - copia
+        A& operator=(const A &another);    // constructor asignacion - copia
 
         // Move
         A(A &&another);                     // constructor move

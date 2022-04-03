@@ -1123,8 +1123,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1/cmake-build-debug",
-		"source" : "/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1"
+		"build" : "/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1_constructores/cmake-build-debug",
+		"source" : "/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1_constructores"
 	},
 	"version" : 
 	{

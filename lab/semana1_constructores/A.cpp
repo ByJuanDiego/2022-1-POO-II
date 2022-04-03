@@ -18,7 +18,11 @@ namespace utec {
         cout << "copia" << endl;
     }
 
-    A &A::operator=(const A &another) {// asignacion - copia
+    A& A::operator=(const A &another) {// asignacion - copia
+        if (&another == this){
+            return *this;
+        }
+
         delete ptrValue;
         ptrValue = new int(*(another.ptrValue));
 
