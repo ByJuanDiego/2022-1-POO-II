@@ -63,7 +63,7 @@ namespace utec{
     }
 
     number_t* & matrix_t::operator()(SIZE_TYPE i, SIZE_TYPE j) {
-        return data[i*n_col + j];
+        return data[i * n_col + j];
     }
 
     number_t* matrix_t::operator()(SIZE_TYPE i, SIZE_TYPE j) const {
