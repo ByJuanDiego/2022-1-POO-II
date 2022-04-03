@@ -19,9 +19,12 @@ namespace utec{
 
     private:
 
+        // atributos
         SIZE_TYPE nrow;
         SIZE_TYPE ncol;
         number_t** data = nullptr;
+
+        // metodos privados
         void _assign_(SIZE_TYPE row, SIZE_TYPE col);
         void _copy_(number_t** other_data);
         void _destroy_();
@@ -37,8 +40,8 @@ namespace utec{
         SIZE_TYPE row_size() const;
         SIZE_TYPE col_size() const;
 
-        number_t* & operator()(int i, int j);       // sobrecarga (i, j) como set
-        number_t* operator()(SIZE_TYPE i, SIZE_TYPE j) const; // sobrecarga (i, j) como get
+        number_t* & operator()(int i, int j);                   // sobrecarga () como set
+        number_t* operator()(SIZE_TYPE i, SIZE_TYPE j) const;   // sobrecarga () como get
 
     };
 
