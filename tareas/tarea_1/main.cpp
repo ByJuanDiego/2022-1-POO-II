@@ -22,7 +22,6 @@ int main() {
             m2(i, j) = new complex_t(dis2(rd), dis2(rd));
         }
     }
-    std::cout << m1;
     std::cout << m2;
 
     utec::matrix_t m3(5, 5);
@@ -32,7 +31,8 @@ int main() {
         }
     }
     m3(0,0) = new integer_t(1);
-    cout << m3;
+    m3(1, 4) = new complex_t(3.45, 0);
+    std::cout << m3;
 
     return  0;
 }
