@@ -22,9 +22,9 @@ namespace utec{
         SIZE_TYPE nrow;
         SIZE_TYPE ncol;
         number_t** data = nullptr;
-        void _destroy_();
-        void _copy_(number_t** other_data);
         void _assign_(SIZE_TYPE row, SIZE_TYPE col);
+        void _copy_(number_t** other_data);
+        void _destroy_();
 
     public:
 

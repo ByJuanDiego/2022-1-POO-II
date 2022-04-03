@@ -6,11 +6,10 @@
 
 namespace utec{
 
-    void matrix_t::_destroy_() {
-        for (int i=0; i<(nrow*ncol); i++){
-            delete data[i];
-        }
-        delete [] data;
+    void matrix_t::_assign_(SIZE_TYPE row, SIZE_TYPE col){
+        nrow = row;
+        ncol = col;
+        data = new number_t*[nrow * ncol];
     }
 
     void matrix_t::_copy_(number_t** other_data) {
@@ -19,12 +18,13 @@ namespace utec{
         }
     }
 
-    void matrix_t::_assign_(SIZE_TYPE row, SIZE_TYPE col){
-        nrow = row;
-        ncol = col;
-        data = new number_t*[nrow * ncol];
+    void matrix_t::_destroy_() {
+        for (int i=0; i<(nrow*ncol); i++){
+            delete data[i];
+        }
+        delete [] data;
     }
-
+    
     ostream& operator<<(ostream &os, const matrix_t &m){
         for (int f = 0; f < m.nrow; f++){
             for (int c = 0; c < m.ncol; c++){
@@ -56,7 +56,7 @@ namespace utec{
         _copy_(other.data);
     }
 
-    matrix_t& matrix_t::operator=(const matrix_t &other){
+    matrix_t& matrix_t::operator=(const matrix_t &other){// sobrecarga asignacion copia
         if (&other == this){
             return *this;
         }
