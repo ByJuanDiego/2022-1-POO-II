@@ -9,7 +9,7 @@ int main() {
     utec::matrix_t m1(4, 5);
     for (int i = 0; i < m1.row_size(); ++i) {
         for (int j = 0; j < m1.col_size(); ++j) {
-            m1(i, j) = new number_t (dis(rd));
+            m1(i, j) = new number_t(dis(rd));
         }
     }
     std::cout << m1;

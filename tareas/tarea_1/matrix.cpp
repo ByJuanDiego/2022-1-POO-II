@@ -47,6 +47,10 @@ namespace utec{
     }
 
     matrix_t& matrix_t::operator=(const matrix_t &other){
+        if (&other == this){
+            return *this;
+        }
+
         _destroy_();
         n_col = other.n_col;
         n_row = other.n_row;
