@@ -27,5 +27,5 @@ complex_t::complex_t(): number_t(), real(0), imaginario(0) {}
 complex_t::complex_t(double real, double imaginario): number_t(), real(real), imaginario(imaginario) {}
 
 void complex_t::print(ostream& os) {
-    os << fixed << setprecision(2) << real << ((imaginario < 0)? "-": "+" ) << abs(imaginario) << "i";
+    os << fixed << setprecision(1) << real << ((imaginario < 0)? "-": "+" ) << abs(imaginario) << "i";
 }
