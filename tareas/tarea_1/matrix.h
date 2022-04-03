@@ -6,6 +6,7 @@
 #define TAREA_1_MATRIX_H
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 typedef int SIZE_TYPE;
 typedef int number_t;
