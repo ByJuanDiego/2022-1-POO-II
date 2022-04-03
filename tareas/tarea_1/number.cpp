@@ -18,7 +18,7 @@ real_t::real_t(): number_t(), real(0){}
 real_t::real_t(double real): number_t(), real(real){}
 
 void real_t::print(ostream& os) {
-    os << fixed << setprecision(2) << real;
+    os << fixed << setprecision(1) << real;
 }
 
 
