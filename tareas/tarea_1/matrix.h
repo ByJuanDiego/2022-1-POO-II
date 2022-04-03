@@ -9,7 +9,7 @@
 #include <iomanip>
 #include "number.h"
 using namespace std;
-typedef int SIZE_TYPE;
+typedef unsigned long int SIZE_TYPE;
 
 namespace utec{
 
@@ -40,7 +40,7 @@ namespace utec{
         SIZE_TYPE row_size() const;
         SIZE_TYPE col_size() const;
 
-        number_t* & operator()(int i, int j);                   // sobrecarga () como set
+        number_t* & operator()(SIZE_TYPE i, SIZE_TYPE j);       // sobrecarga () como set
         number_t* operator()(SIZE_TYPE i, SIZE_TYPE j) const;   // sobrecarga () como get
 
     };
