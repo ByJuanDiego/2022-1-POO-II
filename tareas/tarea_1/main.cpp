@@ -31,7 +31,7 @@ int main() {
         }
     }
     m3(0,0) = new integer_t(1);
-    m3(1, 4) = new complex_t(3.45, 0);
+    m3(0, 4) = new complex_t(3.45, 0);
     std::cout << m3;
 
     return  0;
