@@ -45,7 +45,8 @@ namespace utec{
 
     };
 
-    ostream& operator<<(ostream &os, const utec::matrix_t &m);
+    ostream& operator<<(ostream &os, const matrix_t &m);
+
 }
 
 
