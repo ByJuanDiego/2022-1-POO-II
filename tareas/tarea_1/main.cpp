@@ -8,7 +8,7 @@ int main() {
     uniform_int_distribution<int> dis1(0, 9);
     uniform_real_distribution<double> dis2(-9, 9);
 
-    utec::matrix_t m1(4, 5);
+    utec::matrix_t m1(4, 4);
     for (int i = 0; i < m1.row_size(); ++i) {
         for (int j = 0; j < m1.col_size(); ++j) {
             m1(i, j) = new integer_t(dis1(rd));
@@ -24,14 +24,14 @@ int main() {
     }
     std::cout << m2;
 
-    utec::matrix_t m3(5, 5);
+    utec::matrix_t m3(3, 3);
     for (int i = 0; i < m3.row_size(); ++i) {
         for (int j = 0; j < m3.col_size(); ++j) {
             m3(i, j) = new real_t(dis2(rd));
         }
     }
     m3(0,0) = new integer_t(1);
-    m3(0, 4) = new complex_t(3.45, 0);
+    m3(0, 2) = new complex_t(3.45, 0);
     std::cout << m3;
 
     return  0;

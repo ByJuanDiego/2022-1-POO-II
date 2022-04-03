@@ -16,7 +16,7 @@ namespace utec{
     ostream& operator<<(ostream &os, const matrix_t &m){
         for (int f = 0; f < m.n_row; f++){
             for (int c = 0; c < m.n_col; c++){
-                os << setw(4);
+                os << setw(6);
                 m(f, c)->print(os);
             }
             os << endl;
