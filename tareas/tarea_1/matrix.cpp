@@ -7,15 +7,27 @@
 namespace utec{
 
     void matrix_t::_destroy_() {
-        for (int i=0; i<(n_row*n_col); i++){
+        for (int i=0; i<(nrow*ncol); i++){
             delete data[i];
         }
         delete [] data;
     }
 
+    void matrix_t::_copy_(number_t** other_data) {
+        for (int i=0; i<(nrow*ncol); i++) {
+            *data[i] = *other_data[i];
+        }
+    }
+
+    void matrix_t::_assign_(SIZE_TYPE row, SIZE_TYPE col){
+        nrow = row;
+        ncol = col;
+        data = new number_t*[nrow * ncol];
+    }
+
     ostream& operator<<(ostream &os, const matrix_t &m){
-        for (int f = 0; f < m.n_row; f++){
-            for (int c = 0; c < m.n_col; c++){
+        for (int f = 0; f < m.nrow; f++){
+            for (int c = 0; c < m.ncol; c++){
                 os << setw(6);
                 m(f, c)->print(os);
             }
@@ -26,25 +38,22 @@ namespace utec{
     }
 
     SIZE_TYPE matrix_t::col_size() const {
-        return n_col;
+        return ncol;
     }
 
     SIZE_TYPE matrix_t::row_size() const {
-        return n_row;
+        return nrow;
     }
 
-    matrix_t::matrix_t(SIZE_TYPE row, SIZE_TYPE col): n_row(row), n_col(col) {// constructor por parametros
-        data = new number_t*[n_row*n_col];
-        for (int i=0; i<(n_row*n_col); i++) {
+    matrix_t::matrix_t(SIZE_TYPE row, SIZE_TYPE col){// constructor por parametros
+        _assign_(row, col);
+        for (int i=0; i<(nrow*ncol); i++)
             data[i] = new integer_t();
-        }
     }
 
-    matrix_t::matrix_t(const matrix_t& other): n_row(other.n_row), n_col(other.n_col) {// constructor copia
-        data = new number_t*[n_row*n_col];
-        for (int i=0; i<(n_row*n_col); i++) {
-            *data[i] = *other.data[i];
-        }
+    matrix_t::matrix_t(const matrix_t& other) {// constructor copia
+        _assign_(other.nrow, other.ncol);
+        _copy_(other.data);
     }
 
     matrix_t& matrix_t::operator=(const matrix_t &other){
@@ -53,13 +62,8 @@ namespace utec{
         }
 
         _destroy_();
-        n_col = other.n_col;
-        n_row = other.n_row;
-
-        data = new number_t*[n_row*n_col];
-        for (int i=0; i<(n_row*n_col); i++) {
-            *data[i] = *other.data[i];
-        }
+        _assign_(other.nrow, other.ncol);
+        _copy_(other.data);
         return *this;
     }
 
@@ -68,11 +72,11 @@ namespace utec{
     }
 
     number_t* & matrix_t::operator()(SIZE_TYPE i, SIZE_TYPE j) {
-        return data[i * n_col + j];
+        return data[i * ncol + j];
     }
 
     number_t* matrix_t::operator()(SIZE_TYPE i, SIZE_TYPE j) const {
-        return data[i * n_col + j];
+        return data[i * ncol + j];
     }
 
 }
