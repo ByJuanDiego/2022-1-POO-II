@@ -33,11 +33,11 @@ namespace utec{
     public:
 
         // Constructor por Parámetros
-        matrix_t(SIZE_TYPE row, SIZE_TYPE col);     // constructor por parametros
+        matrix_t(SIZE_TYPE row, SIZE_TYPE col);
 
         // Constructor Copia
-        matrix_t(const matrix_t& other);            //  Copia
-        matrix_t& operator=(const matrix_t& other); //  Asignacion-Copia Sobrecarga =
+        matrix_t(const matrix_t& other);
+        matrix_t& operator=(const matrix_t& other); // Sobrecarga =
 
         // Destructor
         ~matrix_t();
