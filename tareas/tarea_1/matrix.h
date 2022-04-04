@@ -15,36 +15,44 @@ namespace utec{
 
     class matrix_t {
 
+        // Amistad
         friend ostream& operator<<(ostream& os, const matrix_t& m);
 
     private:
 
-        // atributos
+        // Atributos
         SIZE_TYPE nrow;
         SIZE_TYPE ncol;
         number_t** data = nullptr;
 
-        // metodos privados
+        // Métodos privados
         void _assign_(SIZE_TYPE row, SIZE_TYPE col);
         void _copy_(number_t** other_data);
         void _destroy_();
 
     public:
 
+        // Constructor por Parámetros
         matrix_t(SIZE_TYPE row, SIZE_TYPE col);     // constructor por parametros
-        matrix_t(const matrix_t& other);            // constructor copia
-        matrix_t& operator=(const matrix_t& other); //  constructor asignacion-copia
 
-        ~matrix_t();                                // destructor
+        // Constructor Copia
+        matrix_t(const matrix_t& other);            //  Copia
+        matrix_t& operator=(const matrix_t& other); //  Asignacion-Copia Sobrecarga =
 
+        // Destructor
+        ~matrix_t();
+
+        // Getters
         SIZE_TYPE row_size() const;
         SIZE_TYPE col_size() const;
 
-        number_t* & operator()(SIZE_TYPE i, SIZE_TYPE j);       // sobrecarga () como set
-        number_t* operator()(SIZE_TYPE i, SIZE_TYPE j) const;   // sobrecarga () como get
+        // Sobrecarga ()
+        number_t* & operator()(SIZE_TYPE i, SIZE_TYPE j);       // Como Set
+        number_t* operator()(SIZE_TYPE i, SIZE_TYPE j) const;   // Como Get
 
     };
 
+    // Sobrecarga <<
     ostream& operator<<(ostream &os, const matrix_t &m);
 
 }
