@@ -1,7 +1,5 @@
 # ninja log v5
-1	1009	1649162279921946558	CMakeFiles/semana3_templates.dir/main.cpp.o	9c4aa3f0a28a1c1f
-1012	1121	1649162280043684626	semana3_templates	6bce9589b50a7896
-2	1054	1649166517417961858	CMakeFiles/semana3_templates.dir/main.cpp.o	9c4aa3f0a28a1c1f
-1055	1147	1649166517521204067	semana3_templates	6bce9589b50a7896
-4	811	1649166665034051143	CMakeFiles/semana3_templates.dir/main.cpp.o	9c4aa3f0a28a1c1f
-811	880	1649166665107072602	semana3_templates	6bce9589b50a7896
+2	728	1649175499899829042	CMakeFiles/semana3_templates.dir/main.cpp.o	9c4aa3f0a28a1c1f
+728	809	1649175499985365863	semana3_templates	6bce9589b50a7896
+2	806	1649175628922164954	CMakeFiles/semana3_templates.dir/main.cpp.o	9c4aa3f0a28a1c1f
+806	890	1649175629009374144	semana3_templates	6bce9589b50a7896

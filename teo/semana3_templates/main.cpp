@@ -1,3 +1,4 @@
+#include "funciones.h"
 #include <iostream>
 using namespace std;
 
@@ -35,9 +36,12 @@ T2 f3(T1 a, T1 b){// La llamada a la funcion es mas corta porque los operandos (
 }
 
 int main(){
+
     int var1 = f1<int>();
     int var2 = f2<int, int>(10, 20);
     int var3 = f3<int>(10, 20);
+
+    cout << "5^3 = " << Power<5, 3>::val << endl;
 
     return 0;
 }
