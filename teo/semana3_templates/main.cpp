@@ -2,7 +2,17 @@
 using namespace std;
 
 /*
- Reglas de deduccion de parametros de templates de funcion
+ Tipos de Template
+
+    - Template de funciones
+    - Template de clase
+    - Template de variable
+    - Template de alias
+
+*/
+
+/*
+ Reglas de deduccion de parametros de Templates de funciones
 
     1. Solo se pueden deducir los tipos de datos en los parametros de la funcion
     2. Los parametros deducibles se escriben de derecha a izquierda
