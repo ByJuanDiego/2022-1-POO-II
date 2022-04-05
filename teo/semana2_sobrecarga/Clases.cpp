@@ -2,12 +2,12 @@
 // Created by Juan Diego Castro Padilla on 29/03/22.
 //
 
-#include "A.h"
+#include "Clases.h"
 
-A::A():value(" "){
+A::A(): value(" "){
 }
 
-A::A(string&& str):value(str){
+A::A(string&& str): value(str){
 }
 
 A A::operator+(int op2){
@@ -28,7 +28,7 @@ A operator+(int op1, A& op2){
 }
 
 void A::print_B(B &b) {
-    cout << "B.n: " << b.n << " A.value: " << value;
+    cout << "B.n: " << b.n << " Clases.value: " << value;
 }
 
 B::B(int x): n(x) {

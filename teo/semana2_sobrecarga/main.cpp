@@ -1,4 +1,4 @@
-#include "A.h"
+#include "Clases.h"
 #include "Persona.h"
 
 int main() {// La sobrecarga de operadores es un tipo de polimorfismo [ad-hoc]
