@@ -26,3 +26,10 @@ A operator+(A& op1, A& op2){
 A operator+(int op1, A& op2){
     return A(to_string(op1) + op2.value);
 }
+
+void A::print_B(B &b) {
+    cout << "B.n: " << b.n << " A.value: " << value;
+}
+
+B::B(int x): n(x) {
+}

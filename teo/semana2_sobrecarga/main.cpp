@@ -30,5 +30,8 @@ int main() {// La sobrecarga de operadores es un tipo de polimorfismo [ad-hoc]
     cout << Persona::get_clase() << endl;
     cout << Persona::sumar(10, 20) << endl;
 
+    B b(1);
+    a1.print_B(b);
+
     return 0;
 }

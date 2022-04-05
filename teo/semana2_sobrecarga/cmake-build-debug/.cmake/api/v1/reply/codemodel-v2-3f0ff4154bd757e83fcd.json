@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/juandiegocastropadilla/Desktop/CS1103/teo/semana2/cmake-build-debug",
-		"source" : "/Users/juandiegocastropadilla/Desktop/CS1103/teo/semana2"
+		"build" : "/Users/juandiegocastropadilla/Desktop/CS1103/teo/semana2_sobrecarga/cmake-build-debug",
+		"source" : "/Users/juandiegocastropadilla/Desktop/CS1103/teo/semana2_sobrecarga"
 	},
 	"version" : 
 	{

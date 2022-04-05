@@ -15,6 +15,7 @@ using namespace std;
   Sobrecarga de Operadores como metodo
 */
 
+class B;
 
 class A {
     friend ostream& operator<<(ostream& os, A& a);
@@ -26,6 +27,16 @@ public:
     A();
     explicit A(string&& str);
     A operator+(int op2);                   // sobrecarga como metodo (A + int)
+    void print_B(B& b);
+
+};
+
+class B {
+private:
+    int n {};
+public:
+    explicit B(int x);
+    friend void A::print_B(B& b);           // amistad con un solo metodo de otra clase
 };
 
 A operator+(A& op1, A& op2);
