@@ -40,8 +40,8 @@ int main(){
     int var1 = f1<int>();
     int var2 = f2<int, int>(10, 20);
     int var3 = f3<int>(10, 20);
-
+    cout << concatenar("Hola ", "Diego Paredes");
     cout << "5^3 = " << Power<5, 3>::val << endl;
-
+    
     return 0;
 }
