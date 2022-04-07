@@ -47,7 +47,7 @@ int main(){
     cout << "5^3 = " << Power<5, 3>::val << endl;
 
     int arr[] = {1, 2, 3};
-    cout << get_size<>(arr) << endl;
+    cout << get_size(arr) << endl;
 
     return 0;
 }
