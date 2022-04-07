@@ -23,5 +23,9 @@ struct Power<N, 0>{
     enum {val = 1};
 };
 
+template <typename T, int sz>
+auto get_size(const T (&arr)[sz]){// obtener el tamaño de un array
+    return sz;
+}
 
 #endif //SEMANA3_TEMPLATES_FUNCIONES_H

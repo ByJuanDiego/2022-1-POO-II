@@ -40,8 +40,14 @@ int main(){
     int var1 = f1<int>();
     int var2 = f2<int, int>(10, 20);
     int var3 = f3<int>(10, 20);
-    cout << concatenar("Hola ", "Diego Paredes");
+
+    cout << "var1: " << var1 << " var2: " << var2 << " var3: " << var3 << endl;
+
+    cout << concatenar("Hola ", "Diego Paredes") << endl;
     cout << "5^3 = " << Power<5, 3>::val << endl;
-    
+
+    int arr[] = {1, 2, 3};
+    cout << get_size<>(arr) << endl;
+
     return 0;
 }
