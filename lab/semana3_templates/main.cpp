@@ -103,12 +103,11 @@ int main() {
     show("Juan");
 
     cout << sumar(1, 2) << endl;
-    cout << sumar<double>(static_cast<int>(1.4), 2.3) << endl;
+    cout << sumar<double>(1.5, 2.5) << endl;
     cout << restar<int>(1, 1) << endl;
-    cout << multiplicar<int>(1, 3) << endl;
 
-    auto x = multiplicar(3, 2.3);
-    cout << x << endl;
+    cout << multiplicar<int>(1.5, 2.5) << endl; // retorna un int aunque se deduzcan sus operandos como double
+    cout << multiplicar(1.5, 2.5) << endl;      // retorna un double por defecto
 
     int n1 = 1, n2 = 3;
     cout << adicionar(n1, n2) << endl;
