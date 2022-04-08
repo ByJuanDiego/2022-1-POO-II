@@ -17,6 +17,7 @@ using namespace std;
 
     1. Solo se pueden deducir los tipos de datos en los parametros de la funcion
     2. Los parametros deducibles se escriben de derecha a izquierda
+    3. La deduccion se detiene al momento de encontrar un parametro no deducible
 
 */
 
