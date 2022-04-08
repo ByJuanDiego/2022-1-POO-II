@@ -44,9 +44,9 @@ using namespace std;
 
 */
 
-void show(const char* nombre, const char* apellido = "Castro"){
+void show(string&& nombre, string&& apellido = "Castro"){
     /*
-    void show2(const char* nombre = "Juan", const char* string&& apellido);
+    void show(string&& nombre = "Juan", string&& apellido);
     no funciona porque los parametros por defecto se quitan de izquierda a derecha
     */
     cout << nombre << " " << apellido << endl;
