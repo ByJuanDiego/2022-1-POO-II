@@ -24,7 +24,7 @@ using namespace std;
     - Los tipos se clasifican en conceptos
 
       +---------------------------+-----------------------------+
-      |     template generico     |     template especifico      |
+      |     template generico     |     template especifico     |
       ----------------------------+------------------------------
       | adicionar(T var1, T var2) | adicionar(T* ptr1, T* ptr2) |
       +---------------------------+-----------------------------+
