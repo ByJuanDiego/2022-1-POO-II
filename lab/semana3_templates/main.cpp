@@ -54,12 +54,12 @@ void show(string&& nombre, string&& apellido = "Castro"){
 
 template <typename T>
 T sumar(T o1, T o2){
-    return o1 + o2;
+    return o1+o2;
 }
 
 template<typename T>
 T restar(int a, int b){
-    return a+b;
+    return a-b;
 }
 
 template<typename T1 = double, typename T2, typename T3>
