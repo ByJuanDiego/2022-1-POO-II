@@ -89,12 +89,12 @@ auto concatenar(const char* src1, const char* src2){
     return strcat(result, src2);
 }
 
-void f1(int a, int b){
+void f(int a, int b){
     cout << "a: " << a << " b: " << b << endl;
 }
 
 template<int a, int b>
-void f2(){
+void f(){
     cout << "a: " << a << " b: " << b << endl;
 }
 
@@ -115,8 +115,8 @@ int main() {
     cout << adicionar("Hola", " Mundo") << endl;
     cout << concatenar("Hola", " Mundo") << endl;
 
-    f1(10, 20);
-    f2<10, 20>();
+    f(10, 20);
+    f<10, 20>();
 
     /*
     int a = 10, b = 20;
