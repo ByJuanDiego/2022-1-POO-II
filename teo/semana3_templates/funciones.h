@@ -14,12 +14,10 @@ auto concatenar(const char* a, const char* b){
     return result;
 }
 
-template <int N, int P>
-struct Power{
+template <int N, int P> struct Power{
     enum {val = N * Power<N, P-1>::val};
 };
-template <int N>
-struct Power<N, 0>{
+template <int N> struct Power<N, 0>{
     enum {val = 1};
 };
 

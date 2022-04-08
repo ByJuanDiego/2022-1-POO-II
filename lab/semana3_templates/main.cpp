@@ -1,16 +1,48 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 /*
  1. Programacion generica
     - Se lleva a cabo en tiempo de compilacion
     - Templates
+
+ 2. Templates
+    - Funciones
+    - Clase
+    - Variables
+        T a = valor;
+    - Alias
+        using TYPE = int
+        typedef int TYPE;
+
+ 3. Templates de funciones
+    - Los tipos de parametros de Template se pueden deducir
+
+ 4.
+    - Las variables se clasifican en tipos (int, double, string)
+    - Los tipos se clasifican en conceptos
+
+      +---------------------------+-----------------------------+
+      |     template generico     |     template especifico      |
+      ----------------------------+------------------------------
+      | adicionar(T var1, T var2) | adicionar(T* ptr1, T* ptr2) |
+      +---------------------------+-----------------------------+
+
  5. Tipos de parametro de template
-    - Parametros tipo       : <typename T>
-    - Parametros no tipo    : <int a, int b> (util para arreglos estaticos, muy limitado para otros usos)
-    - Parametros de tamplate: <>
+    - Parametros TIPO       : <typename T>
+    - Parametros NO-TIPO    : <int a, int b> (util para arreglos estaticos, muy limitado para otros usos)
+    - Parametros TEMPLATE   : <>
 */
 
+/*
+ Reglas de deduccion de parametros de Templates de funciones
+
+    1. Solo se pueden deducir los tipos de datos en los parametros de la funcion
+    2. Los parametros deducibles se escriben de derecha a izquierda
+    3. La deduccion se detiene al momento de encontrar un parametro no deducible
+
+*/
 
 void show(string&& nombre, string&& apellido = "Castro"){
     /*
@@ -47,7 +79,13 @@ auto adicionar(T* ptr1, T* ptr2){ // Especializacion de "adicionar(T var1, T var
 }
 
 auto adicionar(const char* str1, const char* str2){
-    return string(str1) + string(str2);
+    return (string(str1) + string(str2));
+}
+
+auto concatenar(const char* src1, const char* src2){
+    char* result = new char[strlen(src1) + strlen(src2) + 1];
+    strcpy(result, src1);
+    return strcat(result, src2);
 }
 
 void f1(int a, int b){
@@ -65,9 +103,7 @@ int main() {
 
     cout << sumar(1, 2) << endl;
     cout << sumar<double>(static_cast<int>(1.4), 2.3) << endl;
-
     cout << restar<int>(1, 1) << endl;
-
     cout << multiplicar<int>(1, 3) << endl;
 
     auto x = multiplicar(3, 2.3);
@@ -77,12 +113,13 @@ int main() {
     cout << adicionar(n1, n2) << endl;
     cout << adicionar(&n1, &n2) << endl;
     cout << adicionar("Hola", " Mundo") << endl;
+    cout << concatenar("Hola", " Mundo") << endl;
 
     f1(10, 20);
     f2<10, 20>();
 
     /*
-    int a=10, b=20;
+    int a = 10, b = 20;
     f1(a, b);    // funciona
     f2<a, b>();  // no funciona, (a) y (b) no existen en tiempo de compilacion.
     */
