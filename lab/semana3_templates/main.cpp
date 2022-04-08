@@ -120,8 +120,8 @@ int main() {
 
     /*
     int a = 10, b = 20;
-    f1(a, b);    // funciona
-    f2<a, b>();  // no funciona, (a) y (b) no existen en tiempo de compilacion.
+    f(a, b);    // funciona
+    f<a, b>();  // no funciona, (a) y (b) no existen en tiempo de compilacion.
     */
 
     return 0;
