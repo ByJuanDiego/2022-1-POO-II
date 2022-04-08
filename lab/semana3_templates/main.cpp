@@ -74,7 +74,8 @@ auto adicionar(T var1, T var2){
 }
 
 template<typename T>
-auto adicionar(T* ptr1, T* ptr2){ // Especializacion de "adicionar(T var1, T var2);"
+auto adicionar(T* ptr1, T* ptr2){
+    // Especializacion de "adicionar(T var1, T var2);"
     return (*ptr1) + (*ptr2);
 }
 
