@@ -44,7 +44,7 @@ using namespace std;
 
 */
 
-void show(string&& nombre, string&& apellido = "Castro"){
+void show(const char* nombre, const char* apellido = "Castro"){
     /*
     void show2(string&& nombre = "Juan", string&& apellido);
     no funciona porque los parametros por defecto se quitan de izquierda a derecha
