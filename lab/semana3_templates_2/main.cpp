@@ -86,8 +86,8 @@ int main() {
     display<list<double>::iterator>(begin(lst), end(lst));
     cout << "Suma de elementos: " << suma_elementos(begin(lst), end(lst), 0) << endl;
 
-    int a1 = A::atributo_de_clase; // Operador de ambito para acceder a la variable
-    typename A::value_type a2 = 1; // Operador de ambito para acceder al alias
+    int a1 = A::atributo_de_clase;  // Operador de ambito para acceder a la variable
+    typename A::value_type a2 = 0;  // Operador de ambito para acceder al alias
     /*
         Para evitar que el compilador se confunda se usa el typename para decir explicitamente que
         A::value_type hace referencia el tipo de dato y no a un atributo de clase dentro del struct
