@@ -15,8 +15,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="212c88b6-24ce-4caa-9770-c7946d760404" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../semana3_templates_1/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../semana3_templates_1/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/semana3_templates_2.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/semana3_templates_2.dir/main.cpp.o" afterDir="false" />
@@ -85,6 +83,7 @@
       <workItem from="1649474557113" duration="4427000" />
       <workItem from="1649525329870" duration="728000" />
       <workItem from="1649527181278" duration="1590000" />
+      <workItem from="1649538323936" duration="333000" />
     </task>
     <servers />
   </component>

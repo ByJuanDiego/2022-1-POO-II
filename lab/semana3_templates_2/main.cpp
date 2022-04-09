@@ -24,7 +24,7 @@ void push(Container<T>& contenedor, T value){// push_back para un contenedor gen
 
 template<typename Iterator>
 void display(Iterator begin, Iterator end){
-    for (auto it=begin; it!=end; it++){
+    for (auto it= begin; it != end; it++){
         typename Iterator::value_type value = *it;
         cout << value << " ";
     }
