@@ -83,7 +83,7 @@ int main() {
     typename A::value_type a2 = 1; // Operador de ambito para acceder al alias
     /*
         Para evitar que el compilador se confunda se usa el typename para decir explicitamente que
-        A::value_type hace referencia el tipo de dato y no a una variable statica dentro del struct
+        A::value_type hace referencia el tipo de dato y no a un atributo de clase dentro del struct
     */
     cout << "a1: " << a1 << " a2: " << a2 << endl;
 
