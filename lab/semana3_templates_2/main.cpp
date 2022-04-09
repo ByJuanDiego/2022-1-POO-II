@@ -48,6 +48,12 @@ auto suma_elementos(Iterator start, Iterator stop, typename Iterator::value_type
     return suma;
 }
 
+struct A{
+    int atributo_de_objeto = 0;                 // Atributo de objeto (requiere instanciar a la clase para ser usado)
+    inline static int atributo_de_clase = 10;   // Atributo de clase  (no requiere instanciación)
+    typedef int value_type;                     // Alias
+};
+
 int main() {
 
     int arr1[10] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -72,6 +78,14 @@ int main() {
     cout << "Suma de elementos: " << suma_elementos(begin(lst), end(lst), 0) << endl;
 
     cout << "5! = " << factorial<5>() << endl;
+
+    int a1 = A::atributo_de_clase; // Operador de ambito para acceder a la variable
+    typename A::value_type a2 = 1; // Operador de ambito para acceder al alias
+    /*
+        Para evitar que el compilador se confunda se usa el typename para decir explicitamente que
+        A::value_type hace referencia el tipo de dato y no a una variable statica dentro del struct
+    */
+    cout << "a1: " << a1 << " a2: " << a2 << endl;
 
     return 0;
 }
