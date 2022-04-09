@@ -10,7 +10,7 @@ auto get_size(const T (&)[sz]){// obtener el tamaño de un array estatico
 }
 
 template<typename T, size_t sz>
-int get_size(std::array<T, sz>){// obtener el tamaño de un std::array
+int get_size(std::array<T, sz>&){// obtener el tamaño de un std::array
     return sz;
 }
 
