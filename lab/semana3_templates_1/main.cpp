@@ -57,8 +57,8 @@ void show(string&& nombre, string&& apellido = "Castro"){
 }
 
 template <typename T>
-T sumar(T o1, T o2){
-    return o1+o2;
+T sumar(T a, T b){
+    return a+b;
 }
 
 template<typename T>
@@ -106,18 +106,18 @@ int main() {
 
     show("Juan");
 
-    cout << "1 + 2 = " << sumar(1, 2) << endl;
-    cout << "1.5 + 2.5  = " << sumar<double>(1.5, 2.5) << endl;
-    cout << "1 - 1 = " << restar<int>(1, 1) << endl;
+    cout << "1 + 2 = "            << sumar(1, 2) << endl;
+    cout << "1.5 + 2.5  = "       << sumar<double>(1.5, 2.5) << endl;
+    cout << "1 - 1 = "            << restar<int>(1, 1) << endl;
 
-    cout << "(int) (1.5 * 2.5) = " << multiplicar<int>(1.5, 2.5) << endl; // retorna un int aunque se deduzcan sus operandos como double
-    cout << "1.5 * 2.5 = " << multiplicar(1.5, 2.5) << endl;      // retorna un double por defecto
-
+    cout << "1.5 * 2.5 = "        << multiplicar(1.5, 2.5) << endl;      // retorna un double por defecto
+    cout << "(int)(1.5 * 2.5) = " << multiplicar<int>(1.5, 2.5) << endl; // retorna un int aunque se deduzcan sus operandos como double
+    
     int n1 = 2, n2 = 5;
-    cout << "n1 + n2 = " << adicionar(n1, n2) << endl;
-    cout << "*n1 + *n2 = " << adicionar(&n1, &n2) << endl;
-    cout << "str1 + str2 = " <<  adicionar("Hola", " Mundo") << endl;
-    cout << "char1* + char2* = " << concatenar("Hola", " Mundo") << endl;
+    cout << "n1 + n2 = "          << adicionar(n1, n2) << endl;
+    cout << "*n1 + *n2 = "        << adicionar(&n1, &n2) << endl;
+    cout << "str1 + str2 = "      << adicionar("Hola", " Mundo") << endl;
+    cout << "char1* + char2* = "  << concatenar("Hola", " Mundo") << endl;
 
     f(10, 20);
     f<10, 20>();
