@@ -1,5 +1,8 @@
 #include <iostream>
 #include <cstring>
+#include <array>
+#include <vector>
+#include <list>
 #include "funciones.h"
 using namespace std;
 
@@ -100,26 +103,45 @@ void f(){
 }
 
 template <typename T, int sz>
-auto get_size(const T (&arr)[sz]){// obtener el tamaño de un array
+auto get_size(const T (&)[sz]){// obtener el tamaño de un array estatico
     return sz;
+}
+
+template<typename T, size_t sz>
+int get_size(array<T, sz>){// obtener el tamaño de un array
+    return sz;
+}
+
+template <template<typename...> class Container, typename T>
+void push(Container<T>& contenedor, T value){// obtener el tamaño de un array
+    contenedor.push_back(value);
+}
+
+template<int N>
+constexpr int factorial(){
+    return N * factorial<N-1>();
+}
+template<>
+constexpr int factorial<0>(){
+    return 1;
 }
 
 int main() {
 
     show("Juan");
 
-    cout << sumar(1, 2) << endl;
-    cout << sumar<double>(1.5, 2.5) << endl;
-    cout << restar<int>(1, 1) << endl;
+    cout << "1 + 2 = " << sumar(1, 2) << endl;
+    cout << "1.5 + 2.5  = " << sumar<double>(1.5, 2.5) << endl;
+    cout << "1 - 1 = " << restar<int>(1, 1) << endl;
 
-    cout << multiplicar<int>(1.5, 2.5) << endl; // retorna un int aunque se deduzcan sus operandos como double
-    cout << multiplicar(1.5, 2.5) << endl;      // retorna un double por defecto
+    cout << "(int) (1.5 * 2.5) = " << multiplicar<int>(1.5, 2.5) << endl; // retorna un int aunque se deduzcan sus operandos como double
+    cout << "1.5 * 2.5 = " << multiplicar(1.5, 2.5) << endl;      // retorna un double por defecto
 
-    int n1 = 1, n2 = 3;
-    cout << adicionar(n1, n2) << endl;
-    cout << adicionar(&n1, &n2) << endl;
-    cout << adicionar("Hola", " Mundo") << endl;
-    cout << concatenar("Hola", " Mundo") << endl;
+    int n1 = 2, n2 = 5;
+    cout << "n1 + n2 = " << adicionar(n1, n2) << endl;
+    cout << "*n1 + *n2 = " << adicionar(&n1, &n2) << endl;
+    cout << "str1 + str2 = " <<  adicionar("Hola", " Mundo") << endl;
+    cout << "char1* + char2* = " << concatenar("Hola", " Mundo") << endl;
 
     f(10, 20);
     f<10, 20>();
@@ -130,10 +152,31 @@ int main() {
     f<a, b>();  // no funciona, (a) y (b) no existen en tiempo de compilacion.
     */
 
-    int arr[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-    cout << get_size(arr) << endl;
+    int arr1[10] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    std::array<int, 2> arr2 {0, 1};
 
-    cout << factorial<10>();
-    
+    cout << "arr[10] = " << get_size(arr1) << endl;
+    cout << "array<int, 2> arr2 = " << get_size(arr2) << endl;
+
+    std::vector<int> vec;
+    vec.push_back(1);
+    push<vector>(vec, 2);
+    push<vector>(vec, 3);
+    for (const auto &i: vec){
+        cout << i << " ";
+    }
+    cout << endl;
+
+    std::list<double> lst;
+    lst.push_back(1.1);
+    push<list>(lst, 2.2);
+    push<list>(lst, 3.3);
+    for (const auto &i: lst){
+        cout << i << " ";
+    }
+    cout << endl;
+
+    cout << "5! = " << factorial<5>() << endl;
+
     return 0;
 }
