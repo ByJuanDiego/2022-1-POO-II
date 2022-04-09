@@ -32,7 +32,10 @@ using namespace std;
 
  5. Tipos de parametro de template
     - Parametros TIPO       : <typename T>
-    - Parametros NO-TIPO    : <int a, int b> (util para arreglos estaticos, muy limitado para otros usos)
+    - Parametros NO-TIPO    : <int a, int b>
+        • Útil para obtener el size de arrays estáticos
+        • Cálculos matemáticos en tiempo de compilación
+        • Deducción de tipos en tiempo de compilación
     - Parametros TEMPLATE   : <>
 */
 
