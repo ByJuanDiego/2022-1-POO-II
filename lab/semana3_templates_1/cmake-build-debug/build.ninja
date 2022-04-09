@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: semana3_templates
+# Project: semana3_templates_1
 # Configurations: Debug
 # =============================================================================
 
@@ -64,35 +64,35 @@ build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
 build edit_cache: phony CMakeFiles/edit_cache.util
 
 # =============================================================================
-# Object build statements for EXECUTABLE target semana3_templates
+# Object build statements for EXECUTABLE target semana3_templates_1
 
 
 #############################################
-# Order-only phony target for semana3_templates
+# Order-only phony target for semana3_templates_1
 
-build cmake_object_order_depends_target_semana3_templates: phony || CMakeFiles/semana3_templates.dir
+build cmake_object_order_depends_target_semana3_templates_1: phony || CMakeFiles/semana3_templates_1.dir
 
-build CMakeFiles/semana3_templates.dir/main.cpp.o: CXX_COMPILER__semana3_templates_Debug /Users/juandiegocastropadilla/Desktop/CS1103/lab/semana3_templates_1/main.cpp || cmake_object_order_depends_target_semana3_templates
-  DEP_FILE = CMakeFiles/semana3_templates.dir/main.cpp.o.d
+build CMakeFiles/semana3_templates_1.dir/main.cpp.o: CXX_COMPILER__semana3_templates_1_Debug /Users/juandiegocastropadilla/Desktop/CS1103/lab/semana3_templates_1/main.cpp || cmake_object_order_depends_target_semana3_templates_1
+  DEP_FILE = CMakeFiles/semana3_templates_1.dir/main.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
-  OBJECT_DIR = CMakeFiles/semana3_templates.dir
-  OBJECT_FILE_DIR = CMakeFiles/semana3_templates.dir
+  OBJECT_DIR = CMakeFiles/semana3_templates_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/semana3_templates_1.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target semana3_templates
+# Link build statements for EXECUTABLE target semana3_templates_1
 
 
 #############################################
-# Link the executable semana3_templates
+# Link the executable semana3_templates_1
 
-build semana3_templates: CXX_EXECUTABLE_LINKER__semana3_templates_Debug CMakeFiles/semana3_templates.dir/main.cpp.o
+build semana3_templates_1: CXX_EXECUTABLE_LINKER__semana3_templates_1_Debug CMakeFiles/semana3_templates_1.dir/main.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
-  OBJECT_DIR = CMakeFiles/semana3_templates.dir
+  OBJECT_DIR = CMakeFiles/semana3_templates_1.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = semana3_templates
-  TARGET_PDB = semana3_templates.dbg
+  TARGET_FILE = semana3_templates_1
+  TARGET_PDB = semana3_templates_1.dbg
 
 # =============================================================================
 # Target aliases.
@@ -105,7 +105,7 @@ build semana3_templates: CXX_EXECUTABLE_LINKER__semana3_templates_Debug CMakeFil
 #############################################
 # Folder: /Users/juandiegocastropadilla/Desktop/CS1103/lab/semana3_templates_1/cmake-build-debug
 
-build all: phony semana3_templates
+build all: phony semana3_templates_1
 
 # =============================================================================
 # Built-in targets
