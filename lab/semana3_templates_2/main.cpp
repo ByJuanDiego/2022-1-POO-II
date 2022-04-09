@@ -16,8 +16,7 @@ int get_size(std::array<T, sz>&){// obtener el tamaño de un std::array
 
 template <
         template<typename...> class Container,
-        typename T
-        >
+        typename T>
 void push(Container<T>& contenedor, T value){// push_back para un contenedor generico
     contenedor.push_back(value);
 }
