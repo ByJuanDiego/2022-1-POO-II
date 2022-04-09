@@ -3,7 +3,6 @@
 #include <array>
 #include <vector>
 #include <list>
-#include "funciones.h"
 using namespace std;
 
 /*
