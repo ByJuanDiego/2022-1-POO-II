@@ -61,8 +61,6 @@ int main() {
     display<std::list<double>::iterator>(begin(lst), end(lst));
 
     cout << "5! = " << factorial<5>() << endl;
-
-
-
+    
     return 0;
 }
