@@ -39,6 +39,15 @@ constexpr long long int factorial<0>(){
     return 1;
 }
 
+template<typename Iterator>
+auto suma_elementos(Iterator begin, Iterator end, typename Iterator::value_type initial){
+    typename Iterator::value_type suma = initial;
+    for (auto it = begin; it != end; it++){
+        suma += (*it);
+    }
+    return suma;
+}
+
 int main() {
 
     int arr1[10] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -52,12 +61,15 @@ int main() {
     push<vector, int>(vec, 2);
     push<vector, int>(vec, 3);
     display<std::vector<int>::iterator>(begin(vec), end(vec));
+    cout << "Suma de elementos: " << suma_elementos(begin(vec), end(vec), 0) << endl;
+
 
     std::list<double> lst;
     lst.push_back(1.1);
     push<list, double>(lst, 2.2);
     push<list, double>(lst, 3.3);
     display<std::list<double>::iterator>(begin(lst), end(lst));
+    cout << "Suma de elementos: " << suma_elementos(begin(lst), end(lst), 0) << endl;
 
     cout << "5! = " << factorial<5>() << endl;
 
