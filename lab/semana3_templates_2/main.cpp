@@ -22,8 +22,8 @@ void push(Container<T>& contenedor, T value){// push_back para un contenedor gen
 }
 
 template<typename Iterator>
-void display(Iterator begin, Iterator end){
-    for (auto it= begin; it != end; it++){
+void display(Iterator start, Iterator stop){
+    for (auto it= start; it != stop; it++){
         typename Iterator::value_type value = *it;
         cout << value << " ";
     }
@@ -40,9 +40,9 @@ constexpr long long int factorial<0>(){
 }
 
 template<typename Iterator>
-auto suma_elementos(Iterator begin, Iterator end, typename Iterator::value_type initial){
+auto suma_elementos(Iterator start, Iterator stop, typename Iterator::value_type initial){
     typename Iterator::value_type suma = initial;
-    for (auto it = begin; it != end; it++){
+    for (auto it = start; it != stop; it++){
         suma += (*it);
     }
     return suma;
