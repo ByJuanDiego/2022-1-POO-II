@@ -22,6 +22,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/semana3_templates_2.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/semana3_templates_2.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/semana3_templates_2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/semana3_templates_2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +83,8 @@
       <workItem from="1649471559742" duration="42000" />
       <workItem from="1649471620554" duration="40000" />
       <workItem from="1649474557113" duration="4427000" />
-      <workItem from="1649525329870" duration="1000" />
+      <workItem from="1649525329870" duration="728000" />
+      <workItem from="1649527181278" duration="1590000" />
     </task>
     <servers />
   </component>

@@ -50,17 +50,19 @@ int main() {
 
     std::vector<int> vec;
     vec.push_back(1);
-    push<vector>(vec, 2);
-    push<vector>(vec, 3);
-    display(begin(vec), end(vec));
+    push<vector, int>(vec, 2);
+    push<vector, int>(vec, 3);
+    display<std::vector<int>::iterator>(begin(vec), end(vec));
 
     std::list<double> lst;
     lst.push_back(1.1);
-    push<list>(lst, 2.2);
-    push<list>(lst, 3.3);
-    display(begin(lst), end(lst));
+    push<list, double>(lst, 2.2);
+    push<list, double>(lst, 3.3);
+    display<std::list<double>::iterator>(begin(lst), end(lst));
 
     cout << "5! = " << factorial<5>() << endl;
+
+
 
     return 0;
 }
