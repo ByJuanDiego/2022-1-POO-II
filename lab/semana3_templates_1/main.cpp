@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include "funciones.h"
 using namespace std;
 
 /*
@@ -98,6 +99,11 @@ void f(){
     cout << "a: " << a << " b: " << b << endl;
 }
 
+template <typename T, int sz>
+auto get_size(const T (&arr)[sz]){// obtener el tamaño de un array
+    return sz;
+}
+
 int main() {
 
     show("Juan");
@@ -124,5 +130,10 @@ int main() {
     f<a, b>();  // no funciona, (a) y (b) no existen en tiempo de compilacion.
     */
 
+    int arr[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    cout << get_size(arr) << endl;
+
+    cout << factorial<10>();
+    
     return 0;
 }
