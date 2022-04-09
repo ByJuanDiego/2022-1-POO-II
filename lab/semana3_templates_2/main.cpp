@@ -32,11 +32,11 @@ void display(Iterator begin, Iterator end){
 }
 
 template<int N>
-constexpr int factorial(){
+constexpr long long int factorial(){
     return N * factorial<N-1>();
 }
 template<>
-constexpr int factorial<0>(){
+constexpr long long int factorial<0>(){
     return 1;
 }
 
