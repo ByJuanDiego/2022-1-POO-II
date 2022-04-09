@@ -34,8 +34,7 @@ void push(Container& contenedor, typename Container::value_type valueType
     contenedor.push_back(valueType);
 }
 
-template <typename T,
-        template<typename...> class Container>
+template <template<typename...> class Container, typename T>
 void push(Container<T>& contenedor_, T valueType_){
     // Forma alternativa
     contenedor_.push_back(valueType_);
