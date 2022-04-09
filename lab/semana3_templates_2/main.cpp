@@ -15,8 +15,17 @@ int get_size(std::array<T, sz>&){// obtener el tamaño de un std::array
 }
 
 template <template<typename...> class Container, typename T>
-void push(Container<T>& contenedor, T value){// obtener el tamaño de un array
+void push(Container<T>& contenedor, T value){// push_back para un contenedor generico
     contenedor.push_back(value);
+}
+
+template<typename Iterator>
+void display(Iterator begin, Iterator end){
+    for (auto it=begin; it!=end; it++){
+        typename Iterator::value_type value = *it;
+        cout << value << " ";
+    }
+    cout << endl;
 }
 
 template<int N>
@@ -40,19 +49,13 @@ int main() {
     vec.push_back(1);
     push<vector>(vec, 2);
     push<vector>(vec, 3);
-    for (const auto &i: vec){
-        cout << i << " ";
-    }
-    cout << endl;
+    display(begin(vec), end(vec));
 
     std::list<double> lst;
     lst.push_back(1.1);
     push<list>(lst, 2.2);
     push<list>(lst, 3.3);
-    for (const auto &i: lst){
-        cout << i << " ";
-    }
-    cout << endl;
+    display(begin(lst), end(lst));
 
     cout << "5! = " << factorial<5>() << endl;
 
