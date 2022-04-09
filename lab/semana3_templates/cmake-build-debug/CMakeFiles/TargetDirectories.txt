@@ -1,3 +1,0 @@
-/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana3_templates/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana3_templates/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana3_templates/cmake-build-debug/CMakeFiles/semana3_templates.dir
