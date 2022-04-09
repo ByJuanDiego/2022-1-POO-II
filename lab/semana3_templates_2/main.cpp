@@ -14,12 +14,28 @@ int get_size(std::array<T, sz>&){// obtener el tamaño de un std::array
     return sz;
 }
 
+template<int N>
+constexpr long long int factorial(){
+    return N * factorial<N-1>();
+}
+template<>
+constexpr long long int factorial<0>(){
+    return 1;
+}
+
+template <typename Container>
+void push(Container& contenedor, typename Container::value_type value){// push_back para un contenedor generico
+    contenedor.push_back(value);
+}
+
+/* forma alternativa
 template <
         template<typename...> class Container,
         typename T>
 void push(Container<T>& contenedor, T value){// push_back para un contenedor generico
     contenedor.push_back(value);
 }
+*/
 
 template<typename Iterator>
 void display(Iterator start, Iterator stop){
@@ -28,15 +44,6 @@ void display(Iterator start, Iterator stop){
         cout << value << " ";
     }
     cout << endl;
-}
-
-template<int N>
-constexpr long long int factorial(){
-    return N * factorial<N-1>();
-}
-template<>
-constexpr long long int factorial<0>(){
-    return 1;
 }
 
 template<typename Iterator>
@@ -62,22 +69,22 @@ int main() {
     cout << "size(int[10]) = " << get_size(arr1) << endl;
     cout << "size(array<int>) = " << get_size(arr2) << endl;
 
+    cout << "5! = " << factorial<5>() << endl;
+
     std::vector<int> vec;
     vec.push_back(1);
-    push<vector, int>(vec, 2);
-    push<vector, int>(vec, 3);
-    display<std::vector<int>::iterator>(begin(vec), end(vec));
+    push<vector<int>>(vec, 2);
+    push<vector<int>>(vec, 3);
+    display<vector<int>::iterator>(begin(vec), end(vec));
     cout << "Suma de elementos: " << suma_elementos(begin(vec), end(vec), 0) << endl;
 
 
     std::list<double> lst;
     lst.push_back(1.1);
-    push<list, double>(lst, 2.2);
-    push<list, double>(lst, 3.3);
-    display<std::list<double>::iterator>(begin(lst), end(lst));
+    push<list<double>>(lst, 2.2);
+    push<list<double>>(lst, 3.3);
+    display<list<double>::iterator>(begin(lst), end(lst));
     cout << "Suma de elementos: " << suma_elementos(begin(lst), end(lst), 0) << endl;
-
-    cout << "5! = " << factorial<5>() << endl;
 
     int a1 = A::atributo_de_clase; // Operador de ambito para acceder a la variable
     typename A::value_type a2 = 1; // Operador de ambito para acceder al alias
