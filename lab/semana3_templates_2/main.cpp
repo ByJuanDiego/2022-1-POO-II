@@ -45,8 +45,8 @@ int main() {
     int arr1[10] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     std::array<int, 2> arr2 {0, 1};
 
-    cout << "arr[10] = " << get_size(arr1) << endl;
-    cout << "array<int, 2> arr2 = " << get_size(arr2) << endl;
+    cout << "size(int[10]) = " << get_size(arr1) << endl;
+    cout << "size(array<int>) = " << get_size(arr2) << endl;
 
     std::vector<int> vec;
     vec.push_back(1);
@@ -61,6 +61,6 @@ int main() {
     display<std::list<double>::iterator>(begin(lst), end(lst));
 
     cout << "5! = " << factorial<5>() << endl;
-    
+
     return 0;
 }
