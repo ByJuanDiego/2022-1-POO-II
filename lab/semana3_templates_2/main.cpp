@@ -2,6 +2,7 @@
 #include <array>
 #include <vector>
 #include <list>
+#include <cmath>
 using namespace std;
 
 template <typename T, int sz>
@@ -17,7 +18,10 @@ int get_size(std::array<T, sz>&){
 }
 
 template<int N>
-constexpr long long int factorial(){
+constexpr
+// constexpr: To be evaluated at compile time
+// const    : I promise not to change the value
+long long int factorial(){
     return N * factorial<N-1>();
 }
 template<>
