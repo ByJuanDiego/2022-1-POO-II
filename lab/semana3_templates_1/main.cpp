@@ -112,7 +112,7 @@ int main() {
 
     cout << "1.5 * 2.5 = "        << multiplicar(1.5, 2.5) << endl;      // retorna un double por defecto
     cout << "(int)(1.5 * 2.5) = " << multiplicar<int>(1.5, 2.5) << endl; // retorna un int aunque se deduzcan sus operandos como double
-    
+
     int n1 = 2, n2 = 5;
     cout << "n1 + n2 = "          << adicionar(n1, n2) << endl;
     cout << "*n1 + *n2 = "        << adicionar(&n1, &n2) << endl;
