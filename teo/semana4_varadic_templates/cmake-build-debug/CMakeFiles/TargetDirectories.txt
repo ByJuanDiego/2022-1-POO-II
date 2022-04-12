@@ -1,0 +1,3 @@
+/Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates/cmake-build-debug/CMakeFiles/semana4_varadic_templates.dir
