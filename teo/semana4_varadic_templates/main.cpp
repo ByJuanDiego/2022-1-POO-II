@@ -48,7 +48,7 @@ void f7(T last){
 } template<typename T, typename... ParamType>
 void f7(T first, ParamType... otherParams){
     std::cout << __PRETTY_FUNCTION__ << "  ";
-    // Generalización de print1(T initial, ParamType... paramType)
+    // Generalización de f7(T first, ParamType... otherParams);
     // Caso Recursivo
     std::cout << first << ", " << std::endl;
     f7(otherParams...);
