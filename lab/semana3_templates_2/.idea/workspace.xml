@@ -14,7 +14,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="212c88b6-24ce-4caa-9770-c7946d760404" name="Changes" comment="" />
+    <list default="true" id="212c88b6-24ce-4caa-9770-c7946d760404" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../teo/semana4_varadic_templates/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../teo/semana4_varadic_templates/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../teo/semana4_varadic_templates/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../teo/semana4_varadic_templates/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../teo/semana4_varadic_templates/cmake-build-debug/CMakeFiles/semana4_varadic_templates.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../teo/semana4_varadic_templates/cmake-build-debug/CMakeFiles/semana4_varadic_templates.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../teo/semana4_varadic_templates/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../teo/semana4_varadic_templates/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../teo/semana4_varadic_templates/cmake-build-debug/semana4_varadic_templates" beforeDir="false" afterPath="$PROJECT_DIR$/../../teo/semana4_varadic_templates/cmake-build-debug/semana4_varadic_templates" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../teo/semana4_varadic_templates/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../teo/semana4_varadic_templates/main.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,6 +102,9 @@
       <workItem from="1649606010288" duration="2285000" />
       <workItem from="1649699744621" duration="632000" />
       <workItem from="1649719633417" duration="9000" />
+      <workItem from="1649803292015" duration="173000" />
+      <workItem from="1649807032173" duration="22000" />
+      <workItem from="1649807237930" duration="9000" />
     </task>
     <servers />
   </component>

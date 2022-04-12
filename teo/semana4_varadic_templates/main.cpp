@@ -123,11 +123,10 @@ int main() {
     std::cout << "1+2+3+4 = " << suma1 << std::endl;
     std::cout << "5+6+7+8 = " << suma2 << std::endl;
 
-    std::cout << "isInt(5): " << std::boolalpha << (is_int<int>()) << std::endl;
-    std::cout << "isInt(true): " << std::boolalpha << (is_int<bool>()) << std::endl;
+    std::cout << "is_int(int): " << std::boolalpha << (is_int<int>()) << std::endl;
+    std::cout << "is_int(bool): " << std::boolalpha << (is_int<bool>()) << std::endl;
 
     std::cout << std::endl;
-    f11<std::vector, std::map, std::list, std::vector>();
-
+    f11<std::vector, std::map, std::vector, std::list>();
     return 0;
 }
