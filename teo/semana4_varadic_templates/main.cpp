@@ -42,7 +42,7 @@ template<typename T>
 void f7(T last){
     std::cout << __PRETTY_FUNCTION__ << "  ";
     // El caso base se implementa arriba del caso recursivo
-    // Especialización de print1(T initial, ParamType... paramType)
+    // Especialización de f7(T first, ParamType... otherParams);
     // Caso base
     std::cout << last << std::endl;
 } template<typename T, typename... ParamType>
