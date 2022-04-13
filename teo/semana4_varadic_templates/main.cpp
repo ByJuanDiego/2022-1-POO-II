@@ -26,9 +26,9 @@ void f2(){
 
 template<
         int value,
-        template<typename...> class Container>
+        template<typename...> class Container = vector>
 void f3(){
-    // Template con parámetro NO TIPO y template TIPO
+    // Template con parámetro NO TIPO y template TIPO con valor por defecto
     cout << __PRETTY_FUNCTION__ << endl;
 }
 
@@ -120,7 +120,7 @@ int main() {
 
     f1(10);
     f2<int, 1>();
-    f3<1, vector>();
+    f3<1, list>();
     f4(1, -3, 4.3, 4.5, string("Hola"));
     f5<1, 2, 3, 4, 5>();
     f6<vector, map, list, basic_string>();
