@@ -3,64 +3,65 @@
 #include <map>
 #include <array>
 #include <list>
+using namespace std;
 
 template<typename T1 = double, typename T2>
 T1 f1(T2 param){
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
+    cout << __PRETTY_FUNCTION__ << endl;
     return param;
 }
 
 template<typename Param, int value = 10>
 void f2(){
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
+    cout << __PRETTY_FUNCTION__ << endl;
 }
 
 template<
         int value,
         template<typename...> class Container>
 void f3(){
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
+    cout << __PRETTY_FUNCTION__ << endl;
 }
 
 template<typename...ParamTypePackage>
 void f4(ParamTypePackage...paramPackage){
     // "..." puede almacenar: (int, double, string)
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
+    cout << __PRETTY_FUNCTION__ << endl;
 }
 
 template<int...ParamNoTypePackage>
 void f5(){
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
+    cout << __PRETTY_FUNCTION__ << endl;
 }
 
 template<template<typename...> class...ParamTemplatePackage>
 void f6(){
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
+    cout << __PRETTY_FUNCTION__ << endl;
 }
 
 template<typename T>
 void f7(T last){
-    std::cout << __PRETTY_FUNCTION__ << "  ";
+    cout << __PRETTY_FUNCTION__ << "  ";
     // El caso base se implementa arriba del caso recursivo
     // Especialización de f7(T first, ParamType... otherParams);
     // Caso base
-    std::cout << last << std::endl;
+    cout << last << endl;
 } template<typename T, typename... ParamType>
 void f7(T first, ParamType... otherParams){
-    std::cout << __PRETTY_FUNCTION__ << "  ";
+    cout << __PRETTY_FUNCTION__ << "  ";
     // Generalización de f7(T first, ParamType... otherParams);
     // Caso Recursivo
-    std::cout << first << ", " << std::endl;
+    cout << first << ", " << endl;
     f7(otherParams...);
 }
 
 template<typename... ParamNoTypePackage>
 void f8(ParamNoTypePackage... ParamPackage){// Fold Expressions
-    std::cout << __PRETTY_FUNCTION__ << "  ";
+    cout << __PRETTY_FUNCTION__ << "  ";
     // Una forma más limitada y compacta de implementar f7()
     // ((os << param1 << ", "), (os << param2 << ", "), ...)
-    ((std::cout << ParamPackage << ", "), ...);
-    std::cout << std::endl;
+    ((cout << ParamPackage << ", "), ...);
+    cout << std::endl;
 }
 
 template<typename ... Params>
@@ -85,7 +86,7 @@ constexpr bool is_int(){
 template<template<typename...> class T>
 constexpr bool is_vector(){
     return false;
-} template<> constexpr bool is_vector<std::vector>(){
+} template<> constexpr bool is_vector<vector>(){
     return true;
 }
 
@@ -94,12 +95,12 @@ template<
         template <typename...> class... ParamTemplatePackage>
 constexpr void f11() {
     // Verifica si los params son del template vector
-    std::cout << __PRETTY_FUNCTION__ << "  ";
-    std::cout << std::boolalpha << is_vector<First>() << std::endl;
+    cout << __PRETTY_FUNCTION__ << "  ";
+    cout << boolalpha << is_vector<First>() << endl;
     if constexpr (sizeof...(ParamTemplatePackage) > 0)
         f11<ParamTemplatePackage...>();
     else
-        std::cout << std::endl;
+        cout << endl;
 }
 
 
@@ -107,26 +108,26 @@ int main() {
 
     f1(10);
     f2<int, 1>();
-    f3<1, std::vector>();
-    f4(1, -3, 4.3, 4.5, std::string("Hola"));
+    f3<1, vector>();
+    f4(1, -3, 4.3, 4.5, string("Hola"));
     f5<1, 2, 3, 4, 5>();
-    f6<std::vector, std::map, std::list, std::basic_string>();
+    f6<vector, map, list, basic_string>();
 
-    std::cout << std::endl;
-    f7(1, 2, 4.5, std::string("A"));
-    std::cout << std::endl;
-    f8(0, -1, 3.14, std::string("B"));
-    std::cout << std::endl;
+    cout << endl;
+    f7(1, 2, 4.5, string("A"));
+    cout << endl;
+    f8(0, -1, 3.14, string("B"));
+    cout << endl;
 
     auto suma1 = f9(1, 2, 3, 4);
     auto suma2 = f10(5, 6, 7, 8);
-    std::cout << "1+2+3+4 = " << suma1 << std::endl;
-    std::cout << "5+6+7+8 = " << suma2 << std::endl;
+    cout << "1+2+3+4 = " << suma1 << endl;
+    cout << "5+6+7+8 = " << suma2 << endl;
 
-    std::cout << "is_int(int): " << std::boolalpha << (is_int<int>()) << std::endl;
-    std::cout << "is_int(bool): " << std::boolalpha << (is_int<bool>()) << std::endl;
+    cout << "is_int(int): " << boolalpha << (is_int<int>()) << endl;
+    cout << "is_int(bool): " << boolalpha << (is_int<bool>()) << endl;
 
-    std::cout << std::endl;
-    f11<std::vector, std::map, std::vector, std::list>();
+    cout << endl;
+    f11<vector, map, vector, list>();
     return 0;
 }
