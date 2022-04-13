@@ -5,14 +5,22 @@
 #include <list>
 using namespace std;
 
+/*
+ __PRETTY_FUNCTION__ is a gcc extension.
+ contains the "pretty" name of the function, including the signature of the function.
+*/
+
 template<typename T1 = double, typename T2>
 T1 f1(T2 param){
+    // Template con parámetros no tipo (T1 por defecto)
     cout << __PRETTY_FUNCTION__ << endl;
+    //
     return param;
 }
 
 template<typename Param, int value = 10>
 void f2(){
+    // Template con parámetro TIPO y NO TIPO con valor por defecto
     cout << __PRETTY_FUNCTION__ << endl;
 }
 
@@ -20,22 +28,26 @@ template<
         int value,
         template<typename...> class Container>
 void f3(){
+    // Template con parámetro NO TIPO y template
     cout << __PRETTY_FUNCTION__ << endl;
 }
 
+// "..." puede almacenar: (int, double, string)
 template<typename...ParamTypePackage>
 void f4(ParamTypePackage...paramPackage){
-    // "..." puede almacenar: (int, double, string)
+    // Package de TIPO
     cout << __PRETTY_FUNCTION__ << endl;
 }
 
 template<int...ParamNoTypePackage>
 void f5(){
+    // Package de NO TIPO
     cout << __PRETTY_FUNCTION__ << endl;
 }
 
 template<template<typename...> class...ParamTemplatePackage>
 void f6(){
+    // Package de Template
     cout << __PRETTY_FUNCTION__ << endl;
 }
 
