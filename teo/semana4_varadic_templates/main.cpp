@@ -28,7 +28,7 @@ template<
         int value,
         template<typename...> class Container>
 void f3(){
-    // Template con parámetro NO TIPO y template
+    // Template con parámetro NO TIPO y template TIPO
     cout << __PRETTY_FUNCTION__ << endl;
 }
 
@@ -47,7 +47,7 @@ void f5(){
 
 template<template<typename...> class...ParamTemplatePackage>
 void f6(){
-    // Package de Template
+    // Package de Templates TIPO
     cout << __PRETTY_FUNCTION__ << endl;
 }
 
