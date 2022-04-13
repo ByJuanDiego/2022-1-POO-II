@@ -56,13 +56,13 @@ void f7(T last){
     cout << __PRETTY_FUNCTION__ << "  ";
     // El caso base se implementa arriba del caso recursivo
     // Especialización de f7(T first, ParamType... otherParams);
-    // Caso base
+    // Condición Base (Una sobrecarga del template)
     cout << last << endl;
 } template<typename T, typename... ParamType>
 void f7(T first, ParamType... otherParams){
     cout << __PRETTY_FUNCTION__ << "  ";
     // Generalización de f7(T first, ParamType... otherParams);
-    // Caso Recursivo
+    // Condición Recursiva (Un template genérico)
     cout << first << ", " << endl;
     f7(otherParams...);
 }
