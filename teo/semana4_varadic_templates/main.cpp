@@ -84,7 +84,7 @@ auto f9(Params... params){
 
 template<typename ... Params>
 auto f10(Params... params){
-    // (((...+param3)+param2)+param1)
+    // ((((param1)+param2)+param1)+...)
     return (...+params);
 }
 
