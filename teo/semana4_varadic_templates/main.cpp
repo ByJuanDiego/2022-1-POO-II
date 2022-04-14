@@ -90,7 +90,8 @@ template<typename T>
 constexpr bool is_int(){
     return false;
 }
-template<> constexpr bool is_int<int>(){
+template<>
+constexpr bool is_int<int>(){
     return true;
 }
 
@@ -98,7 +99,8 @@ template<template<typename...> class T>
 constexpr bool is_vector(){
     return false;
 }
-template<> constexpr bool is_vector<vector>(){
+template<>
+constexpr bool is_vector<vector>(){
     return true;
 }
 
