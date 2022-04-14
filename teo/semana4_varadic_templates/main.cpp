@@ -115,6 +115,10 @@ constexpr void f11() {
         cout << endl;
 }
 
+template <typename... ParamPackage>
+auto size(ParamPackage... params){
+    return sizeof...(params);
+}
 
 int main() {
 
@@ -141,5 +145,8 @@ int main() {
 
     cout << endl;
     f11<vector, map, vector, list>();
+
+    cout << "size({1,2,3}) = " << size(1, 2, 3) << endl;
+
     return 0;
 }
