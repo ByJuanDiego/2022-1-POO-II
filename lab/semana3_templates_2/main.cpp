@@ -6,7 +6,7 @@
 using namespace std;
 
 template <typename T, int sz>
-auto get_size(const T (&arr)[sz]){
+auto get_size(const T (&)[sz]){
     // Obtener el tamaño de un array estatico
     return sz;
 }
