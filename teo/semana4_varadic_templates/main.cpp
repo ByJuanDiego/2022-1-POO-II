@@ -52,38 +52,36 @@ void f6(){
 }
 
 template<typename T>
-void f7(T last){
-    cout << __PRETTY_FUNCTION__ << "  ";
+void print1(T last){
     // El caso base se implementa arriba del caso recursivo
-    // Especialización de f7(T first, ParamType... otherParams);
+    // Especialización de print1(T first, ParamType... otherParams);
     // Condición Base (Una sobrecarga del template)
     cout << last << endl;
-} template<typename T, typename... ParamType>
-void f7(T first, ParamType... otherParams){
-    cout << __PRETTY_FUNCTION__ << "  ";
-    // Generalización de f7(T first, ParamType... otherParams);
+}
+template<typename T, typename... ParamType>
+void print1(T first, ParamType... otherParams){
+    // Generalización de print1(T first, ParamType... otherParams);
     // Condición Recursiva (Un template genérico)
-    cout << first << ", " << endl;
-    f7(otherParams...);
+    cout << first << ", ";
+    print1(otherParams...);
 }
 
 template<typename... ParamNoTypePackage>
-void f8(ParamNoTypePackage... ParamPackage){// Fold Expressions
-    cout << __PRETTY_FUNCTION__ << "  ";
-    // Una forma más limitada y compacta de implementar f7()
+void print2(ParamNoTypePackage... ParamPackage){// Fold Expressions
+    // Una forma más limitada y compacta de implementar print1()
     // ((os << param1 << ", "), (os << param2 << ", "), ...)
     ((cout << ParamPackage << ", "), ...);
     cout << std::endl;
 }
 
 template<typename ... Params>
-auto f9(Params... params){
+auto suma1(Params... params){
     // (param1+(param2+(param3+...)))
     return (params+...);
 }
 
 template<typename ... Params>
-auto f10(Params... params){
+auto suma2(Params... params){
     // ((((param1)+param2)+param1)+...)
     return (...+params);
 }
@@ -91,14 +89,16 @@ auto f10(Params... params){
 template<typename T>
 constexpr bool is_int(){
     return false;
-} template<> constexpr bool is_int<int>(){
+}
+template<> constexpr bool is_int<int>(){
     return true;
 }
 
 template<template<typename...> class T>
 constexpr bool is_vector(){
     return false;
-} template<> constexpr bool is_vector<vector>(){
+}
+template<> constexpr bool is_vector<vector>(){
     return true;
 }
 
@@ -107,17 +107,40 @@ template<
         template <typename...> class... ParamTemplatePackage>
 constexpr void f11() {
     // Verifica si los params son del template vector
-    cout << __PRETTY_FUNCTION__ << "  ";
+    cout << "is_vector()?: ";
     cout << boolalpha << is_vector<First>() << endl;
     if constexpr (sizeof...(ParamTemplatePackage) > 0)
         f11<ParamTemplatePackage...>();
-    else
-        cout << endl;
 }
 
 template <typename... ParamPackage>
 auto size(ParamPackage... params){
     return sizeof...(params);
+}
+
+template<typename T>
+T menor(T arg){
+    return arg;
+}
+template<typename T, typename... ParamPackage>
+T menor(T first, ParamPackage... args){
+    T recMin = menor(args...);
+    return (first < recMin)? first:recMin;
+}
+
+template<typename T>
+T mayor(T arg){
+    return arg;
+}
+template<typename T, typename... Params>
+T mayor(T first, Params... args){
+    T recMax = mayor(args...);
+    return (first > recMax)? first:recMax;
+}
+
+template <typename... ParamPackage>
+float media(ParamPackage... args){
+    return suma1(args...)/(double)size(args...);
 }
 
 int main() {
@@ -129,24 +152,20 @@ int main() {
     f5<1, 2, 3, 4, 5>();
     f6<vector, map, list, basic_string>();
 
-    cout << endl;
-    f7(1, 2, 4.5, string("A"));
-    cout << endl;
-    f8(0, -1, 3.14, string("B"));
-    cout << endl;
-
-    auto suma1 = f9(1, 2, 3, 4);
-    auto suma2 = f10(5, 6, 7, 8);
-    cout << "1+2+3+4 = " << suma1 << endl;
-    cout << "5+6+7+8 = " << suma2 << endl;
+    print1(1, 2, 4.5, string("A"));
+    print2(0, -1, 3.14, string("B"));
 
     cout << "is_int(int): " << boolalpha << (is_int<int>()) << endl;
     cout << "is_int(bool): " << boolalpha << (is_int<bool>()) << endl;
 
-    cout << endl;
     f11<vector, map, vector, list>();
 
-    cout << "size({1,2,3}) = " << size(1, 2, 3) << endl;
+    cout << "len(1,2,3) = " << size(1, 2, 3) << endl;
+    cout << "min(9,1,2) = " << menor(9, 1, 2) << endl;
+    cout << "max(7,9,3) = " << mayor(7, 9, 3) << endl;
+    cout << "sum1(1+2+3) = " << suma1(1, 2, 3) << endl;
+    cout << "sum2(4+5+6) = " << suma2(4, 5, 6) << endl;
+    cout << "mean(1,9,3) = " << media(1, 9, 3);
 
     return 0;
 }
