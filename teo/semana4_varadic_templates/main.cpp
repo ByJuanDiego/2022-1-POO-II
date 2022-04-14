@@ -167,7 +167,7 @@ int main() {
     cout << "max(7,9,3) = " << mayor(7, 9, 3) << endl;
     cout << "sum1(1+2+3) = " << suma1(1, 2, 3) << endl;
     cout << "sum2(4+5+6) = " << suma2(4, 5, 6) << endl;
-    cout << "mean(1,9,3) = " << media(1, 9, 3);
-
+    cout << "mean(1,9,3) = " << media(1, 9, 3) << endl;
+    
     return 0;
 }
