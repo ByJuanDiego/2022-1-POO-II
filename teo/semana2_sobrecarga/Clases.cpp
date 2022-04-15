@@ -28,7 +28,7 @@ A operator+(int op1, A& op2){
 }
 
 void A::print_B(B &b) {
-    cout << "B.n: " << b.n << " Clases.value: " << value;
+    cout << "B.n: " << b.n << " A.value: " << value;
 }
 
 B::B(int x): n(x) {
