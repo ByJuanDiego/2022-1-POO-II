@@ -138,7 +138,6 @@ int main() {
     ejercicio_8();
     ejercicio_9();
     ejercicio_10();
-
     
     return 0;
 }
