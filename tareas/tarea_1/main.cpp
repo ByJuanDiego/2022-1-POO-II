@@ -2,7 +2,8 @@
 #include "number.h"
 #include <random>
 
-int main() {
+
+int main(){
 
     random_device rd;
     uniform_int_distribution<int> dis1(0, 9);
@@ -16,7 +17,7 @@ int main() {
     }
     std::cout << m1;
     utec::matrix_t m2 = m1;
-
+    
     for (int i = 0; i < m2.row_size(); ++i) {
         for (int j = 0; j < m2.col_size(); ++j) {
             m2(i, j) = new complex_t(dis2(rd), dis2(rd));

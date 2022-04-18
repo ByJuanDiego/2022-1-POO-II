@@ -7,7 +7,7 @@ int main() {// La sobrecarga de operadores es un tipo de polimorfismo [ad-hoc]
     // - unarios    : (a++), (a--), (& a), (* a)
     // - binarios   : (a*b), (a-b), (a/b), (a+b)
     // - terciarios : (condition)? (verdadero):(falso)
-
+    
     A a1("juan");
     A a2 = (a1 + 10), a3 = (20 + a1);
     A a4("Hola"), a5(" Mundo");
