@@ -74,7 +74,7 @@ build cmake_object_order_depends_target_s5_class_templates: phony || CMakeFiles/
 
 build CMakeFiles/s5_class_templates.dir/main.cpp.o: CXX_COMPILER__s5_class_templates_Debug /Users/juandiegocastropadilla/Desktop/CS1103/teo/s5_class_templates/main.cpp || cmake_object_order_depends_target_s5_class_templates
   DEP_FILE = CMakeFiles/s5_class_templates.dir/main.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
   OBJECT_DIR = CMakeFiles/s5_class_templates.dir
   OBJECT_FILE_DIR = CMakeFiles/s5_class_templates.dir
   TARGET_COMPILE_PDB = CMakeFiles/s5_class_templates.dir/

@@ -83,36 +83,38 @@ public:
     }
 };
 
-// Estructura generica
+
 template<int N>
 struct factorial{
-    enum {value = (N) * (factorial<N-1>::value)};
-    // inline static int = value = (N) * (factorial<N-1>::value);
+    inline static int value = N * factorial<N-1>::value;
 };
 
-// Especializacion
 template<>
 struct factorial<0>{
-    enum {value = 1};
+    inline static int value = 1;
 };
 
 int main() {
-
-    Vector<int> v1;
-    Vector<double> v2;
-    Vector<string> v3;
-
-    cout << endl;
-
-    A<double, double> a1;
-    A<int, double> a2;
-    A<char, int> a3;
-    A<int, char> a4;
-    A<int, int> a5;
-
-    cout << endl;
 
     cout << factorial<5>::value << endl;
 
     return 0;
 }
+
+
+
+
+
+//Vector<int> v1;
+//Vector<double> v2;
+//Vector<string> v3;
+//
+//cout << endl;
+//
+//A<double, double> a1;
+//A<int, double> a2;
+//A<char, int> a3;
+//A<int, char> a4;
+//A<int, int> a5;
+//
+//cout << endl;
