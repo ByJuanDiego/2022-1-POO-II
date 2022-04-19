@@ -9,13 +9,29 @@
 using namespace std;
 
 template<typename cont>
-int linearSearch(int value, cont*& container){
-    for (int i=0; i<container->size(); i++){
-        if ((*container)[i] == value){
-            return i;
+int binarySearch(int value, cont*& container){
+
+    int min_idx {0};
+    int max_idx = container->size()-1;
+    int mid;
+
+    while (true){
+        if (max_idx < min_idx){
+            return -1;
+        }
+        else{
+            mid = (min_idx + max_idx)/2;
+            if ((*container)[mid] < value){
+                min_idx = mid + 1;
+            }
+            else if ((*container)[mid] > value){
+                max_idx = mid - 1;
+            }
+            else{
+                return mid;
+            }
         }
     }
-    return -1;
 }
 
 template<typename cont>
@@ -41,7 +57,7 @@ public:
         bubbleSort(container);
     }
     int operator << (int x){
-        return linearSearch(x, container);
+        return binarySearch(x, container);
     }
 };
 
@@ -56,7 +72,7 @@ public:
         bubbleSort(container);
     }
     int operator << (int x){
-        return linearSearch(x, container);
+        return binarySearch(x, container);
     }
 };
 
