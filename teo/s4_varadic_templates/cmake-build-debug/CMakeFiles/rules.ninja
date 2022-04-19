@@ -42,7 +42,7 @@ rule CXX_EXECUTABLE_LINKER__semana4_varadic_templates_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates -B/Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates/cmake-build-debug
+  command = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/juandiegocastropadilla/Desktop/CS1103/teo/s4_varadic_templates -B/Users/juandiegocastropadilla/Desktop/CS1103/teo/s4_varadic_templates/cmake-build-debug
   description = Re-running CMake...
   generator = 1
 

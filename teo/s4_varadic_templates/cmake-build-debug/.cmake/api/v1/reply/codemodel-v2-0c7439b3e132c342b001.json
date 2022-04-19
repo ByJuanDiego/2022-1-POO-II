@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates/cmake-build-debug",
-		"source" : "/Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates"
+		"build" : "/Users/juandiegocastropadilla/Desktop/CS1103/teo/s4_varadic_templates/cmake-build-debug",
+		"source" : "/Users/juandiegocastropadilla/Desktop/CS1103/teo/s4_varadic_templates"
 	},
 	"version" : 
 	{

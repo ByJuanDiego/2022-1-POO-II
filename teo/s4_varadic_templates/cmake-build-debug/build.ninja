@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates/cmake-build-debug/
+cmake_ninja_workdir = /Users/juandiegocastropadilla/Desktop/CS1103/teo/s4_varadic_templates/cmake-build-debug/
 
 #############################################
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates -B/Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates/cmake-build-debug
+  COMMAND = cd /Users/juandiegocastropadilla/Desktop/CS1103/teo/s4_varadic_templates/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/juandiegocastropadilla/Desktop/CS1103/teo/s4_varadic_templates -B/Users/juandiegocastropadilla/Desktop/CS1103/teo/s4_varadic_templates/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -57,7 +57,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/juandiegocastropadilla/Desktop/CS1103/teo/s4_varadic_templates/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -72,7 +72,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_semana4_varadic_templates: phony || CMakeFiles/semana4_varadic_templates.dir
 
-build CMakeFiles/semana4_varadic_templates.dir/main.cpp.o: CXX_COMPILER__semana4_varadic_templates_Debug /Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates/main.cpp || cmake_object_order_depends_target_semana4_varadic_templates
+build CMakeFiles/semana4_varadic_templates.dir/main.cpp.o: CXX_COMPILER__semana4_varadic_templates_Debug /Users/juandiegocastropadilla/Desktop/CS1103/teo/s4_varadic_templates/main.cpp || cmake_object_order_depends_target_semana4_varadic_templates
   DEP_FILE = CMakeFiles/semana4_varadic_templates.dir/main.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
   OBJECT_DIR = CMakeFiles/semana4_varadic_templates.dir
@@ -106,7 +106,7 @@ build semana4_varadic_templates: CXX_EXECUTABLE_LINKER__semana4_varadic_template
 # =============================================================================
 
 #############################################
-# Folder: /Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates/cmake-build-debug
+# Folder: /Users/juandiegocastropadilla/Desktop/CS1103/teo/s4_varadic_templates/cmake-build-debug
 
 build all: phony semana4_varadic_templates
 

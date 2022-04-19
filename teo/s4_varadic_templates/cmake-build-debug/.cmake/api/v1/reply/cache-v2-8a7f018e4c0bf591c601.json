@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates/cmake-build-debug"
+			"value" : "/Users/juandiegocastropadilla/Desktop/CS1103/teo/s4_varadic_templates/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates"
+			"value" : "/Users/juandiegocastropadilla/Desktop/CS1103/teo/s4_varadic_templates"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1087,7 +1087,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates/cmake-build-debug"
+			"value" : "/Users/juandiegocastropadilla/Desktop/CS1103/teo/s4_varadic_templates/cmake-build-debug"
 		},
 		{
 			"name" : "semana4_varadic_templates_IS_TOP_LEVEL",
@@ -1111,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/juandiegocastropadilla/Desktop/CS1103/teo/semana4_varadic_templates"
+			"value" : "/Users/juandiegocastropadilla/Desktop/CS1103/teo/s4_varadic_templates"
 		}
 	],
 	"kind" : "cache",
