@@ -95,10 +95,7 @@ struct factorial<0>{
 };
 
 int main() {
-
     cout << factorial<5>::value << endl;
-
-    return 0;
 }
 
 
