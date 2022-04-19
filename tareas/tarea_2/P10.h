@@ -33,13 +33,6 @@ void bubbleSort(cont*& container){
 
 template<typename Container>
 class searcher{
-
-    template<typename cont>
-    friend int linearSearch(int value, cont*& container);
-
-    template<typename cont>
-    friend void bubbleSort(cont*& container);
-
 private:
     Container* container;
 public:
@@ -51,7 +44,6 @@ public:
         return linearSearch(x, container);
     }
 };
-
 
 
 template<typename T, size_t sz>
