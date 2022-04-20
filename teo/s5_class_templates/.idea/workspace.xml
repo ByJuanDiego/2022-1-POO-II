@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="s5_class_templates" targetName="s5_class_templates" />
@@ -12,6 +15,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64afc22a-8b21-4b24-9e79-eb2ac718f327" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/CMakeFiles/tarea_2.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/CMakeFiles/tarea_2.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/tarea_2" beforeDir="false" afterPath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/tarea_2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
@@ -54,7 +62,12 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RunManager">
     <configuration name="s5_class_templates" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="s5_class_templates" TARGET_NAME="s5_class_templates" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="s5_class_templates" RUN_TARGET_NAME="s5_class_templates">
@@ -76,7 +89,11 @@
       <workItem from="1650411524357" duration="345000" />
       <workItem from="1650412015400" duration="333000" />
       <workItem from="1650412391041" duration="4000" />
-      <workItem from="1650415222168" duration="1000" />
+      <workItem from="1650415222168" duration="46000" />
+      <workItem from="1650423064588" duration="862000" />
+      <workItem from="1650426105662" duration="718000" />
+      <workItem from="1650428786794" duration="391000" />
+      <workItem from="1650466461306" duration="212000" />
     </task>
     <servers />
   </component>

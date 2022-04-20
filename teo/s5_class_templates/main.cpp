@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 /*
@@ -83,12 +84,13 @@ public:
     }
 };
 
-
+// Caso Recursivo
 template <int N>
 struct factorial{
     inline static constexpr int value = N * factorial<N-1>::value;
 };
 
+// Caso Base
 template<>
 struct factorial<0>{
     inline static constexpr int value = 1;
