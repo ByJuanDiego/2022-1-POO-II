@@ -84,34 +84,30 @@ public:
 };
 
 
-template<int N>
+template <int N>
 struct factorial{
-    inline static int value = N * factorial<N-1>::value;
+    inline static constexpr int value = N * factorial<N-1>::value;
 };
 
 template<>
 struct factorial<0>{
-    inline static int value = 1;
+    inline static constexpr int value = 1;
 };
 
 int main() {
+
+    Vector<int> v1;
+    Vector<double> v2;
+    Vector<string> v3;
+    cout << endl;
+
+    A<double, double> a1;
+    A<int, double> a2;
+    A<char, int> a3;
+    A<int, char> a4;
+    A<int, int> a5;
+    cout << endl;
+
     cout << factorial<5>::value << endl;
+
 }
-
-
-
-
-
-//Vector<int> v1;
-//Vector<double> v2;
-//Vector<string> v3;
-//
-//cout << endl;
-//
-//A<double, double> a1;
-//A<int, double> a2;
-//A<char, int> a3;
-//A<int, char> a4;
-//A<int, int> a5;
-//
-//cout << endl;
