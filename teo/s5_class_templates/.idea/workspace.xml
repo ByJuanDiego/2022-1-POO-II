@@ -15,18 +15,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64afc22a-8b21-4b24-9e79-eb2ac718f327" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/CMakeFiles/tarea_2.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/CMakeFiles/tarea_2.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/tarea_2" beforeDir="false" afterPath="$PROJECT_DIR$/../../tareas/tarea_2/cmake-build-debug/tarea_2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/s5_class_templates.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/s5_class_templates.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/s5_class_templates" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/s5_class_templates" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +87,7 @@
       <workItem from="1650423064588" duration="862000" />
       <workItem from="1650426105662" duration="718000" />
       <workItem from="1650428786794" duration="391000" />
-      <workItem from="1650466461306" duration="212000" />
+      <workItem from="1650466461306" duration="992000" />
     </task>
     <servers />
   </component>

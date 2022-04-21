@@ -3,9 +3,8 @@
 using namespace std;
 
 /*
-
     Sobrecarga de funciones:
-
+        
         void print(int x, int y);
 
         template<typename T1, typename T2>
