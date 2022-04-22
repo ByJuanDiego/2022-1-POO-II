@@ -41,14 +41,18 @@ class A{
             cout << x << " constructor asignacion move" << endl;
             return *this;
         }
+        friend ostream& operator << (ostream& os, A& a){
+            os << a.x;
+            return os;
+        }
 };
 
 template<typename SecuencialContainer>
 void print(SecuencialContainer &arr){
     cout << "{";
     for (auto it = begin(arr); it != end(arr); it++){
-        typename SecuencialContainer::value_type val = *it;
-        cout << val << ((it == prev(end(arr))? "":", "));
+        // typename SecuencialContainer::value_type val = *it;
+        cout << *it << ((it == prev(end(arr))? "":", "));
     }
     cout << "}" << endl;
 }
@@ -105,39 +109,72 @@ void ejemplo_deque(){
     cout << endl;
 }
 
-void f(std::vector<A>& v, int&& n){
+void f(std::vector<A>& v, int&& n, string&& str){
     cout << "------" << endl;
-    v.push_back(A(n));
+    if (str == "push"){
+        v.push_back(A(n));
+    }
+    else if (str == "emplace"){
+        v.emplace_back(n);
+    }
     cout << "size: " << v.size() << endl;
     cout << "capacity: " << v.capacity() << endl;
+    print<vector<A>>(v);
 }
 
 void ejemplo_vector_push_back(){
     cout << __PRETTY_FUNCTION__ << endl;
 
-    // vector<A> vec(6, A(1)); // crea 6 instancias
-    int n = 6;
+    std::size_t n = 6; // n = 8 para mas eficiencia
+    // vector<A> vec(n, A(1)); // reserva memoria y crea 6 instancias
     vector<A> vec;
-    vec.reserve(n); // reserva memoria para 6 instancias (capacity)
-    
-    f(vec, 10);
-    f(vec, 20);
-    f(vec, 30);
-    f(vec, 40);
-    f(vec, 50);
-    f(vec, 60);
-    f(vec, 70); //  duplica el capacity
+    // Si se conoce el tamaño del vector de antenamo es mejor reservar el espacio
+    vec.reserve(n); // reserva memoria para 6 instancias
+
+    f(vec, 10, "push");
+    f(vec, 20, "push");
+    f(vec, 30, "push");
+    f(vec, 40, "push");
+    f(vec, 50, "push");
+    f(vec, 60, "push");
+    //  duplica el capacity, crea un nuevo contenedor y libera el anterior
+    f(vec, 70, "push");
 
     // los vectores no son eficientes para insertar al inicio
     cout << "------" << endl;
+    // construye la instancia y despues
+    // mueve todos los elementos dentro del mismo contenedor
+    // si tiene espacio
     vec.insert(begin(vec), A(5));
     cout << "size: " << vec.size() << endl;
     cout << "capacity: " << vec.capacity() << endl;
+    print<vector<A>>(vec);
     cout << "------" << endl;
+    cout << endl;
 }
 
 void ejemplo_vector_emplace_back(){
+    // El emplace back no requiere construir y mover el objeto, lo crea internamente
     cout << __PRETTY_FUNCTION__ << endl;
+
+    vector<A> vec;
+    std::size_t n = 8;
+    vec.reserve(n); // reserva memoria para 8 instancias
+
+    f(vec, 10, "emplace");
+    f(vec, 20, "emplace");
+    f(vec, 30, "emplace");
+    f(vec, 40, "emplace");
+    f(vec, 50, "emplace");
+    f(vec, 60, "emplace");
+    f(vec, 70, "emplace");
+
+    cout << "------" << endl;
+    vec.emplace(begin(vec), 5);
+    cout << "size: " << vec.size() << endl;
+    cout << "capacity: " << vec.capacity() << endl;
+    print<vector<A>>(vec);
+    cout << "------" << endl;
     cout << endl;
 }
 
@@ -146,5 +183,6 @@ int main() {
     ejemplo_array();
     ejemplo_vector();
     ejemplo_vector_push_back();
+    ejemplo_vector_emplace_back();
     return 0;
 }
