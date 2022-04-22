@@ -17,36 +17,30 @@ using namespace std;
 
 class A{
     private:
-        int x {};
+        int x = 0;
     public:
-        A():x(0){
-            cout << "c por defecto" << endl;
-        }
-        A(int x){
-            this->x = x;
-            cout << "c por parametros" << endl;
+        A(int n){
+            this->x = n;
+            cout << x << " constructor por parametros" << endl;
         };
         A(const A& other){
             this->x = other.x;
-            cout << "c copia " << endl;  
+            cout << x << " constructor copia " << endl;
         }
         A& operator=(const A& other){
             this->x = other.x;
-            cout << "c asignacion copia" << endl;
+            cout << x << " constructor asignacion copia" << endl;
             return *this;
         }
         A(A&& other){
             this->x = other.x;
-            cout << "c move" << endl;
+            cout << x << " constructor move" << endl;
         }
         A& operator=(A&& other){
             this->x = other.x;
-            cout << "c asignacion move" << endl;
+            cout << x << " constructor asignacion move" << endl;
             return *this;
         }
-        int get_x() const {
-            return this->x;
-        };
 };
 
 template<typename SecuencialContainer>
@@ -60,12 +54,12 @@ void print(SecuencialContainer &arr){
 }
 
 void ejemplo_array(){
+    cout << __PRETTY_FUNCTION__  << endl;
     // Es de tamaño invariable
     // Almacenamiento secuancial en el stack
     // Mas ligera que un vector
     // Eficiente para el almacenamiento de una cantidad predeterminada de valores
 
-    cout << __PRETTY_FUNCTION__  << endl;
     array<int, 5> arr = {1, 2, 3, 4};
     arr.at(4) = 5; // at() da un error cuando se accede a un subindice que excede el limite
 
@@ -75,12 +69,16 @@ void ejemplo_array(){
     x++;
     y++;
     print(arr);
+    arr.fill(1); // inicializa todos los valores
+    print(arr);
     cout << "front: " << arr.front() << " back: " << arr.back() << endl;
     cout << "size: " << arr.size() << endl;
     cout << "is empty: " << boolalpha << arr.empty() << endl; // true if the container is empty, false otherwise
+    cout << endl;
 }
 
 void ejemplo_vector(){
+    cout << __PRETTY_FUNCTION__ << endl;
     // Los valores se guardan en la memoria dinamica de forma continua
     // Complejiddad de acceso aleatorio a los datos de O(1)
     // Complejidad de inserción y borrado al final de O(1)
@@ -96,29 +94,57 @@ void ejemplo_vector(){
     // reverse iterator para iterar un contenedor al revés
     vector<int>::reverse_iterator it;
     for (it = v.rbegin(); it != v.rend(); it++){
-        cout << *it << endl;
+        cout << *it << " ";
     }
+    cout << endl << endl;
 }
 
 void ejemplo_deque(){
+    cout << __PRETTY_FUNCTION__ << endl;
     std::deque<int> a;
-    
+    cout << endl;
+}
+
+void f(std::vector<A>& v, int&& n){
+    cout << "------" << endl;
+    v.push_back(A(n));
+    cout << "size: " << v.size() << endl;
+    cout << "capacity: " << v.capacity() << endl;
 }
 
 void ejemplo_vector_push_back(){
-    int n = 10;
-    vector<int> vec;
-    vec.reserve(n); // afecta al capacity
+    cout << __PRETTY_FUNCTION__ << endl;
+
+    // vector<A> vec(6, A(1)); // crea 6 instancias
+    int n = 6;
+    vector<A> vec;
+    vec.reserve(n); // reserva memoria para 6 instancias (capacity)
+    
+    f(vec, 10);
+    f(vec, 20);
+    f(vec, 30);
+    f(vec, 40);
+    f(vec, 50);
+    f(vec, 60);
+    f(vec, 70); //  duplica el capacity
+
+    // los vectores no son eficientes para insertar al inicio
+    cout << "------" << endl;
+    vec.insert(begin(vec), A(5));
+    cout << "size: " << vec.size() << endl;
+    cout << "capacity: " << vec.capacity() << endl;
+    cout << "------" << endl;
 }
 
 void ejemplo_vector_emplace_back(){
-
+    cout << __PRETTY_FUNCTION__ << endl;
+    cout << endl;
 }
 
 
-
 int main() {
-    // ejemplo_array();
+    ejemplo_array();
     ejemplo_vector();
+    ejemplo_vector_push_back();
     return 0;
 }
