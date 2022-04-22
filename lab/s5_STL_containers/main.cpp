@@ -89,6 +89,7 @@ void ejemplo_vector(){
     // Complejidad de inserción y borrado al comienzo e interior de O(n)
     // Mayor uso de memoria a comparacion del std::array
     // Es ineficiente para la inserción y borrado al inicio
+    // No posee push_front ni emplace_front
 
     vector<int> v(5);
 
@@ -101,12 +102,6 @@ void ejemplo_vector(){
         cout << *it << " ";
     }
     cout << endl << endl;
-}
-
-void ejemplo_deque(){
-    cout << __PRETTY_FUNCTION__ << endl;
-    std::deque<int> a;
-    cout << endl;
 }
 
 void f(std::vector<A>& v, int&& n, string&& str){
@@ -158,8 +153,8 @@ void ejemplo_vector_emplace_back(){
     cout << __PRETTY_FUNCTION__ << endl;
 
     vector<A> vec;
-    std::size_t n = 8;
-    vec.reserve(n); // reserva memoria para 8 instancias
+    std::size_t n = 7;
+    vec.reserve(n); // reserva memoria para 7 instancias
 
     f(vec, 10, "emplace");
     f(vec, 20, "emplace");
@@ -167,7 +162,6 @@ void ejemplo_vector_emplace_back(){
     f(vec, 40, "emplace");
     f(vec, 50, "emplace");
     f(vec, 60, "emplace");
-    f(vec, 70, "emplace");
 
     cout << "------" << endl;
     vec.emplace(begin(vec), 5);
@@ -179,10 +173,64 @@ void ejemplo_vector_emplace_back(){
 }
 
 
+void ejemplo_deque(){
+    cout << __PRETTY_FUNCTION__ << endl;
+    // Se comporta de manera similar a un vector
+    // Posee push_front y emplace_front
+
+    std::deque<int> dq = {2, 3, 4};
+    print(dq);
+    dq.push_front(1);
+    print(dq);
+    dq.push_back(5);
+    print(dq);
+
+    cout << endl;
+}
+
+void ejemplo_list(){
+    cout << __PRETTY_FUNCTION__ << endl;
+    // No admite aritmetica de punteros
+    // Pueden recorrerse
+
+    list<int> ls = {1, 2, 4};
+    print(ls);
+    // auto it = (begin(ls)+1)); // Error
+    auto it = std::next(begin(ls));
+    it++; // Es admisible
+    ls.insert(it, 3);
+
+    for (auto itr = ls.rbegin(); itr != ls.rend(); itr++){
+        // El recorrido inverso es admisible
+        cout << *itr << " ";
+    }
+    cout << endl;
+}
+
+void ejemplo_forward_list(){
+    cout << __PRETTY_FUNCTION__ << endl;
+    // No admite aritmetica de punteros
+    // Pueden recorrerse solo hacia adelante
+
+    list<int> ls = {1, 3, 4};
+    print(ls);
+    // auto it = (begin(ls)+1)); // Error
+    auto it = std::next(begin(ls));
+    ls.insert(it, 2);
+    for (auto itr = ls.begin(); itr != ls.end(); itr++){
+        // El recorrido inverso no es admisible
+        cout << *itr << " ";
+    }
+    cout << endl;
+}
+
 int main() {
     ejemplo_array();
     ejemplo_vector();
     ejemplo_vector_push_back();
     ejemplo_vector_emplace_back();
+    ejemplo_deque();
+    ejemplo_list();
+    ejemplo_forward_list();
     return 0;
 }
