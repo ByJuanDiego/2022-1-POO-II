@@ -1,3 +1,0 @@
-/Users/juandiegocastropadilla/Desktop/CS1103/lab/s4_punteros/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/juandiegocastropadilla/Desktop/CS1103/lab/s4_punteros/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/juandiegocastropadilla/Desktop/CS1103/lab/s4_punteros/cmake-build-debug/CMakeFiles/s4_punteros.dir
