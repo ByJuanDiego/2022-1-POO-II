@@ -30,7 +30,9 @@ void ejemplo_map(){
     cout << endl;
 
     auto [it, status] = map1.try_emplace("e", 10);
-    cout << it->first << ": " << it->second << " --> " << boolalpha << status << endl << endl;
+    cout << "first: " << it->first << endl;
+    cout << "second:  " << it->second << endl;
+    cout << "status: " << boolalpha << status << endl << endl;
 
     for (const auto &[key, value]: map1){
         // A partir de la version de C++17
