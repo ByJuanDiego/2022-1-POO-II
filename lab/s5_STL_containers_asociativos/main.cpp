@@ -35,7 +35,6 @@ void ejemplo_map(){
         cout << key << ": " << value << endl;
     }
     cout << endl;
-
 }
 
 void ejemplo_set(){
