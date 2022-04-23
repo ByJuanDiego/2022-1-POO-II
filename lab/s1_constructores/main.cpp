@@ -14,7 +14,8 @@ void mostrar2(int&& n){// rvalue
 }
 
 utec::A fabrica_objeto_A(){
-    return utec::A(2);
+    utec::A temp(0);
+    return temp;
 }
 
 int main() {
@@ -29,13 +30,13 @@ int main() {
     // cout << a.get_value() << endl; // --> error porque la variable a ha sido movida
 
     utec::A e(10);
-    utec::A f = 10;
+    // utec::A f = 10;
 
     cout << b.get_value() << endl;
     cout << c.get_value() << endl;
     cout << d.get_value() << endl;
     cout << e.get_value() << endl;
-    cout << f.get_value() << endl;
+    // cout << f.get_value() << endl;
 
     // mostrar1(1); // --> error porque la variable no existe
     // mostrar2(1);

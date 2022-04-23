@@ -43,7 +43,7 @@ void ejemplo_map(){
 }
 
 void ejemplo_set(){
-    cout << __PRETTY_FUNCTION__  << endl << endl;
+    cout << __PRETTY_FUNCTION__  << endl;
     std::set<string> s1 = {"a", "z", "f"};
     s1.insert("b");
     s1.insert("e");

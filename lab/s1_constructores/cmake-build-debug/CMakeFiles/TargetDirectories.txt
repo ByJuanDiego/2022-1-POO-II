@@ -1,3 +1,3 @@
-/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1_constructores/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1_constructores/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1_constructores/cmake-build-debug/CMakeFiles/semana1.dir
+/Users/juandiegocastropadilla/Desktop/CS1103/lab/s1_constructores/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/juandiegocastropadilla/Desktop/CS1103/lab/s1_constructores/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/juandiegocastropadilla/Desktop/CS1103/lab/s1_constructores/cmake-build-debug/CMakeFiles/semana1.dir

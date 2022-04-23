@@ -18,7 +18,7 @@ namespace utec {
 
         // Convertible
         A();                                // constructor por defecto
-        A(int value);                       // constructor por parametros - convertible
+        explicit A(int value);                       // constructor por parametros - convertible
 
         // Copia
         A(const A &another);                // constructor copia

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1_constructores
+# Install script for directory: /Users/juandiegocastropadilla/Desktop/CS1103/lab/s1_constructores
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana1_constructores/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/juandiegocastropadilla/Desktop/CS1103/lab/s1_constructores/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
