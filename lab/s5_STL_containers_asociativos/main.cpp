@@ -11,7 +11,7 @@ using namespace std;
 
 void ejemplo_map(){
     cout << __PRETTY_FUNCTION__  << endl << endl;
-    std::map<std::string, int> map1 {
+    std::map<std::string, int> map1 = {
         {"c", 2},
         {"a", 1},
         {"b", 1}
@@ -24,15 +24,16 @@ void ejemplo_map(){
 
     map1["z"] = 3;
     for (const auto &[key, value]: map1){
-        // A partir de la version de C++17
+        // Structured binding declaration (a partir de la version de C++17)
         cout << key << ": " << value << endl;
     }
     cout << endl;
 
     auto [it, status] = map1.try_emplace("e", 10);
-    cout << "first: " << it->first << endl;
-    cout << "second:  " << it->second << endl;
-    cout << "status: " << boolalpha << status << endl << endl;
+    // status es true si el key no estaba en el map
+    cout << "first   -> " << it->first << endl;
+    cout << "second  -> " << it->second << endl;
+    cout << "status  -> " << boolalpha << status << endl << endl;
 
     for (const auto &[key, value]: map1){
         // A partir de la version de C++17
@@ -56,7 +57,11 @@ void ejemplo_set(){
 void ejemplo_unordered_map(){
 
     cout << __PRETTY_FUNCTION__  << endl;
-    std::unordered_map<string, int> umap1 {{"z", 1}, {"b", 2}, {"e", 10}};
+    std::unordered_map<string, int> umap1 = {
+        {"z", 1},
+        {"b", 2},
+        {"e", 10}
+    };
     umap1["a"] = 0;
     umap1["c"] = 5;
 
