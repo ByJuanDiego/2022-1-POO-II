@@ -1,3 +1,9 @@
 # ninja log v5
 3	900	1650677983071726941	CMakeFiles/s5_STL_containers_asociativos.dir/main.cpp.o	14bfe37af6bba0e
 900	957	1650677983133904191	s5_STL_containers_asociativos	b9d7c65c86edd3f8
+3	1772	1650680216198115102	CMakeFiles/s5_STL_containers_asociativos.dir/main.cpp.o	860769056caa0521
+1772	1875	1650680216313722513	s5_STL_containers_asociativos	b9d7c65c86edd3f8
+2	1386	1650680252392310273	CMakeFiles/s5_STL_containers_asociativos.dir/main.cpp.o	860769056caa0521
+1386	1446	1650680252457373908	s5_STL_containers_asociativos	b9d7c65c86edd3f8
+2	1239	1650680269094362897	CMakeFiles/s5_STL_containers_asociativos.dir/main.cpp.o	860769056caa0521
+1239	1317	1650680269181509328	s5_STL_containers_asociativos	b9d7c65c86edd3f8

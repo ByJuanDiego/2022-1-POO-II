@@ -4,6 +4,8 @@
 // Contenedores Asociativos
 #include <map>  // std::map, std::multimap
 #include <set>  // std::set, std::multiset
+#include <unordered_map>
+#include <unordered_set>
 
 using namespace std;
 
@@ -46,10 +48,26 @@ void ejemplo_set(){
     for (const auto& item: s1){
         cout << item << endl;
     }
+    cout << endl;
+}
+
+void ejemplo_unordered_map(){
+
+    cout << __PRETTY_FUNCTION__  << endl;
+    std::unordered_map<string, int> umap1 {{"z", 1}, {"b", 2}, {"e", 10}};
+    umap1["a"] = 0;
+    umap1["c"] = 5;
+
+    for (const auto&[key, value]: umap1){
+        std::cout << key << ": " << value << endl;
+    }
+
+    cout << endl;
 }
 
 int main() {
     ejemplo_map();
     ejemplo_set();
+    ejemplo_unordered_map();
     return 0;
 }
