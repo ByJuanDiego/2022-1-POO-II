@@ -80,9 +80,9 @@ void ejemplo_array(){
     print<array<int, 5>>(arr);
     arr.fill(1); // inicializa todos los valores
     print<array<int, 5>>(arr);
-    cout << "front: " << arr.front() << " back: " << arr.back() << endl;
-    cout << "size: " << arr.size() << endl;
-    cout << "is empty: " << boolalpha << arr.empty() << endl; // true if the container is empty, false otherwise
+    cout << "front(): " << arr.front() << " back(): " << arr.back() << endl;
+    cout << "size(): " << arr.size() << endl;
+    cout << "is_empty(): " << boolalpha << arr.empty() << endl; // true if the container is empty, false otherwise
     cout << endl;
 }
 
@@ -102,6 +102,7 @@ void ejemplo_vector(){
     std::iota(v.begin(), v.end(), 1);
 
     // reverse iterator para iterar un contenedor al revés
+    cout << "reverse_iterator: ";
     vector<int>::reverse_iterator it;
     for (it = v.rbegin(); it != v.rend(); it++){
         cout << *it << " ";
@@ -149,7 +150,6 @@ void ejemplo_vector_push_back(){
     cout << "size: " << vec.size() << endl;
     cout << "capacity: " << vec.capacity() << endl;
     print<vector<A>>(vec);
-    cout << "------" << endl;
     cout << endl;
 }
 
@@ -173,7 +173,6 @@ void ejemplo_vector_emplace_back(){
     cout << "size: " << vec.size() << endl;
     cout << "capacity: " << vec.capacity() << endl;
     print<vector<A>>(vec);
-    cout << "------" << endl;
     cout << endl;
 }
 
@@ -188,7 +187,6 @@ void ejemplo_deque(){
     print<deque<int>>(dq);
     dq.push_back(5);
     print<deque<int>>(dq);
-
     cout << endl;
 }
 
@@ -204,11 +202,12 @@ void ejemplo_list(){
     it++; // Es admisible
     ls.insert(it, 3);
 
+    cout << "rbegin(): ";
     for (auto itr = ls.rbegin(); itr != ls.rend(); itr++){
         // El recorrido inverso es admisible
         cout << *itr << " ";
     }
-    cout << endl;
+    cout << endl << endl;
 }
 
 
@@ -219,15 +218,14 @@ void ejemplo_forward_list(){
     // Pueden recorrerse solo hacia adelante
 
     forward_list<int> fls = {2, 3, 4};
-
     fls.push_front(1);
+    print<int>(fls);
+
     // auto it = (begin(ls)+1)); // Error
     auto it = std::next(begin(fls));
-    cout << *it << endl;
+    cout << "next(begin): " << *it << endl;
     it++;
-    cout << *it << endl;
-
-    print<int>(fls);
+    cout << "it++: " << *it << endl;
 }
 
 int main() {
