@@ -44,11 +44,20 @@ class A{
 };
 
 template<typename SecuencialContainer>
-void print(SecuencialContainer &arr){
+void print(SecuencialContainer &container){
     cout << "{";
-    for (auto it = begin(arr); it != end(arr); it++){
+    for (auto it = begin(container); it != end(container); it++){
         // typename SecuencialContainer::value_type val = *it;
-        cout << *it << ((it == prev(end(arr))? "":", "));
+        cout << *it << ((it == prev(end(container))? "":", "));
+    }
+    cout << "}" << endl;
+}
+
+template<typename T>
+void print(std::forward_list<T>& fls){
+    cout << "{";
+    for (auto itr = fls.begin(); itr != fls.end(); itr++){
+        cout << *itr << ((next(itr) == end(fls))? "":", ");
     }
     cout << "}" << endl;
 }
@@ -63,14 +72,14 @@ void ejemplo_array(){
     array<int, 5> arr = {1, 2, 3, 4};
     arr.at(4) = 5; // at() da un error cuando se accede a un subindice que excede el limite
 
-    print(arr);
+    print<array<int, 5>>(arr);
     int& x = arr.front();  // returns a reference to the first element in the array container
     int& y = arr.back();   // returns a reference to the last element in the array container
     x++;
     y++;
-    print(arr);
+    print<array<int, 5>>(arr);
     arr.fill(1); // inicializa todos los valores
-    print(arr);
+    print<array<int, 5>>(arr);
     cout << "front: " << arr.front() << " back: " << arr.back() << endl;
     cout << "size: " << arr.size() << endl;
     cout << "is empty: " << boolalpha << arr.empty() << endl; // true if the container is empty, false otherwise
@@ -174,11 +183,11 @@ void ejemplo_deque(){
     // Posee push_front y emplace_front
 
     std::deque<int> dq = {2, 3, 4};
-    print(dq);
+    print<deque<int>>(dq);
     dq.push_front(1);
-    print(dq);
+    print<deque<int>>(dq);
     dq.push_back(5);
-    print(dq);
+    print<deque<int>>(dq);
 
     cout << endl;
 }
@@ -189,7 +198,7 @@ void ejemplo_list(){
     // Pueden recorrerse
 
     list<int> ls = {1, 2, 4};
-    print(ls);
+    print<list<int>>(ls);
     // auto it = (begin(ls)+1)); // Error
     auto it = std::next(begin(ls));
     it++; // Es admisible
@@ -202,23 +211,23 @@ void ejemplo_list(){
     cout << endl;
 }
 
+
 void ejemplo_forward_list(){
     cout << __PRETTY_FUNCTION__ << endl;
     // No admite aritmetica de punteros
+    // No usar prev() en un forward_list<>
     // Pueden recorrerse solo hacia adelante
 
-    forward_list<int> ls = {2, 3, 4};
+    forward_list<int> fls = {2, 3, 4};
 
-    ls.push_front(1);
+    fls.push_front(1);
     // auto it = (begin(ls)+1)); // Error
-    auto it = std::next(begin(ls));
+    auto it = std::next(begin(fls));
+    cout << *it << endl;
+    it++;
     cout << *it << endl;
 
-    for (auto itr = ls.begin(); itr != ls.end(); itr++){
-        // El recorrido inverso no es admisible
-        cout << *itr << " ";
-    }
-    cout << endl;
+    print<int>(fls);
 }
 
 int main() {
