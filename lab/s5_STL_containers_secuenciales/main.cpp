@@ -260,7 +260,7 @@ void ejemplo_lambdas(){
 
     // Funcion lambda
     const auto odd(
-        [] (int n) {
+        [] (int n) -> bool {
             return (n % 2 != 0);
         }
     );
