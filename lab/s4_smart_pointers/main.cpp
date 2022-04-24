@@ -56,7 +56,7 @@ void ejemplo_shared(){
 
     */
 
-    cout << endl << endl << __PRETTY_FUNCTION__ << endl;
+    cout << endl << __PRETTY_FUNCTION__ << endl;
     shared_ptr<int> sharedPtr1 = make_shared<int>(5);
     cout << "*sharedPtr1: " << *sharedPtr1 << endl;
 
@@ -110,7 +110,7 @@ void ejemplo_weak(){
     /* Punteros compartidos
         No puede reservar memoria, se usa como complemento del shared_ptr<>
      */
-    cout << endl << endl << __PRETTY_FUNCTION__ << endl;
+    cout << endl << __PRETTY_FUNCTION__ << endl;
 
     shared_ptr<S> s1 = make_shared<S>();
     {
