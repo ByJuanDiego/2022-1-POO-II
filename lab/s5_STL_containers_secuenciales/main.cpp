@@ -15,7 +15,7 @@ class A{
     private:
         int x = 0;
     public:
-        A(int n){
+        explicit A(int n){
             this->x = n;
             cout << x << " constructor por parametros" << endl;
         };
@@ -209,7 +209,6 @@ void ejemplo_list(){
     }
     cout << endl << endl;
 }
-
 
 void ejemplo_forward_list(){
     cout << __PRETTY_FUNCTION__ << endl;
