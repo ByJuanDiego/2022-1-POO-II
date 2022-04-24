@@ -1,8 +1,7 @@
 #include <memory>
 #include <iostream>
 #include <vector>
-#include <deque>
-#include <list>
+
 using namespace std;
 
 class B{
@@ -93,16 +92,16 @@ void ejemplo_vector(){
     vec.clear(); // Para poder reutilizar el vector
 }
 
-struct S;
-
-struct W{
-    weak_ptr<S> atr_s;
-    ~W() { cout << "destructor W" << endl;}
-};
+struct W; // Forward declaration
 
 struct S{
     weak_ptr<W> atr_w;
     ~S()  { cout << "destructor S" << endl;}
+};
+
+struct W{
+    weak_ptr<S> atr_s;
+    ~W() { cout << "destructor W" << endl;}
 };
 
 void ejemplo_weak(){
