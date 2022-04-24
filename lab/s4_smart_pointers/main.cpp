@@ -1,6 +1,8 @@
 #include <memory>
 #include <iostream>
 #include <vector>
+#include <deque>
+#include <list>
 using namespace std;
 
 class B{
@@ -28,7 +30,7 @@ unique_ptr<B> f2(){
 void ejemplo_unique(){
     /* Punteros no compartidos
     Están diseñados para asignar memoria a un único puntero
-*/
+    */
     cout << __PRETTY_FUNCTION__ << endl;
     unique_ptr<int> uniquePtr1 = make_unique<int>(10);
     // uniquePtr1 -----> (10)
