@@ -7,20 +7,22 @@ using namespace std;
 class B{
 public:
     B() {
-        cout << "constructor default" << endl;
+        cout << "constructor B" << endl;
     }
     ~B(){
-        cout << "destructor" << endl;
+        cout << "destructor B" << endl;
     }
 };
 
 void f1(){
+    cout << __PRETTY_FUNCTION__  << endl;
     // construye y libera automaticamente
     unique_ptr<B> temp = make_unique<B>();
     // llama al destructor al salir del scope
 }
 
 unique_ptr<B> f2(){
+    cout << endl << __PRETTY_FUNCTION__  << endl;
     unique_ptr<B> temp = make_unique<B>();
     return std::move(temp);
     // extiende la existencia del unique_ptr<> fuera de este scope
@@ -87,7 +89,7 @@ void ejemplo_vector(){
     for (const auto& ptr: vec){
         cout << *ptr << " ";
     }
-    cout << endl;
+    cout << endl << endl;
 
     vec.clear(); // Para poder reutilizar el vector
 }
@@ -119,6 +121,10 @@ void ejemplo_weak(){
         cout << w1.use_count() << endl;
     }
     cout << s1.use_count() << endl;
+
+    cout << boolalpha << static_cast<bool> (s1) << endl;
+    s1.reset();
+    cout << boolalpha << static_cast<bool> (s1) << endl;
 }
 
 int main() {
@@ -127,11 +133,11 @@ int main() {
     ejemplo_shared();
     ejemplo_weak();
 
+    ejemplo_vector();
+
     f1();
     auto ptr = f2();
 
-    ejemplo_vector();
     cout << "Fin del main" << endl;
-
     return 0;
 }
