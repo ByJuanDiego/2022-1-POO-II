@@ -41,6 +41,9 @@ class A{
             os << a.x;
             return os;
         }
+        int get() const{
+            return x;
+        }
 };
 
 template<typename SecuencialContainer>
@@ -151,6 +154,15 @@ void ejemplo_vector_push_back(){
     cout << "capacity: " << vec.capacity() << endl;
     print<vector<A>>(vec);
     cout << endl;
+
+//    auto condition(
+//            [](A& a){
+//                return a.get() < 50;
+//            }
+//    );
+//
+//    vec.erase(remove_if(vec.begin(), vec.end(), condition), vec.end());
+//    print(vec);
 }
 
 void ejemplo_vector_emplace_back(){
@@ -224,7 +236,46 @@ void ejemplo_forward_list(){
     auto it = std::next(begin(fls));
     cout << "next(begin): " << *it << endl;
     it++;
-    cout << "it++: " << *it << endl;
+    cout << "it++: " << *it << endl << endl;
+}
+
+void ejemplo_lambdas(){
+    cout << __PRETTY_FUNCTION__ << endl;
+
+    vector<int> v {1, 2, 3, 2, 5, 2, 6, 2, 4, 8};
+
+    // Imprime el vector completo
+    cout << "vector:         ";
+    print(v);
+    const vector<int>::iterator new_end = remove(begin(v), end(v), 2);
+
+    // Imprime el vector (mismo tamaño)
+    cout << "after remove 2: ";
+    print(v);
+
+    // Elimina el resto de elementos
+    v.erase(new_end, end(v));
+    cout << "after erase:    ";
+    print(v);
+
+    // Funcion lambda
+    const auto odd(
+        [] (int n) {
+            return (n % 2 != 0);
+        }
+    );
+
+    // Remover los elementos sólo si cumplen una condición (odd)
+    // Usar los dos metodos juntos evita que trabajemos con el vector con datos adicionales
+    v.erase(remove_if(begin(v), end(v), odd), end(v));
+    cout << "erase y remove_if:  ";
+    print(v);
+
+    cout << "(size: " << v.size() << ", capacity: " << v.capacity() << ")" << endl;
+    v.shrink_to_fit();
+    cout << "(size: " << v.size() << ", capacity: " << v.capacity() << ")" << endl;
+    v.clear();
+    cout << "(size: " << v.size() << ", capacity: " << v.capacity() << ")" << endl;
 }
 
 int main() {
@@ -235,5 +286,6 @@ int main() {
     ejemplo_deque();
     ejemplo_list();
     ejemplo_forward_list();
+    ejemplo_lambdas();
     return 0;
 }
