@@ -1,0 +1,20 @@
+# ninja log v5
+3	662	1650850188102811309	CMakeFiles/pc1_simulacro.dir/pagination.cpp.o	8a188514ab0947f7
+1	711	1650850252685939069	CMakeFiles/pc1_simulacro.dir/main.cpp.o	767b35253f85c087
+711	792	1650850252771839029	pc1_simulacro	ec779e0bcc4e2c23
+3	979	1650851605808700644	CMakeFiles/pc1_simulacro.dir/pagination.cpp.o	8956cf611c19d55c
+2	1099	1650851605936836667	CMakeFiles/pc1_simulacro.dir/main.cpp.o	92d69cb206fd3e05
+1100	1199	1650851606041306323	pc1_simulacro	ec779e0bcc4e2c23
+4	783	1650851652836103003	CMakeFiles/pc1_simulacro.dir/pagination.cpp.o	8956cf611c19d55c
+2	860	1650851652914224987	CMakeFiles/pc1_simulacro.dir/main.cpp.o	92d69cb206fd3e05
+861	926	1650851652983706832	pc1_simulacro	ec779e0bcc4e2c23
+3	733	1650851665709249338	CMakeFiles/pc1_simulacro.dir/pagination.cpp.o	8956cf611c19d55c
+3	818	1650851665792979540	CMakeFiles/pc1_simulacro.dir/main.cpp.o	92d69cb206fd3e05
+818	874	1650851665854337853	pc1_simulacro	ec779e0bcc4e2c23
+2	683	1650851689674494860	CMakeFiles/pc1_simulacro.dir/pagination.cpp.o	8956cf611c19d55c
+2	764	1650851689755736618	CMakeFiles/pc1_simulacro.dir/main.cpp.o	92d69cb206fd3e05
+764	822	1650851689816180791	pc1_simulacro	ec779e0bcc4e2c23
+2	1138	1650851891744667258	CMakeFiles/pc1_simulacro.dir/main.cpp.o	92d69cb206fd3e05
+1138	1228	1650851891843918657	pc1_simulacro	ec779e0bcc4e2c23
+2	811	1650851906950681762	CMakeFiles/pc1_simulacro.dir/main.cpp.o	92d69cb206fd3e05
+811	878	1650851907022661746	pc1_simulacro	ec779e0bcc4e2c23
