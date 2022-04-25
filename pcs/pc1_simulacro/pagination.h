@@ -64,11 +64,22 @@ public:
         }
     }
 
+    pagination(pagination<T>&& other){
+        cout << "Constructor move: " << endl;
+        this -> sz = other.sz;
+        this -> data = other.data;
+        other.data = nullptr;
+
+        this -> current_pg = 1;
+        this -> page_sz = other.page_sz;
+
+    }
+
     ~pagination(){
         delete [] data;
     }
 
-    int pages() const {
+    int pages() {
         if (sz%page_sz == 0){
             return sz/page_sz;
         }
