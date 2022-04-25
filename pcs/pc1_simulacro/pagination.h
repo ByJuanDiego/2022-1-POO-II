@@ -64,8 +64,25 @@ public:
         }
     }
 
+    pagination& operator = (const pagination<T>& other){
+        if (this != &other){
+            if (this->data != nullptr){
+                delete this->data;
+                this->data = nullptr;
+            }
+
+            this -> sz = other.sz;
+            this -> data = new T[sz];
+            for (auto i=0; i < sz; i++){
+                this->data[i] = other.data[i];
+            }
+            this -> current_pg = other.current_pg;
+            this -> page_sz = other.page_sz;
+        }
+        return *this;
+    }
+
     pagination(pagination<T>&& other){
-        cout << "Constructor move: " << endl;
         this -> sz = other.sz;
         this -> data = other.data;
         other.data = nullptr;
@@ -73,6 +90,22 @@ public:
         this -> current_pg = 1;
         this -> page_sz = other.page_sz;
 
+    }
+
+    pagination& operator = (pagination<T>&& other){
+        if (this == &other){
+            return *this;
+        }
+        else{
+            delete this->data;
+            this->data = other.data;
+            other.data = nullptr;
+
+            this -> sz = other.sz;
+            this -> current_pg = other.current_pg;
+            this -> page_sz = other.page_sz;
+            return *this;
+        }
     }
 
     ~pagination(){
@@ -83,11 +116,8 @@ public:
         if (sz%page_sz == 0){
             return sz/page_sz;
         }
-        else if (page_sz * (sz/page_sz) < sz){
+        else {
             return sz/page_sz + 1;
-        }
-        else{
-            return sz/page_sz - 1;
         }
     }
 
