@@ -2,6 +2,11 @@
 
 int main() {
 
+    auto x = generate_polynomial<1, 2, 3, 3, 2>(2);
+    cout << x << endl;
+    
+    std::cout << generate_polynomial<>(1);
+
     {
         vector<int> vec{1, 4, 5, 2, 3};
         polynomial<int, 1, 0, 3, 4> p1 = vec;

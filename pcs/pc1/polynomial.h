@@ -17,7 +17,7 @@ using namespace std;
 template<int ... Coefficients, typename T>
 T generate_polynomial(T x){
     int grado = 0;
-    return ((pow(x, grado++)*Coefficients)+...);
+    return ((pow(x, grado++)*Coefficients)+...+0);
 }
 
 template<typename T, int... Coefficients>
@@ -52,7 +52,7 @@ public:
             idx++;
         }
     }
-
+    
     polynomial(std::vector<T>& x_vec){
         this -> sz = x_vec.size();
         this -> pares_ordenados = new pair<T, T>[this->sz];
