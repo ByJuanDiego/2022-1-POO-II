@@ -84,21 +84,23 @@ void ejemplo_begin_end(){
 }
 
 template<typename C>
-constexpr bool is_forward_iterator_v = is_same_v<typename C::iterator::iterator_category, std::forward_iterator_tag>;
+struct is_forward_iterator {
+    constexpr inline static bool value = is_same_v<typename C::iterator::iterator_category, std::forward_iterator_tag>;
+};
 
 template<typename C>
-enable_if_t<is_forward_iterator_v<C>, int>
+constexpr bool is_forward_iterator_v = is_forward_iterator<C>::value;
+
+template<typename C>
+enable_if_t<is_forward_iterator_v<C>, void>
 f1(){
-    cout << __PRETTY_FUNCTION__ << endl;
-    cout << "forward_iterator" << endl;
-    return 1;
+    cout << "es un forward_iterator" << endl;
 }
 
 template<typename C>
 typename enable_if<is_same<typename C::iterator::iterator_category, std::bidirectional_iterator_tag>::value, void>::type
 f2(){
-    cout << __PRETTY_FUNCTION__ << endl;
-    cout << "bidirectional_iterator" << endl;
+    cout << "es un bidirectional_iterator" << endl;
 }
 
 int main() {
