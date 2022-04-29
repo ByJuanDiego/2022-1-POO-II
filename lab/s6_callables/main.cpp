@@ -80,7 +80,7 @@ void ejemplo_begin_end(){
     cout << endl;
 }
 
-// Validar si un tipo es bool
+// Validar si un tipo es bool, la llamada serie: es_bool<bool>
 
 template<typename T>
 struct is_bool : std::false_type {
@@ -89,7 +89,7 @@ template<>
 struct is_bool<bool> : std::true_type {
 };
 
-/* Otra forma de implementarlo
+/* Otra forma de implementarlo, la llamada seria: es_bool<bool>::value
 template<typename T>
 struct es_bool{
     constexpr inline static bool value = false;
