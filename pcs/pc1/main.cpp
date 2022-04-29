@@ -2,9 +2,6 @@
 
 int main() {
 
-    auto x = generate_polynomial<1, 2, 3, 3, 2>(2);
-    cout << x << endl;
-    
     std::cout << generate_polynomial<>(1);
 
     {
