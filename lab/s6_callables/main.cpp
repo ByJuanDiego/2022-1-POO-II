@@ -2,8 +2,6 @@
 #include <vector>
 #include <list>
 #include <forward_list>
-#include <deque>
-#include <map>
 #include <tuple>
 using namespace std;
 
@@ -16,10 +14,8 @@ using namespace std;
 
 void ejemplo_macro(){
     cout << __PRETTY_FUNCTION__  << endl;
-
     PRINT(10+10)
-    auto x = SUMA(10, 20);
-    cout << x << endl;
+    cout << SUMA(10, 20) << endl;
 }
 
 void ejemplo_forward_iterator(){
@@ -117,6 +113,7 @@ int main() {
     ejemplo_random_access_iterator();
 #endif
 
+    ejemplo_macro();
     ejemplo_begin_end();
 
     f1<forward_list<int>>();
