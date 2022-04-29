@@ -8,13 +8,14 @@ using namespace std;
 #define FORWARD
 #define BIDIRECTIONAL
 #define RANDOM_ACCESS
+#define ENABLE_IF
 
 #define PRINT(EX) cout << #EX << " = " << (EX) << endl;
 #define SUMA(a, b) ((a)+(b))
 
 void ejemplo_macro(){
     cout << __PRETTY_FUNCTION__  << endl;
-    PRINT(10+10)
+    PRINT(10+10);
     cout << SUMA(10, 20) << endl;
 }
 
@@ -79,6 +80,29 @@ void ejemplo_begin_end(){
     cout << endl;
 }
 
+// Validar si un tipo es bool
+
+template<typename T>
+struct is_bool : std::false_type {
+};
+template<>
+struct is_bool<bool> : std::true_type {
+};
+
+/* Otra forma de implementarlo
+template<typename T>
+struct es_bool{
+    constexpr inline static bool value = false;
+};
+template<>
+struct es_bool<bool>{
+    constexpr inline static bool value = true;
+};
+*/
+
+
+// Validar si un iterador es del tipo forward_iterator_tag
+
 template<typename C>
 struct is_forward_iterator {
     constexpr inline static bool value = is_same_v<typename C::iterator::iterator_category, std::forward_iterator_tag>;
@@ -87,15 +111,17 @@ struct is_forward_iterator {
 template<typename C>
 constexpr bool is_forward_iterator_v = is_forward_iterator<C>::value;
 
+// Esta funcion se habilida unicamente cuando el tipo es un forward_iterator
 template<typename C>
 enable_if_t<is_forward_iterator_v<C>, void>
-f1(){
+validar_forward_iterator(){
     cout << "es un forward_iterator" << endl;
 }
 
+// Esta funcion se habilida unicamente cuando el tipo es un bidirectional_iterator
 template<typename C>
 typename enable_if<is_same<typename C::iterator::iterator_category, std::bidirectional_iterator_tag>::value, void>::type
-f2(){
+validar_bidirectional_iterator(){
     cout << "es un bidirectional_iterator" << endl;
 }
 
@@ -113,11 +139,14 @@ int main() {
     ejemplo_random_access_iterator();
 #endif
 
+#if defined(ENABLE_IF)
+    cout << is_bool<int>() << endl;
+    validar_forward_iterator<forward_list<int>>();
+    validar_bidirectional_iterator<list<int>>();
+#endif
+
     ejemplo_macro();
     ejemplo_begin_end();
-
-    f1<forward_list<int>>();
-    f2<list<int>>();
 
     cout << endl << "Ejecución Exitosa" << endl;
     return 0;
