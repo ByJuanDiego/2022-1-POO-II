@@ -15,14 +15,14 @@ using namespace std;
 
 void ejemplo_macro(){
     cout << __PRETTY_FUNCTION__  << endl;
-    PRINT(10+10);
+    PRINT(10+10)
     cout << SUMA(10, 20) << endl;
 }
 
 void ejemplo_forward_iterator(){
     cout << __PRETTY_FUNCTION__  << endl;
     std::forward_list<int> fl = {1, 2, 3, 4, 5};
-    std::forward_list<int>::iterator it1 = begin(fl);
+    auto it1 = begin(fl); // std::forward_list<int>::iterator
 
     cout << (*it1) << endl;
     cout << *(++it1) << endl;
@@ -52,7 +52,7 @@ void ejemplo_forward_iterator(){
 void ejemplo_bidirectional_iterator(){
     cout << __PRETTY_FUNCTION__  << endl;
     std::list<int> ls = {10, 20, 30, 40};
-    std::list<int>::iterator it1 = end(ls);
+    auto it1 = end(ls); // std::list<int>::iterator
 
     cout << *(--it1) << endl;
 }
@@ -60,7 +60,7 @@ void ejemplo_bidirectional_iterator(){
 void ejemplo_random_access_iterator(){
     cout << __PRETTY_FUNCTION__ << endl;
     std::vector<int> v = {10, 20, 30, 40};
-    std::vector<int>::iterator it1 = begin(v);
+    auto it1 = begin(v); // std::vector<int>::iterator
 
     cout << *(it1 + 2) << endl;
     cout << it1[3] << endl;
