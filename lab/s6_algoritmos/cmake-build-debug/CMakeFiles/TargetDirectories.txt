@@ -1,0 +1,3 @@
+/Users/juandiegocastropadilla/Desktop/CS1103/lab/s6_algoritmos/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/juandiegocastropadilla/Desktop/CS1103/lab/s6_algoritmos/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/juandiegocastropadilla/Desktop/CS1103/lab/s6_algoritmos/cmake-build-debug/CMakeFiles/s6_algoritmos.dir
