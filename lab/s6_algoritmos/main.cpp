@@ -128,8 +128,8 @@ void ejemplo_puntero_funcion(){
     bool (*ptr_funcion)(int) = &is_par_function;
     cout << std::boolalpha << ptr_funcion(3) << endl;
 
-    is_par_class instance;
     // Puntero a metodo
+    is_par_class instance;
     // called object type 'bool (is_par_class::*)(int)' is not a function or function pointer
     bool (is_par_class::*ptr_method1)(int) = &is_par_class::method;
     cout << boolalpha << (instance.*ptr_method1)(4) << endl;
@@ -138,9 +138,9 @@ void ejemplo_puntero_funcion(){
     auto ptr_method_2 = std::bind(&is_par_class::method, &instance, placeholders::_1);
     cout << boolalpha << ptr_method_2(2) << endl;
 
-    vector<int> v1 = {1, 2, 3, 4};
-    vector<int> v2 = {5, 6, 7, 8};
-
+    vector<int> v1 = {1, 2, 3, 4, 6, 7, 8, 9};
+    vector<int> v2 = {0, 5, 3, 1, 2, 4, 5, 6};
+    
     v1.erase(
             remove_if(v1.begin(), v1.end(), ptr_funcion)
             , end(v1)
