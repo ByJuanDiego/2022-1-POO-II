@@ -6,6 +6,7 @@
 #define PATRONES
 #define EJEMPLOS
 using namespace std;
+using namespace std::placeholders;
 
 template<typename Container>
 void print(Container& vec){
@@ -88,7 +89,7 @@ struct is_par_functor{
 // Metodo de clase
 class is_par_class{
 public:
-    bool static method(int n){
+    bool method(int n){
         return n%2==0;
     }
 };
@@ -128,12 +129,14 @@ void ejemplo_puntero_funcion(){
     std::cout << std::boolalpha << ptr_funcion(3) << std::endl;
 
     // Puntero a metodo
-    bool (*ptr_method_1)(int) = &is_par_class::method;
-    std::cout << std::boolalpha << ptr_method_1(4) << std::endl;
+    bool (is_par_class::*ptr_method1)(int) = &is_par_class::method;
+    is_par_class instance;
+    auto ptr_method_2 = std::bind(&is_par_class::method, &instance, std::placeholders::_1);
 
-    // Puntero a metodo
-    auto ptr_method_2 = bind(&is_par_class::method, placeholders::_1);
-    cout << boolalpha << ptr_method_2(1) << endl;
+    std::cout << std::boolalpha << (instance.*ptr_method1)(4) << std::endl;
+
+    // Puntero a metodo (std::placeholders)
+    cout << boolalpha << ptr_method_2(2) << endl;
 }
 
 void ejemplo_lambda(){
