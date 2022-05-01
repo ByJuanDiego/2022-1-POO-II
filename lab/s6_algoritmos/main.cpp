@@ -4,6 +4,7 @@
 #include <functional>
 
 #define PATRONES
+#define EJEMPLOS
 using namespace std;
 
 template<typename Container>
@@ -131,7 +132,7 @@ void ejemplo_puntero_funcion(){
     std::cout << std::boolalpha << ptr_method_1(4) << std::endl;
 
     // Puntero a metodo
-    auto ptr_method_2 = std::bind(&is_par_class::method, placeholders::_1);
+    auto ptr_method_2 = bind(&is_par_class::method, placeholders::_1);
     cout << boolalpha << ptr_method_2(1) << endl;
 }
 
@@ -163,8 +164,14 @@ int main() {
     ejemplo_patron_2();
     ejemplo_patron_3();
     ejemplo_patron_4();
-    ejemplo_lambda();
+    ejemplo_patron_5();
+
+#endif
+
+#if defined(EJEMPLOS)
+
     ejemplo_puntero_funcion();
+    ejemplo_lambda();
 
 #endif
 
