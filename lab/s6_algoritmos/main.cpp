@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <functional>
 
 #define PATRONES
 using namespace std;
@@ -122,12 +123,16 @@ void ejemplo_puntero_funcion(){
     cout << __PRETTY_FUNCTION__ << endl;
 
     // Puntero a funcion
-    bool (*ptr_funcion)(int) = is_par_function;
+    bool (*ptr_funcion)(int) = &is_par_function;
     std::cout << std::boolalpha << ptr_funcion(3) << std::endl;
 
     // Puntero a metodo
-    bool (*ptr_method)(int) = is_par_class::method;
-    std::cout << std::boolalpha << ptr_method(4) << std::endl;
+    bool (*ptr_method_1)(int) = &is_par_class::method;
+    std::cout << std::boolalpha << ptr_method_1(4) << std::endl;
+
+    // Puntero a metodo
+    auto ptr_method_2 = std::bind(&is_par_class::method, placeholders::_1);
+    cout << boolalpha << ptr_method_2(1) << endl;
 }
 
 void ejemplo_lambda(){
@@ -152,7 +157,7 @@ void ejemplo_lambda(){
 
 int main() {
 
-#if defined(PATRONES)
+#if defined(PATRONES) // Directiva de pre procesamiento
 
     ejemplo_patron_1();
     ejemplo_patron_2();
