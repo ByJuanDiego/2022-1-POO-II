@@ -16,7 +16,7 @@ void print(Container& vec){
     cout << endl;
 }
 
-void ejemplo_patron_1(){
+void patron_1(){
     cout << __PRETTY_FUNCTION__  << endl;
     // function(FirstItr, LastItr);
 
@@ -25,7 +25,7 @@ void ejemplo_patron_1(){
     print(v);
 }
 
-void ejemplo_patron_2(){
+void patron_2(){
     cout << __PRETTY_FUNCTION__  << endl;
     // function(FirstItr, LastItr, Value);
 
@@ -37,7 +37,7 @@ void ejemplo_patron_2(){
     }
 }
 
-void ejemplo_patron_3(){
+void patron_3(){
     cout << __PRETTY_FUNCTION__  << endl;
     // function(FirstItr1, LastItr1, FirstItr2);
 
@@ -51,7 +51,7 @@ void ejemplo_patron_3(){
     print(v3);
 }
 
-void ejemplo_patron_4(){
+void patron_4(){
     cout << __PRETTY_FUNCTION__ << endl;
     // function(FirstItr1, LastItr1, FirstItr2, LastItr2, FirstItr3);
 
@@ -93,7 +93,7 @@ public:
     }
 };
 
-void ejemplo_patron_5(){
+void patron_5(){
     cout << __PRETTY_FUNCTION__  << endl;
     // function(FirstItr, LastItr, Predicate);
 
@@ -160,11 +160,11 @@ int main() {
 
 #if defined(PATRONES) // Directiva de pre procesamiento
 
-    ejemplo_patron_1();
-    ejemplo_patron_2();
-    ejemplo_patron_3();
-    ejemplo_patron_4();
-    ejemplo_patron_5();
+    patron_1();
+    patron_2();
+    patron_3();
+    patron_4();
+    patron_5();
 
 #endif
 
