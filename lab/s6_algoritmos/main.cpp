@@ -3,7 +3,7 @@
 #include <cmath>
 #include <functional>
 
-//#define PATRONES
+#define PATRONES
 #define EJEMPLOS
 using namespace std;
 using namespace std::placeholders;
@@ -130,12 +130,28 @@ void ejemplo_puntero_funcion(){
 
     is_par_class instance;
     // Puntero a metodo
+    // called object type 'bool (is_par_class::*)(int)' is not a function or function pointer
     bool (is_par_class::*ptr_method1)(int) = &is_par_class::method;
     cout << boolalpha << (instance.*ptr_method1)(4) << endl;
 
     // Puntero a metodo (std::placeholders)
     auto ptr_method_2 = std::bind(&is_par_class::method, &instance, placeholders::_1);
     cout << boolalpha << ptr_method_2(2) << endl;
+
+    vector<int> v1 = {1, 2, 3, 4};
+    vector<int> v2 = {5, 6, 7, 8};
+
+    v1.erase(
+            remove_if(v1.begin(), v1.end(), ptr_funcion)
+            , end(v1)
+            );
+    print(v1);
+
+    v2.erase(
+            remove_if(v2.begin(), v2.end(), ptr_method_2)
+            , end(v2)
+    );
+    print(v2);
 }
 
 void ejemplo_lambda(){
@@ -173,7 +189,7 @@ int main() {
 #if defined(EJEMPLOS)
 
     ejemplo_puntero_funcion();
-    //ejemplo_lambda();
+    ejemplo_lambda();
 
 #endif
 
