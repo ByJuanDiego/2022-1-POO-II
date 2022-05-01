@@ -128,14 +128,13 @@ void ejemplo_puntero_funcion(){
     bool (*ptr_funcion)(int) = &is_par_function;
     std::cout << std::boolalpha << ptr_funcion(3) << std::endl;
 
+    is_par_class instance;
     // Puntero a metodo
     bool (is_par_class::*ptr_method1)(int) = &is_par_class::method;
-    is_par_class instance;
-    auto ptr_method_2 = std::bind(&is_par_class::method, &instance, std::placeholders::_1);
-
     std::cout << std::boolalpha << (instance.*ptr_method1)(4) << std::endl;
 
     // Puntero a metodo (std::placeholders)
+    auto ptr_method_2 = std::bind(&is_par_class::method, &instance, std::placeholders::_1);
     cout << boolalpha << ptr_method_2(2) << endl;
 }
 
