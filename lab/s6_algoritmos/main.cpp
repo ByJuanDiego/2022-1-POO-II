@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <iomanip>
 #include <functional>
 
 #define PATRONES
@@ -13,7 +14,7 @@ void print(C & cont){
     cout << "{";
     for (typename C::iterator it = cont.begin(); it != cont.end(); it++){
         typename C::iterator::value_type i = *it;
-        cout << i << " ";
+        cout << i << ((it != prev(cont.end()))? ", ":"");
     }
     cout << "}" << endl;
 }
