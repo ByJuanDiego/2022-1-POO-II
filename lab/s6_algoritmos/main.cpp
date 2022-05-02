@@ -8,11 +8,11 @@
 using namespace std;
 using namespace std::placeholders;
 
-template<typename Container>
-void print(Container& vec){
-    typename Container::iterator it;
-    for (it = vec.begin(); it != vec.end(); it++){
-        cout << *it << " ";
+template<typename C>
+void print(C & cont){
+    for (typename C::iterator it = cont.begin(); it != cont.end(); it++){
+        typename C::iterator::value_type i = *it;
+        cout << i << " ";
     }
     cout << endl;
 }
@@ -140,7 +140,7 @@ void ejemplo_puntero_funcion(){
 
     vector<int> v1 = {1, 2, 3, 4, 6, 7, 8, 9};
     vector<int> v2 = {0, 5, 3, 1, 2, 4, 5, 6};
-    
+
     v1.erase(
             remove_if(v1.begin(), v1.end(), ptr_funcion)
             , end(v1)
@@ -171,7 +171,6 @@ void ejemplo_lambda(){
     cout << sumar(10, 20) << endl;
     cout << raiz_cubica(8) << endl;
 }
-
 
 
 int main() {
