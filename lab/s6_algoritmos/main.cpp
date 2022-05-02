@@ -10,11 +10,12 @@ using namespace std::placeholders;
 
 template<typename C>
 void print(C & cont){
+    cout << "{";
     for (typename C::iterator it = cont.begin(); it != cont.end(); it++){
         typename C::iterator::value_type i = *it;
         cout << i << " ";
     }
-    cout << endl;
+    cout << "}" << endl;
 }
 
 void patron_1(){
