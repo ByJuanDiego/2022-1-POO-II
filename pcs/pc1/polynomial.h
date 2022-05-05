@@ -17,7 +17,7 @@ using namespace std;
 template<int ... Coefficients, typename T>
 T generate_polynomial(T x){
     int grado = 0;
-    return ((pow(x, grado++)*Coefficients)+...);
+    return ((pow(x, grado++)*Coefficients)+...+0);
 }
 
 template<typename T, int... Coefficients>
