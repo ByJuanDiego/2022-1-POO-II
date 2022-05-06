@@ -2,6 +2,7 @@
 #include <vector>
 #include <cmath>
 #include <functional>
+#include <fstream>
 
 #define PATRONES
 #define EJEMPLOS
@@ -51,6 +52,15 @@ void patron_3(){
     std::copy(std::begin(v1), std::end(v1), std::back_inserter<std::vector<int>>(v3));
 
     print(v3);
+
+    ifstream file("datos.txt", std::ios::in);
+    vector<int> vec;
+    std::copy(istream_iterator<int>(file),istream_iterator<int>(),back_inserter(vec));
+    print(vec);
+
+    ofstream fileResult("result.txt");
+    std::copy(begin(vec), end(vec), ostream_iterator<int>(fileResult, "\n"));
+
 }
 
 void patron_4(){

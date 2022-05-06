@@ -11,7 +11,19 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77c2caa5-f453-4dc0-b448-83931a4cf5ee" name="Changes" comment="" />
+    <list default="true" id="77c2caa5-f453-4dc0-b448-83931a4cf5ee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../s7_algorithm_complexity/cmake-build-debug/datos.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s6_callables/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-a71a83d238528c05122f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s6_callables/cmake-build-debug/.cmake/api/v1/reply/index-2022-05-05T16-29-28-0021.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s6_callables/cmake-build-debug/.cmake/api/v1/reply/target-s6_callables-Debug-6f3b586609799da810c0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s6_callables/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../s6_callables/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s6_callables/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../s6_callables/cmake-build-debug/build.ninja" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,11 +62,6 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="s6_algoritmos" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="s6_algoritmos" TARGET_NAME="s6_algoritmos" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="s6_algoritmos" RUN_TARGET_NAME="s6_algoritmos">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -74,6 +81,7 @@
       <workItem from="1651635622141" duration="15000" />
       <workItem from="1651704887378" duration="280000" />
       <workItem from="1651761874818" duration="480000" />
+      <workItem from="1651796206066" duration="142000" />
     </task>
     <servers />
   </component>
