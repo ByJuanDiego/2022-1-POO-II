@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana3_templates_2/cmake-build-debug"
+			"value" : "/Users/juandiegocastropadilla/Desktop/CS2013/lab/s3_templates_2/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana3_templates_2"
+			"value" : "/Users/juandiegocastropadilla/Desktop/CS2013/lab/s3_templates_2"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1087,7 +1087,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana3_templates_2/cmake-build-debug"
+			"value" : "/Users/juandiegocastropadilla/Desktop/CS2013/lab/s3_templates_2/cmake-build-debug"
 		},
 		{
 			"name" : "semana3_templates_2_IS_TOP_LEVEL",
@@ -1111,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/juandiegocastropadilla/Desktop/CS1103/lab/semana3_templates_2"
+			"value" : "/Users/juandiegocastropadilla/Desktop/CS2013/lab/s3_templates_2"
 		}
 	],
 	"kind" : "cache",

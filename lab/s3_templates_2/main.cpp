@@ -68,6 +68,19 @@ struct A{
     typedef int value_type;                     // Alias
 };
 
+template<typename T, typename U>
+struct are_same {
+    constexpr inline static bool val = false;
+};
+
+template<typename T>
+struct are_same<T, T>{
+    constexpr inline static bool val = true;
+};
+
+template<typename T, typename U>
+constexpr bool are_same_v = are_same<T, U>::val;
+
 int main() {
 
     int arr1[5] {0, 1, 2, 3, 4};
@@ -101,6 +114,9 @@ int main() {
         A::value_type hace referencia al tipo de dato y no a un atributo de clase
     */
     cout << "a1: " << a1 << " a2: " << a2 << endl;
+
+    std::cout << "Is same (int, int): " << is_same_v<int, int> << std::endl;
+    std::cout << "Is same (int, double): " << is_same_v<int, double> << std::endl;
 
     return 0;
 }
