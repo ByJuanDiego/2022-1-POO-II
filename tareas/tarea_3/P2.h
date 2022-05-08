@@ -1,37 +1,34 @@
 //
-// Created by Juan Diego Castro Padilla on 25/04/22.
+// Created by rudri on 10/11/2020.
 //
 
-#ifndef TAREA_3_P2_H
-#define TAREA_3_P2_H
+#ifndef PROG3_UNIT2_STANDAR_LIBRARY_V2022_1_P2_H
+#define PROG3_UNIT2_STANDAR_LIBRARY_V2022_1_P2_H
 
 #include <vector>
-#include <deque>
-#include <iostream>
 #include <list>
 using namespace std;
 
 template<template<typename ...> class Container, typename T>
-Container<T> sum_range(Container<T>& c1, Container<T>& c2){
-    Container<T> result;
+Container<T> sum_range(Container<T>& cont1, Container<T>& cont2){
+    auto n = std::max(distance(cont1.begin(), cont1.end()), distance(cont2.begin(), cont2.end()));
+    Container<T> temp(n);
 
-    if (c1.size() == c2.size()){
-        auto itr2 = c2.begin();
-        for (auto itr1 = c1.begin(); itr1 != c1.end(); itr1++){
-            result.push_back(*itr1 + *itr2);
-            itr2++;
-        }
-    } else if (c1.size() > c2.size()){
-        for (int i=0; i<c1.size(); i++){
-            result.push_back(c1[i] + c2[i%c2.size()]);
-        }
-    } else{
-        for (int i=0; i<c2.size(); i++){
-            result.push_back(c2[i] + c1[i%c1.size()]);
+    auto it1 = cont1.cbegin();
+    auto it2 = cont2.cbegin();
+
+    for (typename Container<T>::iterator it = temp.begin(); it != temp.end(); it++){
+        *it = ((*it1) + (*it2));
+        it1++;
+        it2++;
+        if (it1 == cont1.end()){
+            it1 = cont1.cbegin();
+        } else if(it2 == cont2.end()){
+            it2 = cont2.cbegin();
         }
     }
-    return result;
+
+    return temp;
 }
 
-
-#endif //TAREA_3_P2_H
+#endif //PROG3_UNIT2_STANDAR_LIBRARY_V2022_1_P2_H

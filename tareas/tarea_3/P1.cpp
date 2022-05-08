@@ -1,5 +1,8 @@
 //
-// Created by Juan Diego Castro Padilla on 25/04/22.
+// Created by rudri on 10/11/2020.
 //
 
-#include "P1.h"
+#include <iostream>
+#include "p1.h"
+using namespace std;
+

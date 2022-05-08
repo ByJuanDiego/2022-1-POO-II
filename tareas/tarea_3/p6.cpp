@@ -3,6 +3,6 @@
 //
 
 #include <iostream>
-#include "p2.h"
+#include "p6.h"
 using namespace std;
 

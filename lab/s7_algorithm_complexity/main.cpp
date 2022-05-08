@@ -86,8 +86,6 @@ void ejemplo_3(){
 }
 
 int main() {
-    std::cout << "are same: " << are_same_v<int, int> << std::endl;
-    std::cout << "are same: " << are_same_v<int, bool> << std::endl;
 
     // Time Complexity
     // Space Complexity

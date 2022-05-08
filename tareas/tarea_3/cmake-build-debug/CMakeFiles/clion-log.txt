@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja /Users/juandiegocastropadilla/Desktop/CS1103/tareas/tarea_3
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja /Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/juandiegocastropadilla/Desktop/CS1103/tareas/tarea_3/cmake-build-debug
+-- Build files have been written to: /Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3/cmake-build-debug

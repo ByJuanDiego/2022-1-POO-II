@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/juandiegocastropadilla/Desktop/CS1103/tareas/tarea_3/cmake-build-debug/
+cmake_ninja_workdir = /Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3/cmake-build-debug/
 
 #############################################
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/juandiegocastropadilla/Desktop/CS1103/tareas/tarea_3/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/juandiegocastropadilla/Desktop/CS1103/tareas/tarea_3 -B/Users/juandiegocastropadilla/Desktop/CS1103/tareas/tarea_3/cmake-build-debug
+  COMMAND = cd /Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3 -B/Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -57,7 +57,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/juandiegocastropadilla/Desktop/CS1103/tareas/tarea_3/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -72,21 +72,63 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_tarea_3: phony || CMakeFiles/tarea_3.dir
 
-build CMakeFiles/tarea_3.dir/main.cpp.o: CXX_COMPILER__tarea_3_Debug /Users/juandiegocastropadilla/Desktop/CS1103/tareas/tarea_3/main.cpp || cmake_object_order_depends_target_tarea_3
+build CMakeFiles/tarea_3.dir/main.cpp.o: CXX_COMPILER__tarea_3_Debug /Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3/main.cpp || cmake_object_order_depends_target_tarea_3
   DEP_FILE = CMakeFiles/tarea_3.dir/main.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
   OBJECT_DIR = CMakeFiles/tarea_3.dir
   OBJECT_FILE_DIR = CMakeFiles/tarea_3.dir
 
-build CMakeFiles/tarea_3.dir/P1.cpp.o: CXX_COMPILER__tarea_3_Debug /Users/juandiegocastropadilla/Desktop/CS1103/tareas/tarea_3/P1.cpp || cmake_object_order_depends_target_tarea_3
-  DEP_FILE = CMakeFiles/tarea_3.dir/P1.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+build CMakeFiles/tarea_3.dir/p1.cpp.o: CXX_COMPILER__tarea_3_Debug /Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3/p1.cpp || cmake_object_order_depends_target_tarea_3
+  DEP_FILE = CMakeFiles/tarea_3.dir/p1.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
   OBJECT_DIR = CMakeFiles/tarea_3.dir
   OBJECT_FILE_DIR = CMakeFiles/tarea_3.dir
 
-build CMakeFiles/tarea_3.dir/P2.cpp.o: CXX_COMPILER__tarea_3_Debug /Users/juandiegocastropadilla/Desktop/CS1103/tareas/tarea_3/P2.cpp || cmake_object_order_depends_target_tarea_3
-  DEP_FILE = CMakeFiles/tarea_3.dir/P2.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+build CMakeFiles/tarea_3.dir/p2.cpp.o: CXX_COMPILER__tarea_3_Debug /Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3/p2.cpp || cmake_object_order_depends_target_tarea_3
+  DEP_FILE = CMakeFiles/tarea_3.dir/p2.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
+  OBJECT_DIR = CMakeFiles/tarea_3.dir
+  OBJECT_FILE_DIR = CMakeFiles/tarea_3.dir
+
+build CMakeFiles/tarea_3.dir/p3.cpp.o: CXX_COMPILER__tarea_3_Debug /Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3/p3.cpp || cmake_object_order_depends_target_tarea_3
+  DEP_FILE = CMakeFiles/tarea_3.dir/p3.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
+  OBJECT_DIR = CMakeFiles/tarea_3.dir
+  OBJECT_FILE_DIR = CMakeFiles/tarea_3.dir
+
+build CMakeFiles/tarea_3.dir/p4.cpp.o: CXX_COMPILER__tarea_3_Debug /Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3/p4.cpp || cmake_object_order_depends_target_tarea_3
+  DEP_FILE = CMakeFiles/tarea_3.dir/p4.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
+  OBJECT_DIR = CMakeFiles/tarea_3.dir
+  OBJECT_FILE_DIR = CMakeFiles/tarea_3.dir
+
+build CMakeFiles/tarea_3.dir/p5.cpp.o: CXX_COMPILER__tarea_3_Debug /Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3/p5.cpp || cmake_object_order_depends_target_tarea_3
+  DEP_FILE = CMakeFiles/tarea_3.dir/p5.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
+  OBJECT_DIR = CMakeFiles/tarea_3.dir
+  OBJECT_FILE_DIR = CMakeFiles/tarea_3.dir
+
+build CMakeFiles/tarea_3.dir/p6.cpp.o: CXX_COMPILER__tarea_3_Debug /Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3/p6.cpp || cmake_object_order_depends_target_tarea_3
+  DEP_FILE = CMakeFiles/tarea_3.dir/p6.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
+  OBJECT_DIR = CMakeFiles/tarea_3.dir
+  OBJECT_FILE_DIR = CMakeFiles/tarea_3.dir
+
+build CMakeFiles/tarea_3.dir/p7.cpp.o: CXX_COMPILER__tarea_3_Debug /Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3/p7.cpp || cmake_object_order_depends_target_tarea_3
+  DEP_FILE = CMakeFiles/tarea_3.dir/p7.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
+  OBJECT_DIR = CMakeFiles/tarea_3.dir
+  OBJECT_FILE_DIR = CMakeFiles/tarea_3.dir
+
+build CMakeFiles/tarea_3.dir/p8.cpp.o: CXX_COMPILER__tarea_3_Debug /Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3/p8.cpp || cmake_object_order_depends_target_tarea_3
+  DEP_FILE = CMakeFiles/tarea_3.dir/p8.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
+  OBJECT_DIR = CMakeFiles/tarea_3.dir
+  OBJECT_FILE_DIR = CMakeFiles/tarea_3.dir
+
+build CMakeFiles/tarea_3.dir/p9.cpp.o: CXX_COMPILER__tarea_3_Debug /Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3/p9.cpp || cmake_object_order_depends_target_tarea_3
+  DEP_FILE = CMakeFiles/tarea_3.dir/p9.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
   OBJECT_DIR = CMakeFiles/tarea_3.dir
   OBJECT_FILE_DIR = CMakeFiles/tarea_3.dir
 
@@ -98,7 +140,7 @@ build CMakeFiles/tarea_3.dir/P2.cpp.o: CXX_COMPILER__tarea_3_Debug /Users/juandi
 #############################################
 # Link the executable tarea_3
 
-build tarea_3: CXX_EXECUTABLE_LINKER__tarea_3_Debug CMakeFiles/tarea_3.dir/main.cpp.o CMakeFiles/tarea_3.dir/P1.cpp.o CMakeFiles/tarea_3.dir/P2.cpp.o
+build tarea_3: CXX_EXECUTABLE_LINKER__tarea_3_Debug CMakeFiles/tarea_3.dir/main.cpp.o CMakeFiles/tarea_3.dir/p1.cpp.o CMakeFiles/tarea_3.dir/p2.cpp.o CMakeFiles/tarea_3.dir/p3.cpp.o CMakeFiles/tarea_3.dir/p4.cpp.o CMakeFiles/tarea_3.dir/p5.cpp.o CMakeFiles/tarea_3.dir/p6.cpp.o CMakeFiles/tarea_3.dir/p7.cpp.o CMakeFiles/tarea_3.dir/p8.cpp.o CMakeFiles/tarea_3.dir/p9.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/tarea_3.dir
   POST_BUILD = :
@@ -115,7 +157,7 @@ build tarea_3: CXX_EXECUTABLE_LINKER__tarea_3_Debug CMakeFiles/tarea_3.dir/main.
 # =============================================================================
 
 #############################################
-# Folder: /Users/juandiegocastropadilla/Desktop/CS1103/tareas/tarea_3/cmake-build-debug
+# Folder: /Users/juandiegocastropadilla/Desktop/CS2013/tareas/tarea_3/cmake-build-debug
 
 build all: phony tarea_3
 
