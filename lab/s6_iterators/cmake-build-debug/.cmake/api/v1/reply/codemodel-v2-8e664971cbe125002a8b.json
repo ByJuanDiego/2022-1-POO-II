@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "s6_callables",
+					"name" : "s6_iterators",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "s6_callables::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-s6_callables-Debug-6bd68f067a683e188e1c.json",
-					"name" : "s6_callables",
+					"id" : "s6_iterators::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-s6_iterators-Debug-59434660f2b7a399d18e.json",
+					"name" : "s6_iterators",
 					"projectIndex" : 0
 				}
 			]
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/juandiegocastropadilla/Desktop/CS2013/lab/s6_callables/cmake-build-debug",
-		"source" : "/Users/juandiegocastropadilla/Desktop/CS2013/lab/s6_callables"
+		"build" : "/Users/juandiegocastropadilla/Desktop/CS2013/lab/s6_iterators/cmake-build-debug",
+		"source" : "/Users/juandiegocastropadilla/Desktop/CS2013/lab/s6_iterators"
 	},
 	"version" : 
 	{

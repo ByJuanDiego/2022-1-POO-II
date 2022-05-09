@@ -1,0 +1,3 @@
+/Users/juandiegocastropadilla/Desktop/CS2013/lab/s6_iterators/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/juandiegocastropadilla/Desktop/CS2013/lab/s6_iterators/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/juandiegocastropadilla/Desktop/CS2013/lab/s6_iterators/cmake-build-debug/CMakeFiles/s6_iterators.dir

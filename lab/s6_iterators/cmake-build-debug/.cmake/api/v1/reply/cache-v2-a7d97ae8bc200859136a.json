@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/juandiegocastropadilla/Desktop/CS2013/lab/s6_callables/cmake-build-debug"
+			"value" : "/Users/juandiegocastropadilla/Desktop/CS2013/lab/s6_iterators/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/juandiegocastropadilla/Desktop/CS2013/lab/s6_callables"
+			"value" : "/Users/juandiegocastropadilla/Desktop/CS2013/lab/s6_iterators"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -795,7 +795,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "s6_callables"
+			"value" : "s6_iterators"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1078,7 +1078,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "s6_callables_BINARY_DIR",
+			"name" : "s6_iterators_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1087,10 +1087,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/juandiegocastropadilla/Desktop/CS2013/lab/s6_callables/cmake-build-debug"
+			"value" : "/Users/juandiegocastropadilla/Desktop/CS2013/lab/s6_iterators/cmake-build-debug"
 		},
 		{
-			"name" : "s6_callables_IS_TOP_LEVEL",
+			"name" : "s6_iterators_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1102,7 +1102,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "s6_callables_SOURCE_DIR",
+			"name" : "s6_iterators_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1111,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/juandiegocastropadilla/Desktop/CS2013/lab/s6_callables"
+			"value" : "/Users/juandiegocastropadilla/Desktop/CS2013/lab/s6_iterators"
 		}
 	],
 	"kind" : "cache",

@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "s6_callables"
+			"path" : "s6_iterators"
 		}
 	],
 	"backtrace" : 1,
@@ -56,7 +56,7 @@
 			]
 		}
 	],
-	"id" : "s6_callables::@6890427a1f51a3e7e1df",
+	"id" : "s6_iterators::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -72,8 +72,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "s6_callables",
-	"nameOnDisk" : "s6_callables",
+	"name" : "s6_iterators",
+	"nameOnDisk" : "s6_iterators",
 	"paths" : 
 	{
 		"build" : ".",
