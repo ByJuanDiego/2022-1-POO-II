@@ -14,25 +14,6 @@
     <list default="true" id="77c2caa5-f453-4dc0-b448-83931a4cf5ee" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../s6_callables/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../s6_callables/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../s7_algorithm_complexity/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../s7_algorithm_complexity/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../s7_algorithm_complexity/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../s7_algorithm_complexity/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/.cmake/api/v1/reply/cache-v2-3b03857907a3b9c8a442.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-65ba7b4b236f202a6cd4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-e107a9381594956bdc3a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/.cmake/api/v1/reply/index-2022-04-26T12-44-18-0513.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/CMakeFiles/pc1.dir/Clase.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/CMakeFiles/pc1.dir/polynomial.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../pcs/pc1/cmake-build-debug/cmake_install.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +80,8 @@
       <workItem from="1651871392439" duration="19000" />
       <workItem from="1651886453726" duration="3000" />
       <workItem from="1651886492342" duration="14000" />
+      <workItem from="1652070397970" duration="140000" />
+      <workItem from="1652071714103" duration="2000" />
     </task>
     <servers />
   </component>
