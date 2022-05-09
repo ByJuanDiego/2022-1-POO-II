@@ -25,32 +25,38 @@ public:
     using iterator_category = std::forward_iterator_tag;
     using difference_type   = std::ptrdiff_t;
     using value_type        = T;
-    using pointer           = T*;
-    using reference         = T&;
+    using pointer           = value_type*;
+    using reference         = value_type&;
 
-    explicit fixed_stack_pusher(fixed_stack<T, sz>& stack){
-        stack1 = &stack;
+    typename vector<T>::iterator iterador;
+    fixed_stack<T, sz>* ptr = nullptr;
+
+public:
+
+    fixed_stack_pusher(fixed_stack<T, sz>& stack){
+        ptr = &stack;
         iterador = stack.pila.begin();
     }
 
     fixed_stack_pusher<T, sz>& operator++(){
-        ++iterador;
-        return *this;
+        iterador++;
+        return (*this);
+    }
+
+    fixed_stack_pusher<T, sz> operator++(int){
+        auto temp (*this);
+        iterador++;
+        return temp;
     }
 
     fixed_stack_pusher<T, sz>& operator=(T value){
-        stack1->push(value);
+        ptr->push(value);
         return *this;
     }
 
     fixed_stack_pusher<T, sz>& operator*(){
         return *this;
     }
-
-private:
-
-    typename std::iterator<iterator_category , T> iterador;
-    fixed_stack<T, sz>* stack1 = nullptr;
 
 };
 

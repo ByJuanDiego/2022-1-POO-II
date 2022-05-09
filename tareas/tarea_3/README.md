@@ -178,4 +178,98 @@ auto codes = filter_codes<forward_list>('data.txt', 'c');
     // codes almacenaría ordenadamente: "cabd123", "cdbe546"
 ```
 
-## Question #9 - TO BE DEFINED  (4 points)
+
+## Question #9 - Fixed Stack  (4 points)
+
+Desarrollar el template de clase `fixed_stack` que permita implementar pilas de tamaño fijo que cuente con 2 parámetros:
+
+- Tipo de dato de los valores que almacenara la pila (`T`) (Parámetro tipo)
+- Cantidad fija de valores que aceptara la pila (`sz`) (Parámetro No tipo)
+
+y que cuenten con los siguientes métodos:
+
+- `fixed_stack(std::initializer_list lst)` constructor que permita copiar valores en la pila considerando como restricción la cantidad fija de valores aceptada por la pila, en caso `lst` tuviera más valores que los soportados por la pila esos valores serian descartados.
+- `T top()` retorna el valor al tope de la pila
+- `pop()` remueve el valor del tope de la pila y actualiza el valor del tope.
+- `bool push(T Value)` agrega un nuevo valor a la pila, actualiza la posición del tope y retornar `true` si fue exitoso, se considera que NO es exitoso si se intenta ingresar un valor y se rebasa el tope máximo definido por el tamaño fijo de la pila.
+- `boo empty()` retorna `true` si la pila esta vacía.
+- `int size()` retorne la cantidad de datos grabados en la pila.
+
+Adicionalmente elaborar el template de clase `fixed_stack_pusher` amiga de la clase `fixed_stack` que se comportara como un iterador `forward` para lo cual la clase `fixed_stack_pusher` debe implementar los siguientes métodos:
+
+- `fixed_stack_pusher(fixed_stack<T, sz> stack)` constructor utilizado para que la clase `fixed_stack_pusher` acceda a los valores almacenados y al tope de la pila.
+
+- `fixed_stack_inserter& operator++()` y `fixed_stack_inserter<T, sz> operator++(int)` que permiten avanzar desde el primer elemento hacia adelante.
+
+- `fixed_stack_inserter& operator=(T value)` que permite realizar el `push` de un nuevo valor en la pila.
+
+- `fixed_stack_inserter& operator*()` que retorne la referencia a la misma clase (usar `*this`).
+
+**Use Case #1:**
+```cpp
+    fixed_stack<int, 5> fs1 = {1, 2, 3, 4, 5};
+    while (!fs1.empty()){
+        cout << fs1.top() << " ";
+        fs1.pop();
+    }
+    // 5 4 3 2 1
+```
+
+**Use Case #2:**
+```cpp
+    fixed_stack<int, 100> fs1;
+    std::vector<float> vc1 = {1, 2, 3, 4, 5, 6, 7, 8};
+    copy(begin(vc1), end(vc1), fixed_stack_pusher(fs1));
+    while (!fs1.empty()){
+        cout << fs1.top() << " ";
+        fs1.pop();
+    }
+    // 8 7 6 5 4 3 2 1
+```
+
+**Use Case #3:**
+```cpp
+    fixed_stack<float, 100> fs1;
+    std::vector<float> vc1 = {1, 2, 3, 4, 5, 6, 7, 8};
+    for(const auto& item: vc1)
+        fs1.push(item);
+    while (!fs1.empty()){
+        std::cout << fs1.top() << " ";
+        fs1.pop();
+    }
+    // 8 7 6 5 4 3 2 1
+```
+
+**Use Case #4:**
+```cpp
+    fixed_stack<float, 5> fs1;
+    std::vector<float> vc1 = {1, 2, 3, 4, 5, 6, 7, 8};
+    for(const auto& item: vc1)
+        if (!fs1.push(item))
+            break;
+    while (!fs1.empty()) {
+        std::cout << fs1.top() << " ";
+        fs1.pop();
+    }
+    // 5 4 3 2 1
+```
+
+**Use Case #5:**
+```cpp
+    fixed_stack<unique_ptr<pair<int, int>>, 7> fs1;
+    int n = 0;
+    cin >> n;
+    vector<pair<int, int>> vc1(n);
+    for (auto& item: vc1)
+        cin >> item.first >> item.second;
+    
+    for (auto& item: vc1)
+        if (!fs1.push(make_unique<pair<int, int>>(item)))
+            break;
+    
+    while (!fs1.empty()){
+        cout << fs1.top()->first << " " << fs1.top()->second << std::endl;
+        fs1.pop();
+    }
+    // 5 4 3 2 1
+```
