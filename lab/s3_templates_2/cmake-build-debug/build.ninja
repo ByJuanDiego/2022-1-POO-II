@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: semana3_templates_2
+# Project: s3_templates_2
 # Configurations: Debug
 # =============================================================================
 
@@ -64,35 +64,35 @@ build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
 build edit_cache: phony CMakeFiles/edit_cache.util
 
 # =============================================================================
-# Object build statements for EXECUTABLE target semana3_templates_2
+# Object build statements for EXECUTABLE target s3_templates_2
 
 
 #############################################
-# Order-only phony target for semana3_templates_2
+# Order-only phony target for s3_templates_2
 
-build cmake_object_order_depends_target_semana3_templates_2: phony || CMakeFiles/semana3_templates_2.dir
+build cmake_object_order_depends_target_s3_templates_2: phony || CMakeFiles/s3_templates_2.dir
 
-build CMakeFiles/semana3_templates_2.dir/main.cpp.o: CXX_COMPILER__semana3_templates_2_Debug /Users/juandiegocastropadilla/Desktop/CS2013/lab/s3_templates_2/main.cpp || cmake_object_order_depends_target_semana3_templates_2
-  DEP_FILE = CMakeFiles/semana3_templates_2.dir/main.cpp.o.d
+build CMakeFiles/s3_templates_2.dir/main.cpp.o: CXX_COMPILER__s3_templates_2_Debug /Users/juandiegocastropadilla/Desktop/CS2013/lab/s3_templates_2/main.cpp || cmake_object_order_depends_target_s3_templates_2
+  DEP_FILE = CMakeFiles/s3_templates_2.dir/main.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
-  OBJECT_DIR = CMakeFiles/semana3_templates_2.dir
-  OBJECT_FILE_DIR = CMakeFiles/semana3_templates_2.dir
+  OBJECT_DIR = CMakeFiles/s3_templates_2.dir
+  OBJECT_FILE_DIR = CMakeFiles/s3_templates_2.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target semana3_templates_2
+# Link build statements for EXECUTABLE target s3_templates_2
 
 
 #############################################
-# Link the executable semana3_templates_2
+# Link the executable s3_templates_2
 
-build semana3_templates_2: CXX_EXECUTABLE_LINKER__semana3_templates_2_Debug CMakeFiles/semana3_templates_2.dir/main.cpp.o
+build s3_templates_2: CXX_EXECUTABLE_LINKER__s3_templates_2_Debug CMakeFiles/s3_templates_2.dir/main.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
-  OBJECT_DIR = CMakeFiles/semana3_templates_2.dir
+  OBJECT_DIR = CMakeFiles/s3_templates_2.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = semana3_templates_2
-  TARGET_PDB = semana3_templates_2.dbg
+  TARGET_FILE = s3_templates_2
+  TARGET_PDB = s3_templates_2.dbg
 
 # =============================================================================
 # Target aliases.
@@ -105,7 +105,7 @@ build semana3_templates_2: CXX_EXECUTABLE_LINKER__semana3_templates_2_Debug CMak
 #############################################
 # Folder: /Users/juandiegocastropadilla/Desktop/CS2013/lab/s3_templates_2/cmake-build-debug
 
-build all: phony semana3_templates_2
+build all: phony s3_templates_2
 
 # =============================================================================
 # Built-in targets

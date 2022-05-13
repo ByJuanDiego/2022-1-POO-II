@@ -7,10 +7,12 @@
 
 #include <tuple>
 #include <iostream>
+#include <string>
+using namespace std;
 
 template <typename ... ParamPackage>
 std::tuple<ParamPackage& ...> unpack(ParamPackage& ... paramPackage){
-    return std::tie(paramPackage...);
+    return {paramPackage...};
 }
 
 #endif //PROG3_UNIT2_STANDAR_LIBRARY_V2022_1_P5_H

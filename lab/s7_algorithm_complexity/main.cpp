@@ -2,6 +2,7 @@
 #include <vector>
 #include <array>
 #include <fstream>
+#include "sp4.h"
 
 /*
 Orden de crecimiento de los algoritmos:
@@ -87,13 +88,23 @@ void ejemplo_3(){
 
 int main() {
 
+    auto x = get_anagrams("amor", "data.txt");
+
+    for (const auto & i :x){
+        std::cout << i << std::endl;
+    }
+
+    vector<double> v {1, 2, 5, 4, -1, 5, -20, 200};
+    auto b = get_par_lejano(v);
+    cout << b.first << " " << b.second;
+
     // Time Complexity
     // Space Complexity
 
-    ejemplo_leyes();
-    ejemplo_1();
-    ejemplo_2();
-    ejemplo_3();
+//    ejemplo_leyes();
+//    ejemplo_1();
+//    ejemplo_2();
+//    ejemplo_3();
 
     return 0;
 }

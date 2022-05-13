@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "s7_algorithm_complexity"
+			"path" : "s3_templates_2"
 		}
 	],
 	"backtrace" : 1,
@@ -56,7 +56,7 @@
 			]
 		}
 	],
-	"id" : "s7_algorithm_complexity::@6890427a1f51a3e7e1df",
+	"id" : "s3_templates_2::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -72,8 +72,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "s7_algorithm_complexity",
-	"nameOnDisk" : "s7_algorithm_complexity",
+	"name" : "s3_templates_2",
+	"nameOnDisk" : "s3_templates_2",
 	"paths" : 
 	{
 		"build" : ".",

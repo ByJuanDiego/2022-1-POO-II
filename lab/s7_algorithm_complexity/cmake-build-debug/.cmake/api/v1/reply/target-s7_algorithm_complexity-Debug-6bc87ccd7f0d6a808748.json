@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "semana3_templates_2"
+			"path" : "s7_algorithm_complexity"
 		}
 	],
 	"backtrace" : 1,
@@ -52,11 +52,12 @@
 			},
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
 			]
 		}
 	],
-	"id" : "semana3_templates_2::@6890427a1f51a3e7e1df",
+	"id" : "s7_algorithm_complexity::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -72,8 +73,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "semana3_templates_2",
-	"nameOnDisk" : "semana3_templates_2",
+	"name" : "s7_algorithm_complexity",
+	"nameOnDisk" : "s7_algorithm_complexity",
 	"paths" : 
 	{
 		"build" : ".",
@@ -85,7 +86,15 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				2
 			]
 		}
 	],
@@ -96,6 +105,17 @@
 			"compileGroupIndex" : 0,
 			"path" : "main.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sp4.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "sp4.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

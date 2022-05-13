@@ -1,15 +1,14 @@
-#include "p9.h"
+#include "p5.h"
 
 int main() {
 
-    fixed_stack<int, 100> fs1;
-    std::vector<float> vc1 = {1, 2, 3, 4, 5, 6, 7, 8};
-    copy(begin(vc1), end(vc1), fixed_stack_pusher(fs1));
-    while (!fs1.empty()){
-        cout << fs1.top() << " ";
-        fs1.pop();
-    }
-    // 8 7 6 5 4 3 2 1
+    std::tuple<int, string, string, double> t1 = {1321, "Jose", "Perez", 1.68};
+    int key;
+    string first_name;
+    string last_name;
+    double height;
+    unpack(key, first_name, last_name, height) = t1;
+    std::cout << key <<  " "<< first_name << " " << last_name << " "  << height << endl;
 
     return 0;
 }

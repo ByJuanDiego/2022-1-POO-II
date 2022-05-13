@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "semana3_templates_2",
+					"name" : "s3_templates_2",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "semana3_templates_2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-semana3_templates_2-Debug-b4e362bf6c3cb269f75d.json",
-					"name" : "semana3_templates_2",
+					"id" : "s3_templates_2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-s3_templates_2-Debug-19a4f7e8227872fc79a1.json",
+					"name" : "s3_templates_2",
 					"projectIndex" : 0
 				}
 			]
