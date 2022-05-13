@@ -46,139 +46,169 @@ bool ejercicio_1(const matrix_t& matrix) {
 // = O(nm) para un C = 4 y n0 = 1 tal que n >= n0 m >= n0
 
 void ejercicio_2(int n) {
-    for( int i = n;  i > 0;  i /= 2 ) {
-        for( int j = 1;  j < n;  j *= 2 ) {
-            for( int k = 0;  k < n;  k += 2 ) {
-                // ... constant number of operations
+    for( int i = n;  i > 0;  i /= 2 ) {                 // O(log(n))
+        for( int j = 1;  j < n;  j *= 2 ) {             // O(log(n))
+            for( int k = 0;  k < n;  k += 2 ) {         // O(n)
+                // ... constant number of operations    // O(1)
             }
         }
     }
-}
+} // BigO = O(C1 * n * log(n) * log(n)) = O(n * log(n)²)
 
 void ejercicio_3(int n) {
-    auto sum = 0;
-    for ( int i = 1; i < n; i *= 2 ) {
-        for ( int j = n; j > 0; j /= 2 ) {
-            for ( int k = j; k < n; k += 2 ) {
-                sum += (i + j * k );
+    auto sum = 0;                               // O(1)
+    for ( int i = 1; i < n; i *= 2 ) {          // O(log(n))
+        for ( int j = n; j > 0; j /= 2 ) {      // O(log(n))
+            for ( int k = j; k < n; k += 2 ) {  // O(n)
+                sum += (i + j * k );            // O(1)
             }
         }
     }
-}
+} // BigO = O(C2 * n * log(n) * log(n) + C1) = O(n * log(n)²)
 
 void ejercicio_4(int n) {
-    for( int i = n;  i > 0;  i-- ) {
-        for( int j = 1;  j < n;  j *= 2 ) {
-            for( int k = 0;  k < j;  k++ ) {
-                // ... constant number C of operations
+    for( int i = n;  i > 0;  i-- ) {                    // O(n)
+        for( int j = 1;  j < n;  j *= 2 ) {             // O(log(n))
+            for( int k = 0;  k < j;  k++ ) {            // O(n), en el peor de los casos j=n-1
+                // ... constant number C of operations  // O(1)
             }
         }
     }
-}
+} // BigO = O(C1 *n * log(n) * n) = O(n²*log(n))
 
 void ejercicio_5(int n) {
-    for( int bound = 1; bound <= n; bound *= 2 ) {
-        for( int i = 0; i < bound; i++ ) {
-            for( int j = 0; j < n; j += 2 ) {
-                // ... constant number of operations
+    for( int bound = 1; bound <= n; bound *= 2 ) {      // O(log(n))
+        for( int i = 0; i < bound; i++ ) {              // O(n)
+            for( int j = 0; j < n; j += 2 ) {           // O(n)
+                // ... constant number of operations    // O(1)
             }
-            for( int j = 1; j < n; j *= 2 ) {
-                // ... constant number of operations
+            for( int j = 1; j < n; j *= 2 ) {           // O(log(n))
+                // ... constant number of operations    // O(1)
             }
+
         }
     }
-}
+} // BigO = O( (C1*log(n) + C2*n) * n * log(n) ) = O( (log(n) + n) * n * log(n) )
+  //                                             = O(log(n)*n*log(n) + n*n*log(n))
+  //                                             = O(n*log(n)² + n²*log(n))
+  //                                             = O(n²*log(n))
 
 int randint(int first, int last) {
-    random_device rd;
-    uniform_int_distribution<int> dis(first, last);
-    return dis(rd);
-}
+    random_device rd;                                   // O(1) = C1
+    uniform_int_distribution<int> dis(first, last);  // O(1) = C2
+    return dis(rd);                                   // O(1) = C3
+} // BigO = O(1)
 
-int ejercicio_6(int n) {
-    if ( n <= 0 ) return 0;
-    int i = randint( 0, n - 1 );
-    return ejercicio_6( i ) + ejercicio_6( n - 1 - i );
-    // i + n - 1 - i // i + n - 1 - i
-    //  ejercicio_6(n - 1)
-}
+int ejercicio_6(int n) {// T(n)
+    if ( n <= 0 ) return 0;                 // O(1) = C1
+    int i = randint( 0, n - 1 );    // O(1) = C2
+    return (ejercicio_6(i) +  // En el peor caso i=(n-1)
+    ejercicio_6( n - 1 - i)); // En el peor caso i=0
+    // Pero i no puede valer (n-1) y 0 a la vez, asi que el peor caso seria n/2
+} // BigO = C + T(n/2) + T(n/2)
+  //      = C + 2*T(n/2)
+  // a = 2, b = 2, d = 0
+  // a > b^d -> 2 > 1
+  // BigO = O(n^(logb(a)))
+  // BigO = O(n^(log2(2)))
+  //      = O(n)
 
 void ejercicio_7(int n) {
     int k = 1;
-    while (k <= n)
+    while (k <= n)  {
         k = 3 * k;
-}
+    }
+    // Es el equivalente a: for (int k=1; k<=n; k *= 3);
+    // El numero de instrucciones se reduce a una fraccion del numero anterior (1/3)
+} // BigO = (log3(n))
 
 void ejercicio_8(int n) {
-    int j = 0;
-    for (int i = 0; i < n; ++i) {
-        j = i;
-        while (j < i * i) {
-            j = j + 1;
-            if (j % i == 0)
-                for (int k = 0; k < j; ++k)
-                    cout << "utec";
+    int j = 0;                              // O(1)
+    for (int i = 0; i < n; ++i) {           // O(n), en el peor caso i=n-1
+        j = i;                              // O(1)
+        while (j < i * i) {                 // O(n²), en el peor caso j=i²-1
+            j = j + 1;                      // O(1)
+            if (j % i == 0)                 // O(1)
+                for (int k = 0; k < j; ++k) // O(n²), en el peor caso k=j-1
+                    cout << "utec";         // O(1)
         }
     }
-}
+} // BigO = O( ((C1*n² + C2 + C3) * n² + C4) * n + C5)
+  //      = O(n²*n²*n)
+  //      = O(n^5)
 
 void ejercicio_9(int n) {
-    int count = 0;
-    for (int i = n/2; i < n; ++i) {
-        int j = 1;
-        while (j + n/2 <= n) {
-            int k = 1;
-            while (k <= n) {
+    int count = 0;                  // O(1) = C1
+    for (int i = n/2; i < n; ++i) { // O(n)
+        int j = 1;                  // O(1) = C2
+        while (j + n/2 <= n) {      // O(n)
+            int k = 1;              // O(1) = C3
+            while (k <= n) {        // log2(n) (el while completo)
                 ++count;
                 k *= 2;
             } // end while
-            ++j;
+            ++j;                    // O(1) = C4
         } // end while
     } // end for
-    std::cout << count;
-}
+    std::cout << count;             // O(1) = C5
+} // BigO = O(((log2(n) + C3 + C4)* n + C2)* n + C1 + C5)
+  //      = O(log2(n) * n * n)
+  //      = O(n² * log2(n))
 
 void ejercicio_10(int n) {
-    int sum = 0;
-    for (int i = 0; i < sqrt(n)/2; ++i)
-        sum++;
-    int j = 0;
-    for (; j < sqrt(n)/4; ++j)
-        sum++;
-    for (int k = 0; k < 8 + j; ++k)
-        sum++;
-}
-
+    int sum = 0;                                // O(1) = C1
+    for (int i = 0; i < sqrt(n)/2; ++i)  // O(√n), En el peor caso i=(√n/2)-1
+        sum++;                                  // O(1) = C2
+    int j = 0;                                  // O(1) = C3
+    for (; j < sqrt(n)/4; ++j)           // O(√n), En el peor caso j=(√n/4)-1
+        sum++;                                  // O(1) = C4
+    for (int k = 0; k < 8 + j; ++k)             // O(√n), En el peor caso k = j+7
+        sum++;                                  // O(1) = C5
+} // BigO = O(C1 + (C2*n^(1/2)) + C3 + (C4*n^(1/2)) + (C5*n^(1/2)))
+  //      = O(C6 + (C2+C4+C5)*n^(1/2))
+  //      = O(n^(1/2))
 
 int ejercicio_11 (int n, int x) {
-    if (n <= 1) return 1;
+    if (n <= 1) return 1;            // O(1) = C1
     else
-        for (int i = 1; i <= n; ++i)
-            x = x + 1;
-    return ejercicio_11 (n-1, x);
-}
+        for (int i = 1; i <= n; ++i) // O(n)
+            x = x + 1;               // O(1) = C2
+    return ejercicio_11 (n-1, x);  // T(n-1)
+
+} // BigO = T(n) = (C1+C2*n) + T(n-1)
+  //                  ...    + (C1+C2*n) + T(n-2)
+  //                  ...    +    ...    + (C1+C2*n) + T(1)
+  //                  ...    +    ...    +    ...    + C1
+  //                -------------- n veces -----------------
+  // BigO = O((C1+C2)*n * n + C1)
+  //      = O(n²)
 
 int ejercicio_12 (vector<int> v) {
-    auto n = size(v);
+    auto n = size(v);   // O(1) = C1
 
-    if (n == 0) return 0;
-    if (n == 1) {
-        int value = v.back();
-        v.pop_back();
-        return value;
+    if (n == 0) return 0;               // O(1) = C2
+    if (n == 1) {                       // O(1) = C3
+        int value = v.back();           // O(1) = C4
+        v.pop_back();                   // O(1) = C5
+        return value;                   // O(1) = C6
     }
 
-    vector<int> v1;
-    vector<int> v2;
-    auto left = begin(v);
-    auto middle = next(left, n/2);
-    auto right = end(v);
+    vector<int> v1; // O(1) = C7
+    vector<int> v2; // O(1) = C8
+    auto left = begin(v);            // O(1) = C9
+    auto middle = next(left, n/2); // O(1) = C10
+    auto right = end(v);             // O(1) = C11
 
-    copy(left, middle, back_inserter(v1));
-    copy(middle, right, back_inserter(v2));
+    copy(left, middle, back_inserter(v1));  // O(n)
+    copy(middle, right, back_inserter(v2)); // O(n)
 
     return ejercicio_12(v1) + ejercicio_12 (v2);
-}
+} // BigO = f(n) = C + n + n + f(n/2) + f(n/2)
+  //             = C + 2*n^1 + 2*f(n/2)
+  //    a = 2, b = 2, d = 1
+  //    a = b^d:
+  // BigO = O(n^1 * log(n))
+  //      = O(n * log(n))
 
 /*
 Ejercicio #14

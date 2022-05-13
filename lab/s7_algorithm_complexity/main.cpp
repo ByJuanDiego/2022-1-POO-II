@@ -101,10 +101,10 @@ int main() {
     // Time Complexity
     // Space Complexity
 
-//    ejemplo_leyes();
-//    ejemplo_1();
-//    ejemplo_2();
-//    ejemplo_3();
+    ejemplo_leyes();
+    ejemplo_1();
+    ejemplo_2();
+    ejemplo_3();
 
     return 0;
 }

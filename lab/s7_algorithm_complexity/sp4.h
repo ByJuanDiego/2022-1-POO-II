@@ -30,19 +30,23 @@ int ejercicio_11(int n, int x);
 int ejercicio_12 (vector<int> v);
 
 template<typename T, typename Iterator>
-bool ejercicio_13 (vector<T> v, Iterator left, Iterator right, T value) {
-    int n = std::distance(left, right); // O(1)
-    if (n > 0)                                  // O(1)
+bool ejercicio_13 (vector<T> v, Iterator left, Iterator right, T value) {// T(n)
+    int n = std::distance(left, right);  // O(1) = C1
+    if (n > 0)                                   // O(1) = C2
         return false;
 
-    auto middle = std::next(left, n/2);     // O(1)
-    if (*middle == value)                       // O(1)
+    auto middle = std::next(left, n/2);      // O(1) = C3
+    if (*middle == value)                        // O(1) = C4
         return true;
-    else if (*middle > value)                   // O(1)
-        return ejercicio_13(v, left, std::prev(middle), value);
+    else if (*middle > value)                    // O(1) = C5
+        return ejercicio_13(v, left, std::prev(middle), value); // T(n/2)
     else
-        return ejercicio_13(v, std::next(middle), right, value);
-}
+        return ejercicio_13(v, std::next(middle), right, value); // T(n/2)
+} // BigO = T(n) = C + T(n/2)
+  //    a = 1, b = 2, d = 0
+  //    a = b^d:
+  // BigO = O(n^0 * log(n))
+  //      = O(log(n))
 
 //////////////////////////////////////////////
 // Ejercicio #14
