@@ -1,0 +1,3 @@
+/Users/juandiegocastropadilla/Desktop/CS2013/teo/s9_patrones/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/juandiegocastropadilla/Desktop/CS2013/teo/s9_patrones/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/juandiegocastropadilla/Desktop/CS2013/teo/s9_patrones/cmake-build-debug/CMakeFiles/s9_patrones.dir
