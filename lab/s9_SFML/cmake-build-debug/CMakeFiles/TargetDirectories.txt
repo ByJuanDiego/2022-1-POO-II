@@ -1,0 +1,3 @@
+/Users/juandiegocastropadilla/Desktop/CS2013/lab/s9_SFML/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/juandiegocastropadilla/Desktop/CS2013/lab/s9_SFML/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/juandiegocastropadilla/Desktop/CS2013/lab/s9_SFML/cmake-build-debug/CMakeFiles/s9_SFML.dir
