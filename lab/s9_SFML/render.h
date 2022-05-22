@@ -30,7 +30,7 @@ public:
         return unique_instance;
     }
 
-    std::shared_ptr<T> get(){
+    std::shared_ptr<T>& get(){
         return data;
     }
 

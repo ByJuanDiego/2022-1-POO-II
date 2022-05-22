@@ -1,22 +1,19 @@
 //
-// Created by Juan Diego Castro Padilla on 19/05/22.
+// Created by rrivas on 18/05/2022.
 //
 
-#ifndef S9_SFML_LABLE_H
-#define S9_SFML_LABLE_H
+#ifndef PATRONES_SDL_LABEL_H
+#define PATRONES_SDL_LABEL_H
 
-#include "component.h"
-#include <SFML/Graphics.hpp>
+#include "componente.h"
 #include "render.h"
-#include <iostream>
+#include <SFML/Graphics.hpp>
 
-class label_t: public component_t {
+class sdl_label_t: public componente_t {
+
 public:
-
-    using component_t::component_t;
-
-    void draw () override
-    {
+    using componente_t::componente_t;
+    void draw () override {
         sf::Font font;
         sf::Text txt;
         if (font.loadFromFile("./Oxanium-Regular.ttf"))
@@ -34,5 +31,4 @@ public:
 };
 
 
-
-#endif //S9_SFML_LABLE_H
+#endif //PATRONES_SDL_LABEL_H

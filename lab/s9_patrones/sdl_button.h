@@ -1,22 +1,19 @@
 //
-// Created by Juan Diego Castro Padilla on 19/05/22.
+// Created by rrivas on 18/05/2022.
 //
 
-#ifndef S9_SFML_BUTTON_H
-#define S9_SFML_BUTTON_H
+#ifndef PATRONES_SDL_BUTTON_H
+#define PATRONES_SDL_BUTTON_H
 
-#include "component.h"
+#include "componente.h"
 #include "render.h"
-#include <SFML/Graphics.hpp>
+#include "SFML/Graphics.hpp"
 
-class button_t: public component_t {
+class sdl_button_t: public componente_t {
 public:
+    using componente_t::componente_t;
 
-    // button_t(float x, float y, float w, float h): component_t(x, y, w, h) {}
-    using component_t::component_t;
-
-    void draw() override
-    {
+    void draw() {
         auto& canvas = render<sf::RenderWindow>::get_instance()->get();
         sf::RectangleShape shape({width, height});
         shape.setPosition(x, y);
@@ -45,4 +42,4 @@ public:
 };
 
 
-#endif //S9_SFML_BUTTON_H
+#endif //PATRONES_SDL_BUTTON_H
