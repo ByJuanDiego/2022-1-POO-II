@@ -15,24 +15,17 @@ using namespace std;
 
 class factory_t {
 private:
-    unordered_map<string,
-        function<shared_ptr<componente_t>(
-                string, float, float, float, float)>> callbacks;
+    unordered_map<string, function<shared_ptr<componente_t>(string, float, float, float, float)>> callbacks;
     inline static factory_t* instance {};
 protected:
     factory_t() = default;
 public:
-    bool attach(const string& key,
-                const function<shared_ptr<componente_t>(
-                        string, float, float, float, float)>& createFn) noexcept {
+    bool attach(const string& key, const function<shared_ptr<componente_t>(string, float, float, float, float)>& createFn) noexcept {
         return callbacks.insert({key, createFn}).second;
     }
-    shared_ptr<componente_t> create(const string& key, const string& text,
-                                    float left, float top,
-                                    float width, float height) {
+    shared_ptr<componente_t> create(const string& key, const string& text, float left, float top, float width, float height) {
         return callbacks.at(key)(text, left, top, width, height);
     }
-
     static factory_t* get_instance() noexcept {
         if (instance == nullptr) instance = new factory_t();
         return instance;
