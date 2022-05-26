@@ -8,6 +8,7 @@
 #include "componente.h"
 #include "render.h"
 #include "SFML/Graphics.hpp"
+#include <iostream>
 
 class sfml_button_t: public componente_t {
     sf::Color color = sf::Color::White;
@@ -41,13 +42,25 @@ public:
     }
     // Sobrecarga de metodos
     void click_pressed_event(mouse_event_params_t e) override {
-        if (click) click(e);
+        if (click) {
+            click(e);
+        } else{
+            std::cout << "No hay funcion registrada para click_pressed_event" << std::endl;
+        }
     }
     void click_released_event(mouse_event_params_t e) override {
-        if (click) click(e);
+        if (click) {
+            click(e);
+        } else{
+            std::cout << "No hay funcion registrada para click_released_event" << std::endl;
+        }
     }
     void mouse_move_event(mouse_event_params_t e) override {
-        if (mouse_move) mouse_move(e);
+        if (mouse_move){
+            mouse_move(e);
+        } else{
+            std::cout << "No hay funcion registrada para mouse_move_event" << std::endl;
+        }
     }
     void mouse_enter_event(mouse_event_params_t e) override {
         sf::Cursor crs;
