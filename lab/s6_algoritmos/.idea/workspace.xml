@@ -12,6 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77c2caa5-f453-4dc0-b448-83931a4cf5ee" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../s10_threads_2/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../s10_threads_2/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s10_threads_2/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../s10_threads_2/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
@@ -82,6 +84,7 @@
       <workItem from="1651886492342" duration="14000" />
       <workItem from="1652070397970" duration="140000" />
       <workItem from="1652071714103" duration="2000" />
+      <workItem from="1654098696045" duration="134000" />
     </task>
     <servers />
   </component>

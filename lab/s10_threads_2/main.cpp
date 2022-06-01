@@ -1,16 +1,18 @@
-#include <iostream>
+#include <condition_variable>
+#include <mutex>
 #include <thread>
 #include <vector>
-#include <mutex>
 #include <atomic>
-#include <condition_variable>
 #include <algorithm>
+#include <iostream>
 
+// std::mutex define una sección crítica
+// El resto de hilos no podrá acceder a esa sección hasta que se termine de ejecutar
 std::mutex mtx;
 
 void increase(int& x){
     mtx.lock();     // Inicio de Sección Crítica
-    x = x + 1;
+    x = x + 1;      // ...
     mtx.unlock();   // Fin de sección Crítica
 }
 
@@ -28,14 +30,15 @@ void ejemplo1_mutex(){
     std::cout << x << std::endl;
 }
 
-void ejemplo1_atomic(){// Sólo funciona para el manejo de una operación.
-
+void ejemplo1_atomic(){// Instrucciones individuales (operaciones aritméticas, simples)
     std::atomic<int> x = 0;
     int nHilos = 100;
     std::vector<std::thread> vHilos(nHilos);
 
     for (std::thread &h: vHilos)
-        h = std::thread([&x]{x++;});
+        h = std::thread([&x]{
+            ++x;
+        });
 
     for (std::thread &h: vHilos)
         h.join();
@@ -51,21 +54,23 @@ private:
     double saldo = 0;
 
 public:
+
     void deposito(double importe){
-        std::unique_lock ul(cuentaBancaria::mtx); // mtx.lock()
+        std::unique_lock ul(this->mtx); // mtx.lock()
         saldo += importe;
         ul.unlock();
         cv.notify_one();    // Notifica la modificacion del saldo
     } // mtx.unlock()
 
     void retiro(double importe){
-        std::unique_lock ul(cuentaBancaria::mtx);
-        cv.wait(ul, [&](){
-            return saldo > 0;
-            }
-        );
-        // if (saldo > 0)
-        saldo -= importe;
+        std::unique_lock ul(this->mtx);
+        cv.wait(ul, [this, importe](){return this->saldo >= importe;}); // A la espera de una notificación
+        if (saldo > importe){
+            saldo -= importe;
+        }
+        else {
+            std::cout << "Saldo insuficiente" << std::endl;
+        }
     }
 
     [[nodiscard]] double getSaldo() const{
@@ -102,17 +107,17 @@ void ejemplo4(){
     auto r = (n_size - start) / n_hilos;
     auto i = start;
 
-    for (auto& hilo: vHilos){
+    for (std::thread & hilo: vHilos){
         // hilo = std::thread([&](){ agregarValores(vInt, i, r);});
         hilo = std::thread(agregarValores, std::ref(vInt), i, r);
         i += r;
     }
 
-    for (auto& hilo: vHilos){
+    for (std::thread & hilo: vHilos){
         hilo.join();
     }
 
-    for (const auto &value: vInt){
+    for (const int &value: vInt){
         std::cout << value << std::endl;
     }
 }
