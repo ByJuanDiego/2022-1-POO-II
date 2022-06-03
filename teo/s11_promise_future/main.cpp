@@ -15,7 +15,7 @@ void consumer(std::future<std::string>& future){
     std::this_thread::sleep_for(std::chrono::seconds(2));
 }
 
-void f1() {
+void f1() {// Promise y Future
     std::promise<std::string> promise;
     std::future<std::string> future(promise.get_future());
 
@@ -45,7 +45,7 @@ void consumer2(std::string& value){
     std::cout << "Value: " << value;
 }
 
-void f2(){
+void f2(){// Condition variable
     std::string value;
     std::thread t1(producer2, std::ref(value));
     std::thread t2(consumer2, std::ref(value));
@@ -58,11 +58,11 @@ int sumar(int x, int y){
 }
 
 void f3(){
-    std::future<int> x = std::async(sumar, 5, 6);
+    std::future<int> x = std::async<int(int, int)>(sumar, 5, 6);
     std::cout << x.get() << std::endl;
 }
 
 int main(){
-    f2();
+    f1();
     return 0;
 }
