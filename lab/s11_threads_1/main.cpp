@@ -45,12 +45,11 @@ void ejemplo1(std::string file_name){
 }
 
 template<typename Iterator>
-void summarize(Iterator first, Iterator last, int& suma){
-    suma = std::accumulate(first, last, 0);
+void summarize(Iterator first, Iterator last, Iterator suma){
+    *suma = std::accumulate(first, last, 0);
 }
 
 void ejemplo2(std::string file_name){
-    // suma de los elementos de un vector haciendo uso de std::accumulate en 4 hilos
     vector<int> vec = generate_vector(file_name);
     int n_hilos = 4;
     auto size = vec.size();
@@ -63,8 +62,9 @@ void ejemplo2(std::string file_name){
     auto it_sum = sumas.begin();
 
     for (thread& hilo : v_thread){
-        unsigned current_range = (it_sum != prev(sumas.end()))? range : (size - range*(sumas.size()-1));
-        hilo = thread(summarize<vector<int>::iterator>, it, next(it, (int)current_range), ref(*it_sum));
+        if (it_sum == prev(sumas.end()))
+            range = (size - range*(sumas.size()-1));
+        hilo = thread(summarize<decltype(it)>, it, next(it, (int)range), it_sum);
         it_sum++;
         advance(it, range);
     }
