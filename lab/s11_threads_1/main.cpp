@@ -4,6 +4,7 @@
 #include <random>
 #include <numeric>
 #include <thread>
+#include <map>
 using namespace std;
 
 void generate_file(std::string& name, int size, int _min, int _max){
@@ -61,13 +62,15 @@ void ejemplo2(std::string file_name){
     auto it = vec.begin();
     auto it_sum = sumas.begin();
 
-    for (thread& hilo : v_thread){
-        if (it_sum == prev(sumas.end()))
-            range = (size - range*(sumas.size()-1));
+    for_each(begin(v_thread), prev(end(v_thread)), [&, range](thread& hilo){
         hilo = thread(summarize<decltype(it)>, it, next(it, (int)range), it_sum);
         it_sum++;
         advance(it, range);
-    }
+    });
+
+    range = distance(it, end(vec));
+    auto it_thread = prev(end(v_thread));
+    *it_thread = thread(summarize<decltype(it)>, it, next(it, (int)range), it_sum);
 
     for (thread& hilo: v_thread){
         hilo.join();
